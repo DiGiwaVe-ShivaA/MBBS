@@ -19,7 +19,6 @@ export default function ToppersAcademyReviews() {
       <h2 className="text-3xl font-bold text-gray-900 mb-6">
         Reviews of Mbbs Wallah & those who Attended Coachings post Councelling
       </h2>
-
       <div className="overflow-x-auto">
         <table className="min-w-full border border-gray-200 text-left">
           <thead className="bg-gray-100">
@@ -46,6 +45,9 @@ export default function ToppersAcademyReviews() {
           </tbody>
         </table>
       </div>
+      {/* new */}
+
+      {/* new */}
     </div>
   );
 }
