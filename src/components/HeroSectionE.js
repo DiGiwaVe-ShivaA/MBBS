@@ -110,7 +110,7 @@ export default function FeaturesSection() {
       </div>
 
       {/* 🚀 Floating CTA Button */}
-      {showCTA && (
+      {/* {showCTA && (
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -124,7 +124,7 @@ export default function FeaturesSection() {
         >
           Quick Inquiry
         </motion.button>
-      )}
+      )} */}
     </section>
   );
 }
