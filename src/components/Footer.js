@@ -50,7 +50,7 @@ export default function Footer() {
                 { name: "Blogs", link: "/blogs" },
                 { name: "State", link: "/state" },
                 { name: "Counseling", link: "/counseling" },
-                { name: "Privacy Policy", link: "/privacy-policy" },
+                // { name: "Privacy Policy", link: "/privacy-policy" },
               ].map(({ name, link }, index) => (
                 <Link
                   key={index}

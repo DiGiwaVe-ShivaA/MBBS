@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
-import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { useState, useCallback } from "react";
+import Image from "next/image";
 import ApplicationFormModal from "./ApplicationFormModal";
 
 const initialFormState = {
@@ -15,7 +15,7 @@ const initialFormState = {
   coaching: "",
 };
 
-const TopBar = () => {
+export default function HeroSectionA() {
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState("");
   const [formData, setFormData] = useState(initialFormState);
@@ -72,53 +72,37 @@ Coaching Attended: ${formData.coaching}
   );
 
   return (
-    <>
-      <div className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 text-white text-sm">
-        <div className="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center">
+    <section className="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 text-white shadow-xl">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-10 md:py-16 gap-8">
+        {/* Doctor Image */}
+        <div className="w-full md:w-1/3">
+          <Image
+            src="/images/docherosectionB.jpg"
+            alt="Doctor"
+            width={400}
+            height={300}
+            className="w-auto h-auto rounded"
+            priority
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="w-full md:w-2/3 space-y-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
+            BOOKING OPEN FOR NEET-UG PREMIUM COUNSELLING SERVICES 2025-26
+          </h2>
+          <p className="text-base md:text-lg leading-relaxed max-w-prose mx-auto md:mx-0">
+            To maintain high quality, client satisfaction, and maximum accuracy,
+            we accept very limited bookings depending upon our back-end team
+            size. So, we may increase our service charge dynamically as per
+            demand.
+          </p>
           <button
-            className="font-semibold flex items-center gap-1"
             onClick={() => setShowForm(true)}
-            aria-label="Open Application Form"
+            className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-lg font-semibold transition"
           >
             Apply Now
-            <span
-              className="text-lg leading-none"
-              role="img"
-              aria-hidden="true"
-            >
-              📝
-            </span>
           </button>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              title="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              title="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              title="Twitter"
-            >
-              <FaXTwitter />
-            </a>
-          </div>
         </div>
       </div>
 
@@ -131,8 +115,6 @@ Coaching Attended: ${formData.coaching}
           error={error}
         />
       )}
-    </>
+    </section>
   );
-};
-
-export default TopBar;
+}
