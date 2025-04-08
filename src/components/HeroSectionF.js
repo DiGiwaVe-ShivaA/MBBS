@@ -48,8 +48,8 @@ export default function ToppersAcademyReviews() {
         className="max-w-6xl mx-auto"
       >
         <h2 className="text-4xl font-extrabold text-center mb-16 text-gray-900 leading-tight">
-          Reviews of <span className="text-indigo-600">Mbbs Wallah</span> & NEET
-          Aspirants After Counselling
+          Reviews of <span className="text-indigo-600">MbbsCollege.com</span> &
+          NEET Aspirants After Counselling
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

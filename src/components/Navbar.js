@@ -33,7 +33,7 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
         <Link href="/" className="hidden lg:block">
-          <Image src="/logo.jpg" alt="Logo" width={50} height={50} />
+          <Image src="/lago.png" alt="Logo" width={50} height={50} />
         </Link>
 
         {/* Mobile Header */}
@@ -45,7 +45,7 @@ export default function NavBar() {
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
           <Link href="/">
-            <Image src="/logo.jpg" alt="Logo" width={50} height={50} />
+            <Image src="/lago.png" alt="Logo" width={50} height={50} />
           </Link>
         </div>
 
@@ -125,6 +125,7 @@ export default function NavBar() {
           </div>
 
           <Link href="/neet-predictor">NEET Predictor</Link>
+          <Link href="/neet-2025">NEET 2025</Link>
         </nav>
 
         {/* Desktop CTAs */}
@@ -257,6 +258,10 @@ export default function NavBar() {
 
             <Link href="/neet-predictor" className="block py-2 border-b">
               NEET Predictor
+            </Link>
+
+            <Link href="/neet-2025" className="block py-2 border-b">
+              NEET 2025
             </Link>
 
             <div className="pt-4 flex flex-col space-y-3">
