@@ -34,7 +34,7 @@ export default function AdmissionFlow() {
     <section className="max-w-6xl mx-auto px-4 py-16 relative">
       <h2 className="text-3xl font-bold text-center mb-14 flex items-center justify-center gap-2 text-gray-800">
         <ArrowRightCircle className="w-7 h-7 text-blue-600" />
-        📊 Admission Flow (Simplified)
+        📊 Admission Flow
       </h2>
 
       <div className="relative flex flex-col md:flex-row items-center md:justify-between gap-14 md:gap-6 px-2">
