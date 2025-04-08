@@ -19,7 +19,9 @@ export default function HeroSection() {
           </span>
         </p>
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-lg animate-fade-in-slow">
-          <span className="text-cyan-300">Expert College</span>
+          <span className="text-cyan-300">
+            Experts <br /> Colleges
+          </span>
           <br />
           <span className="text-pink-300">Counseling</span>
           <br />
