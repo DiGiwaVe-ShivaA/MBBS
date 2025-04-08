@@ -91,7 +91,7 @@ export default function NEETPage() {
       </section>
 
       {/* Timeline for Admission */}
-      <section className="max-w-5xl mx-auto px-4 py-16">
+      {/* <section className="max-w-5xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2 text-gray-800">
           <ArrowRightCircle className="w-7 h-7 text-blue-600" />
           📊 Admission Flow (Simplified)
@@ -115,7 +115,7 @@ export default function NEETPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Important Dates */}
       <section className="max-w-4xl mx-auto px-4 py-10">

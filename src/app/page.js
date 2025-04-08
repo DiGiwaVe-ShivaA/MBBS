@@ -8,7 +8,7 @@ import HeroSectionD from "../components/HeroSectionD";
 import HeroSectionE from "../components/HeroSectionE";
 import HeroSectionF from "../components/HeroSectionF";
 import HeroSectionG from "../components/HeroSectionG";
-// import HeroSectionH from "../components/HeroSectionH";
+import HeroSectionH from "../components/HeroSectionH";
 import HeroSectionI from "../components/HeroSectionI";
 
 import Footer from "../components/Footer";
@@ -24,11 +24,11 @@ export default function Home() {
         <HeroSectionA />
         <HeroSectionB />
         <HeroSectionI />
+        <HeroSectionH />
         <HeroSectionC />
         <HeroSectionD />
         <HeroSectionF />
         <HeroSectionG />
-        {/* <HeroSectionH /> */}
         <HeroSectionE />
       </main>
       <Footer />
