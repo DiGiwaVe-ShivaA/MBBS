@@ -10,6 +10,7 @@ import HeroSectionF from "../components/HeroSectionF";
 import HeroSectionG from "../components/HeroSectionG";
 import HeroSectionH from "../components/HeroSectionH";
 import HeroSectionI from "../components/HeroSectionI";
+import HeroSectionJ from "../components/HeroSectionJ";
 
 import Footer from "../components/Footer";
 
@@ -30,6 +31,7 @@ export default function Home() {
         <HeroSectionF />
         <HeroSectionG />
         <HeroSectionE />
+        <HeroSectionJ />
       </main>
       <Footer />
     </div>
