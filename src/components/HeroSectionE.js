@@ -17,9 +17,9 @@ import {
   School,
   BookOpenCheck,
   FileText,
+  Info,
 } from "lucide-react";
 
-// Separate icons for front and back
 const combinedFeatures = [
   {
     frontIcon: <CheckCircle className="w-8 h-8 text-blue-600" />,
@@ -99,11 +99,67 @@ export default function WhyChooseUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold mb-12 text-gray-800"
+          className="text-4xl font-bold mb-6 text-gray-800"
         >
           Why Choose Us?
         </motion.h2>
 
+        {/* Description Section */}
+        {/* Description Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mx-auto mb-12 px-4 sm:px-6 lg:px-8 w-full max-w-5xl"
+        >
+          {/* Animated Icon Header */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="flex justify-center items-center gap-2 mb-4 text-blue-600"
+          >
+            <Info className="w-6 h-6" />
+            <span className="font-semibold uppercase text-sm tracking-wide">
+              Expert Admission Guidance
+            </span>
+          </motion.div>
+
+          {/* Gradient Divider */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            whileInView={{ opacity: 1, width: "4rem" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="h-1 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"
+          />
+
+          {/* Descriptive Text */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-base sm:text-lg text-gray-700 leading-relaxed"
+          >
+            Our platform bridges your dream of becoming a{" "}
+            <strong>medical professional</strong> with strategic career support
+            and trusted admissions guidance. Whether you're pursuing{" "}
+            <strong>MBBS or MD/MS</strong> in India or abroad, we simplify the
+            process with personalized counseling, college shortlisting, and
+            step-by-step guidance.
+            <br />
+            We assist with <strong>NEET UG/PG</strong> admission planning,
+            complete documentation, application follow-ups, and category-based
+            support for <strong>NRI Quota, Management Seats</strong>, and{" "}
+            <strong>State/Central-level quotas</strong>. With us, your path to a
+            top medical college is clearer, smarter, and truly achievable.
+          </motion.p>
+        </motion.div>
+
+        {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {combinedFeatures.map((feature, idx) => (
             <motion.div
