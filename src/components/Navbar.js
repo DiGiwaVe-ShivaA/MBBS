@@ -33,7 +33,7 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
         <Link href="/" className="hidden lg:block">
-          <Image src="/lago.png" alt="Logo" width={50} height={50} />
+          <Image src="/lago.png" alt="Logo" width={100} height={100} />
         </Link>
 
         {/* Mobile Header */}
@@ -114,10 +114,22 @@ export default function NavBar() {
                     PG
                   </Link>
                   <Link
+                    href="/courses/paramedical"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Paramedical
+                  </Link>
+                  <Link
                     href="/courses/diploma"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Diploma
+                  </Link>
+                  <Link
+                    href="/courses/pg"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Others
                   </Link>
                 </motion.div>
               )}
@@ -247,8 +259,18 @@ export default function NavBar() {
                       </Link>
                     </li>
                     <li>
+                      <Link href="/courses/paramedical" className="block">
+                        Paramedical
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/courses/diploma" className="block">
                         Diploma
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/" className="block">
+                        Others
                       </Link>
                     </li>
                   </motion.ul>

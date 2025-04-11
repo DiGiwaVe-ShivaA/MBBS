@@ -2,6 +2,7 @@
 
 import { Globe } from "lucide-react";
 import Image from "next/image";
+import clsx from "clsx"; // optional: for cleaner conditional classnames
 
 const countries = [
   {
@@ -21,33 +22,80 @@ const countries = [
       "No tuition fees in public universities, innovation & research.",
   },
   {
+    name: "Nepal",
+    flag: "/images/nepal.png",
+    description:
+      "Affordable MBBS, Indian curriculum, cultural similarity, no visa hassle.",
+  },
+  {
     name: "Italy",
     flag: "/images/italy.png",
     description: "Cultural heritage, English-taught programs, scholarships.",
+  },
+  {
+    name: "Russia",
+    flag: "/images/russia.webp",
+    description:
+      "Affordable tuition, medical universities, globally recognized degrees.",
+  },
+  {
+    name: "Kazakhstan",
+    flag: "/images/kazakhastan.jpeg",
+    description:
+      "Emerging education hub, cost-effective, English-medium medical courses.",
+  },
+  {
+    name: "Kyrgyzstan",
+    flag: "/images/Kyrgyzstan.jpg",
+    description:
+      "Low tuition fees, WHO-recognized medical degrees, Indian student-friendly.",
+  },
+  {
+    name: "Uzbekistan",
+    flag: "/images/Uzbekistan.webp",
+    description:
+      "Modern curriculum, English-taught MBBS, growing international reputation.",
+  },
+  {
+    name: "Georgia",
+    flag: "/images/Georgia.webp",
+    description:
+      "European education system, English-medium programs, clinical exposure.",
+  },
+  {
+    name: "Philippines",
+    flag: "/images/Philippines.png",
+    description:
+      "US-based curriculum, English-speaking country, good FMGE passing rate.",
   },
 ];
 
 export default function AbroadSupport() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-20 bg-gradient-to-b from-white via-blue-50 to-white">
+    <section className="max-w-7xl mx-auto px-4 py-20 bg-gradient-to-b from-white via-blue-50 to-white">
       <h2 className="text-4xl font-extrabold text-center mb-14 text-gray-900 flex items-center justify-center gap-3 tracking-tight">
         <Globe className="text-blue-600 w-8 h-8" />
-        <span>🌍 Study Abroad Support – Top Countries</span>
+        <span>
+          🌍 Study Abroad Support - Top countries for MBBS at low cost 💫
+        </span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {countries.map((country) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        {countries.map((country, index) => (
           <div
             key={country.name}
-            className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400 hover:scale-105"
+            className={clsx(
+              "bg-white rounded-3xl shadow-lg transition-transform duration-300 p-6 flex flex-col items-center text-center border hover:border-blue-400 hover:scale-105 hover:rotate-[0.5deg]",
+              index % 2 === 0 ? "bg-white" : "bg-blue-50"
+            )}
           >
-            <div className="relative w-16 h-10 mb-4">
+            <div className="relative w-20 h-12 mb-4">
               <Image
                 src={country.flag}
                 alt={`${country.name} flag`}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-sm border border-gray-300 shadow"
+                className="rounded shadow-md border border-gray-300"
               />
             </div>
             <h3 className="text-lg font-bold text-blue-800 mb-2 uppercase tracking-wide">

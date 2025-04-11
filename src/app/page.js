@@ -3,7 +3,7 @@ import TopBar from "../components/TopBar";
 import Navbar from "../components/Navbar";
 import HeroSectionA from "../components/HeroSectionA";
 import HeroSectionB from "../components/HeroSectionB";
-import HeroSectionC from "../components/HeroSectionC";
+// import HeroSectionC from "../components/HeroSectionC";
 import HeroSectionD from "../components/HeroSectionD";
 import HeroSectionE from "../components/HeroSectionE";
 import HeroSectionF from "../components/HeroSectionF";
@@ -26,8 +26,8 @@ export default function Home() {
         <HeroSectionB />
         <HeroSectionI />
         <HeroSectionH />
-        <HeroSectionC />
         <HeroSectionD />
+        {/* <HeroSectionC /> */}
         <HeroSectionF />
         <HeroSectionG />
         <HeroSectionE />

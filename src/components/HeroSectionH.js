@@ -1,114 +1,74 @@
 "use client";
 
-import { ArrowRightCircle, ArrowRight, Info } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import {
+  GraduationCap,
+  Stethoscope,
+  Code2,
+  Scale,
+  Hammer,
+  Briefcase,
+} from "lucide-react";
 
-const steps = [
+const careerPaths = [
   {
-    label: "NEET Exam",
-    info: "Appear for the NEET-UG medical entrance examination.",
+    icon: <Stethoscope className="w-6 h-6 text-red-600" />,
+    title: "Medical",
+    options: ["MBBS", "BDS", "BAMS", "BHMS", "Nursing", "Pharmacy"],
+    color: "from-red-200 to-red-50",
   },
   {
-    label: "Result",
-    info: "Check your score and percentile after the exam.",
+    icon: <Code2 className="w-6 h-6 text-blue-600" />,
+    title: "Engineering",
+    options: ["B.Tech", "B.E", "B.Arch", "Diploma", "BCA"],
+    color: "from-blue-200 to-blue-50",
   },
   {
-    label: "Counselling (MCC/State)",
-    info: "Participate in centralized/state counselling.",
+    icon: <Scale className="w-6 h-6 text-yellow-600" />,
+    title: "Commerce",
+    options: ["B.Com", "CA", "CS", "BBA", "Economics"],
+    color: "from-yellow-200 to-yellow-50",
   },
   {
-    label: "Seat Allotment",
-    info: "Get your seat in a college based on merit.",
+    icon: <Hammer className="w-6 h-6 text-purple-600" />,
+    title: "Arts",
+    options: ["BA", "Mass Comm", "Fashion Design", "Hotel Mgmt"],
+    color: "from-purple-200 to-purple-50",
   },
   {
-    label: "College Admission",
-    info: "Report to the allotted college and complete joining.",
+    icon: <Briefcase className="w-6 h-6 text-green-600" />,
+    title: "Other Fields",
+    options: ["Law", "Defense", "Animation", "Pilot", "Foreign Language"],
+    color: "from-green-200 to-green-50",
   },
 ];
 
-export default function AdmissionFlow() {
-  const [activeTooltip, setActiveTooltip] = useState(null);
-
+export default function CareerDiagram() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 relative">
-      <h2 className="text-3xl font-bold text-center mb-14 flex items-center justify-center gap-2 text-gray-800">
-        <ArrowRightCircle className="w-7 h-7 text-blue-600" />
-        📊 Admission Flow
+    <section className="py-16 bg-gradient-to-br from-white to-gray-100 px-4">
+      <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800">
+        🎓 Career Options After 12th
       </h2>
-
-      <div className="relative flex flex-col md:flex-row items-center md:justify-between gap-14 md:gap-6 px-2">
-        {/* Animated Connecting Line */}
-        <motion.div
-          className="absolute md:top-1/2 md:left-0 md:right-0 md:h-1 top-0 bottom-0 left-1/2 w-1 md:w-auto bg-gradient-to-b md:bg-gradient-to-r from-blue-100 via-blue-300 to-blue-100 z-0 rounded-full"
-          initial={{ scaleX: 0, scaleY: 0 }}
-          animate={{ scaleX: 1, scaleY: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          style={{
-            transformOrigin: "left center",
-          }}
-        />
-
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.label}
-            className="relative z-10 flex flex-col items-center text-center gap-3"
-            initial={{ opacity: 0, y: 40, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-7xl mx-auto">
+        {careerPaths.map((path, index) => (
+          <div
+            key={index}
+            className={`rounded-xl p-6 bg-gradient-to-br ${path.color} shadow-lg flex flex-col items-center text-center relative group transition-transform hover:scale-105`}
           >
-            {/* Step Number Badge with Tooltip */}
-            <div
-              className="group relative"
-              onMouseEnter={() => setActiveTooltip(index)}
-              onMouseLeave={() => setActiveTooltip(null)}
-            >
-              <motion.div
-                className="bg-gradient-to-br from-blue-100 to-blue-300 border border-blue-200 shadow-xl rounded-full w-16 h-16 flex items-center justify-center font-semibold text-blue-800 text-base cursor-pointer"
-                whileHover={{ scale: 1.15 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                {index + 1}
-              </motion.div>
-
-              {/* Tooltip */}
-              {activeTooltip === index && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute -top-24 w-56 bg-white text-sm text-gray-700 shadow-xl border border-gray-200 rounded-lg px-4 py-3 z-20"
+            <div className="mb-3">{path.icon}</div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              {path.title}
+            </h3>
+            <ul className="text-sm text-gray-600 space-y-1">
+              {path.options.map((opt, i) => (
+                <li
+                  key={i}
+                  className="before:content-['→'] before:mr-2 before:text-gray-400"
                 >
-                  <div className="flex gap-2 items-center">
-                    <Info className="w-4 h-4 text-blue-500" />
-                    <p className="font-medium">{step.label}</p>
-                  </div>
-                  <p className="mt-1 text-gray-500">{step.info}</p>
-                </motion.div>
-              )}
-            </div>
-
-            {/* Step Label */}
-            <motion.div
-              className="bg-white text-blue-700 px-6 py-2 rounded-lg border border-blue-200 shadow-md font-medium max-w-[180px] text-sm"
-              whileHover={{ scale: 1.05 }}
-            >
-              {step.label}
-            </motion.div>
-
-            {/* Animated Arrows (Desktop Only) */}
-            {index < steps.length - 1 && (
-              <motion.div
-                className="hidden md:block absolute right-[-35px] top-1/2 -translate-y-1/2 text-blue-400"
-                initial={{ x: -5 }}
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-              >
-                <ArrowRight className="w-5 h-5" />
-              </motion.div>
-            )}
-          </motion.div>
+                  {opt}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </section>

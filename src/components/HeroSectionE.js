@@ -4,64 +4,74 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
+  ShieldCheck,
   Users,
+  UserCheck,
   BookOpen,
+  Book,
   HeartHandshake,
+  Handshake,
   PhoneCall,
+  MessageCircle,
   GraduationCap,
+  School,
   BookOpenCheck,
-  Star,
+  FileText,
 } from "lucide-react";
 
+// Separate icons for front and back
 const combinedFeatures = [
   {
-    icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
+    frontIcon: <CheckCircle className="w-8 h-8 text-blue-600" />,
+    backIcon: <ShieldCheck className="w-8 h-8 text-white" />,
     title: "Verified College Admissions",
     description:
       "Gain access to trusted institutions with proven admission success.",
   },
   {
-    icon: <Users className="w-8 h-8 text-green-600" />,
+    frontIcon: <Users className="w-8 h-8 text-green-600" />,
+    backIcon: <UserCheck className="w-8 h-8 text-white" />,
     title: "Expert Faculty Panel",
     description:
       "Learn from seasoned professionals with years of industry experience.",
   },
   {
-    icon: <BookOpen className="w-8 h-8 text-purple-600" />,
+    frontIcon: <BookOpen className="w-8 h-8 text-purple-600" />,
+    backIcon: <Book className="w-8 h-8 text-white" />,
     title: "Quality Study Material",
     description:
       "Access curated materials designed for efficient learning and success.",
   },
   {
-    icon: <HeartHandshake className="w-8 h-8 text-pink-600" />,
+    frontIcon: <HeartHandshake className="w-8 h-8 text-pink-600" />,
+    backIcon: <Handshake className="w-8 h-8 text-white" />,
     title: "Personal Counseling",
     description:
       "Get tailored guidance to map your academic journey with confidence.",
   },
   {
-    icon: <PhoneCall className="w-8 h-8 text-yellow-500" />,
+    frontIcon: <PhoneCall className="w-8 h-8 text-yellow-500" />,
+    backIcon: <MessageCircle className="w-8 h-8 text-white" />,
     title: "WhatsApp & Call Support",
     description: "Reach out anytime—real support from real people who care.",
   },
   {
-    icon: <GraduationCap className="w-8 h-8 text-green-500" />,
+    frontIcon: <GraduationCap className="w-8 h-8 text-green-500" />,
+    backIcon: <School className="w-8 h-8 text-white" />,
     title: "Top College Admissions",
     description: "Expert guidance to secure admission in top medical colleges.",
   },
   {
-    icon: <BookOpenCheck className="w-8 h-8 text-blue-500" />,
+    frontIcon: <BookOpenCheck className="w-8 h-8 text-blue-500" />,
+    backIcon: <FileText className="w-8 h-8 text-white" />,
     title: "NEET Study Content",
     description: "Curated study material for NEET UG aspirants.",
   },
   {
-    icon: <Users className="w-8 h-8 text-purple-500" />,
+    frontIcon: <Users className="w-8 h-8 text-purple-500" />,
+    backIcon: <UserCheck className="w-8 h-8 text-white" />,
     title: "1-on-1 Counseling",
     description: "Personalized mentorship and emotional support.",
-  },
-  {
-    icon: <Star className="w-8 h-8 text-yellow-400" />,
-    title: "Mock Tests & Analysis",
-    description: "Practice tests with detailed performance tracking.",
   },
 ];
 
@@ -73,9 +83,9 @@ export default function WhyChooseUsSection() {
   return (
     <section
       id="why-choose-us"
-      className="relative py-20 px-6 bg-gradient-to-br from-white to-gray-100 overflow-hidden"
+      className="relative py-20 px-4 sm:px-6 bg-gradient-to-br from-white to-gray-100 overflow-hidden"
     >
-      {/* Animated Neumorphism Background Blob */}
+      {/* Background Blob */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1.4, opacity: 0.15 }}
@@ -94,7 +104,7 @@ export default function WhyChooseUsSection() {
           Why Choose Us?
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {combinedFeatures.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -102,13 +112,27 @@ export default function WhyChooseUsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl transition-all duration-300 bg-[#f0f0f3] shadow-[10px_10px_20px_#d1d9e6,_-10px_-10px_20px_#ffffff]"
+              className="flip-card"
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-gray-600">{feature.description}</p>
+              <div className="flip-card-inner">
+                {/* Front Side */}
+                <div className="flip-card-front p-6 rounded-3xl bg-[#f0f0f3] shadow-[10px_10px_20px_#d1d9e6,_-10px_-10px_20px_#ffffff]">
+                  <div className="mb-3">{feature.frontIcon}</div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{feature.description}</p>
+                </div>
+
+                {/* Back Side */}
+                <div className="flip-card-back p-6 rounded-3xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+                  <div className="mb-3">{feature.backIcon}</div>
+                  <h3 className="text-lg font-bold tracking-wide mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm italic">{feature.description}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -13,6 +13,8 @@ const initialFormState = {
   neetAttempt: "",
   dropper: "",
   coaching: "",
+  courses: [], // <-- for selected checkboxes
+  otherCourse: "", // <-- for optional 'Other' course name
 };
 
 export default function NeetCourses() {
@@ -80,7 +82,7 @@ Coaching Attended: ${formData.coaching}
       {/* Session 2025–26 */}
       <div className="mb-12">
         <h3 className="text-green-600 text-xl font-semibold mb-1">
-          Classroom Courses
+          Carrer and Admission Counselling for next year
         </h3>
         <p className="text-gray-700 font-semibold mb-4">
           Session: <span className="text-gray-900">2025-26</span>
@@ -93,20 +95,20 @@ Coaching Attended: ${formData.coaching}
             {
               title: "NURTURE",
               subtitle: "Class X to XI Moving Students",
-              duration: "Two Years",
+              // duration: "Two Years",
               target: 2027,
             },
             {
-              title: "ENTHUSIAST",
-              subtitle: "Class XI to XII Moving Students",
-              duration: "One Year",
-              target: 2026,
+              title: "Higher Studies",
+              subtitle: "After 12th Graudation",
+              // duration: "One Year",
+              target: 2027,
             },
             {
-              title: "LEADER",
+              title: "NEET",
               subtitle: "Class XII Passed Students",
-              duration: "One Year",
-              target: 2026,
+              // duration: "One Year",
+              target: 2027,
             },
           ].map((course, idx) => (
             <div
@@ -115,9 +117,9 @@ Coaching Attended: ${formData.coaching}
             >
               <h4 className="text-lg font-bold mb-2">{course.title}</h4>
               <p>{course.subtitle}</p>
-              <p className="text-sm mt-1 text-gray-600">
+              {/* <p className="text-sm mt-1 text-gray-600">
                 (Duration : {course.duration})
-              </p>
+              </p> */}
               <p className="mt-2 font-medium">Target - {course.target}</p>
             </div>
           ))}
@@ -135,16 +137,16 @@ Coaching Attended: ${formData.coaching}
         <div className="flex flex-col md:flex-row justify-center gap-6">
           {[
             {
-              title: "ALPHA ACHIEVER",
+              title: " Coaching ",
               subtitle: "Class XII Passed ",
-              duration: "One Year",
-              target: 2025,
+              // duration: "One Year",
+              target: 2027,
             },
             {
-              title: "Crash Course",
+              title: "Other Carrer Guidance",
               subtitle: "Class XII Undergoing/Passed",
-              duration: "60 Days",
-              target: 2025,
+              // duration: "60 Days",
+              target: 2027,
             },
           ].map((course, idx) => (
             <div
@@ -153,9 +155,9 @@ Coaching Attended: ${formData.coaching}
             >
               <h4 className="text-lg font-bold mb-2">{course.title}</h4>
               <p>{course.subtitle}</p>
-              <p className="text-sm mt-1 text-gray-600">
+              {/* <p className="text-sm mt-1 text-gray-600">
                 (Duration : {course.duration})
-              </p>
+              </p> */}
               <p className="mt-2 font-medium">Target - {course.target}</p>
             </div>
           ))}
