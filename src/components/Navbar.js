@@ -137,7 +137,7 @@ export default function NavBar() {
           </div>
 
           <Link href="/neet-predictor">NEET Predictor</Link>
-          <Link href="/neet-2025">NEET 2025</Link>
+          <Link href="/NEET2025">NEET 2025</Link>
         </nav>
 
         {/* Desktop CTAs */}

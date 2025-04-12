@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TopBar from "../../components/TopBar";
 import Navbar from "../../components/Navbar";
-import HeroSectionK from "../../components/HeroSectionK";
+import HeroSectionC from "../../components/HeroSectionC";
 
 import Footer from "../../components/Footer";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <TopBar />
       <Navbar />
       <main>
-        <HeroSectionK />
+        <HeroSectionC />
       </main>
       <Footer />
     </div>
