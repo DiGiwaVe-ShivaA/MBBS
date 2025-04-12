@@ -282,7 +282,7 @@ export default function NavBar() {
               NEET Predictor
             </Link>
 
-            <Link href="/neet-2025" className="block py-2 border-b">
+            <Link href="/NEET2025" className="block py-2 border-b">
               NEET 2025
             </Link>
 
