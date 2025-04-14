@@ -3,6 +3,15 @@
 import React, { useState } from "react";
 import { CalendarDays, Clock, User } from "lucide-react";
 
+import {
+  GraduationCap,
+  BookOpenCheck,
+  CalendarClock,
+  ClipboardList,
+  CheckCircle,
+} from "lucide-react";
+import { motion } from "framer-motion";
+
 const keyDates = [
   { event: "Notification Release", date: "December 14, 2024" },
   { event: "Application Window", date: "February 7 – March 7, 2025" },
@@ -14,7 +23,34 @@ const keyDates = [
   { event: "Counselling Start", date: "July 3rd week, 2025 (Tentative)" },
 ];
 
+const cards = [
+  { icon: "🧑‍⚕️", title: "One National Exam" },
+  { icon: "🏥", title: "MBBS, BDS, AYUSH Admissions" },
+  { icon: "📍", title: "Nationwide Centers" },
+  { icon: "🗃️", title: "21+ Lakh Applicants (2024)" },
+  { icon: "🏛️", title: "500+ Medical Colleges" },
+];
+
+const stats = [
+  { label: "Subjects", value: "Physics, Chemistry, Biology" },
+  { label: "Duration", value: "3 hrs 20 mins" },
+  { label: "Questions", value: "180 out of 200" },
+  { label: "Max Marks", value: "720" },
+  { label: "Marking", value: "+4 for correct, -1 for wrong" },
+];
+
 export default function Page() {
+  const data = [
+    { subject: "Biology", marks: 360 },
+    { subject: "Physics", marks: 180 },
+    { subject: "Chemistry", marks: 180 },
+  ];
+  const events = [
+    { year: 2013, event: "NEET introduced (replacing AIPMT)" },
+    { year: 2016, event: "SC declares NEET as sole exam" },
+    { year: 2019, event: "NTA takes over from CBSE" },
+    { year: "2020–24", event: "15–20 lakh candidates/year" },
+  ];
   return (
     <main className="container mx-auto px-4 py-8 max-w-5xl text-gray-800">
       <div className=" text-black rounded-md overflow-hidden shadow-lg">
@@ -49,113 +85,209 @@ export default function Page() {
         </div>
       </div>
 
-      <Section title=" 📅 Key Dates & Timeline ">
-        <div className=" overflow-x-auto shadow-lg rounded-lg">
-          <table className="min-w-full bg-white text-left text-sm">
-            <thead className="bg-blue-50 sticky top-0 z-10">
-              <tr>
-                <th className="px-6 py-3 font-medium text-gray-700">Event</th>
-                <th className="px-6 py-3 font-medium text-gray-700">Date</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              {keyDates.map(({ event, date }) => (
-                <tr key={event} className="hover:bg-blue-50 transition">
-                  <td className="px-6 py-4 font-medium">{event}</td>
-                  <td className="px-6 py-4">{date}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* eye catchng header starts */}
+
+      <section className="text-center py-16 px-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <h1 className="text-4xl font-bold mb-4">NEET Full Guide</h1>
+        <p className="text-xl">
+          The Ultimate Roadmap to the National Eligibility cum Entrance Test
+        </p>
+        <div className="mt-6 italic text-lg">
+          “The journey of a thousand miles begins with a single step.”
         </div>
-      </Section>
-
-      <Section title="🧾 What is NEET & Why It Matters">
-        <p className=" mb-2">
-          The National Eligibility cum Entrance Test (NEET-UG) is India's
-          unified medical entrance exam for courses like MBBS, BDS, BAMS, BHMS,
-          and BSMS. It ensures a standardized admission process across the
-          nation.
-        </p>
-        <p>
-          Conducted by NTA, NEET has replaced multiple state and institutional
-          exams, promoting transparency and fairness.
-        </p>
-      </Section>
-
-      <Section title="📝 Eligibility Criteria">
-        <ul className="list-disc list-inside space-y-2">
-          <li>Minimum Age: 17 years as of December 31, 2025</li>
-          <li>No upper age limit</li>
-          <li>10+2 with Physics, Chemistry, Biology/Biotech & English</li>
-          <li>Min. marks: 50% (General), 40% (Reserved), 45% (PwD)</li>
-          <li>Open to Indian Nationals, NRIs, OCIs, PIOs, Foreign Nationals</li>
-        </ul>
-      </Section>
-
-      <Section title="🖥️ Application Process">
-        <ol className="list-decimal list-inside space-y-2">
-          <li>
-            Register on{" "}
-            <a
-              href="https://neet.nta.nic.in"
-              className="text-blue-600 underline"
-              target="_blank"
-              rel="noopener noreferrer"
+      </section>
+      {/* eye catching header ends   */}
+      {/* Over View Cards starts */}
+      <section className="py-12 px-4 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Why NEET?</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="bg-white p-4 rounded-xl shadow text-center"
             >
-              neet.nta.nic.in
-            </a>
-          </li>
-          <li>Fill in personal, academic, and communication details</li>
-          <li>Upload photo, signature, certificates</li>
-          <li>
-            Pay fees: ₹1600 (Gen), ₹1500 (OBC/EWS), ₹1000 (SC/ST/PwD), ₹9500
-            (Intl.)
-          </li>
-          <li>Download and save confirmation</li>
-        </ol>
-      </Section>
-
-      <Section title="🧪 Exam Pattern">
-        <ul className="list-disc list-inside space-y-2">
-          <li>Mode: Offline (pen & paper)</li>
-          <li>Duration: 3 hours</li>
-          <li>180 MCQs across 3 subjects</li>
-          <li>Subjects: Physics (45), Chemistry (45), Biology (90)</li>
-          <li>Marking: +4 for correct, -1 for wrong, 0 for unattempted</li>
-        </ul>
-      </Section>
-
-      <Section title="📚 Syllabus Overview">
-        <p className="mb-4">
-          Based on NCERT Classes 11–12. Here's the subject-wise structure:
-        </p>
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card
-            title="Physics"
-            items={[
-              "Mechanics",
-              "Thermodynamics",
-              "Electrodynamics",
-              "Optics",
-              "Modern Physics",
-            ]}
-          />
-          <Card
-            title="Chemistry"
-            items={["Physical", "Organic", "Inorganic"]}
-          />
-          <Card
-            title="Biology"
-            items={[
-              "Cell Biology",
-              "Genetics",
-              "Human & Plant Physiology",
-              "Ecology",
-            ]}
-          />
+              <div className="text-3xl">{card.icon}</div>
+              <div className="mt-2 font-medium">{card.title}</div>
+            </div>
+          ))}
         </div>
-      </Section>
+      </section>
+      {/* Overview cards ends */}
+      {/* Exam Stats Stars */}
+      <section className="bg-white py-10 px-4">
+        <h2 className="text-center text-2xl font-bold mb-6">
+          NEET Exam Overview
+        </h2>
+        <div className="max-w-2xl mx-auto space-y-3">
+          {stats.map((item, i) => (
+            <div
+              key={i}
+              className="flex justify-between px-4 py-2 bg-gray-100 rounded-md"
+            >
+              <span className="font-medium">{item.label}</span>
+              <span>{item.value}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Exam Stats ends */}
+      {/* Subject Weightage starts */}
+      <section className="py-12 px-4 bg-gradient-to-br from-teal-50 to-green-100">
+        <h2 className="text-center text-2xl font-semibold mb-6">
+          Subject-Wise Weightage
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {data.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl p-6 w-64 shadow text-center"
+            >
+              <div className="text-xl font-bold">{item.subject}</div>
+              <div className="text-2xl mt-2 text-blue-600">
+                {item.marks} Marks
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* subject weightage ends  */}
+      {/* Eligibility starts */}
+      <section className="py-12 px-4 bg-white">
+        <h2 className="text-2xl text-center font-bold mb-6">
+          Eligibility Criteria
+        </h2>
+        <div className="max-w-3xl mx-auto space-y-3">
+          <p>✅ Age: Minimum 17 years by 31st Dec of the admission year</p>
+          <p>✅ Education: 10+2 with PCB and English</p>
+          <p>📌 Minimum Marks: Gen: 50%, OBC/SC/ST: 40%, PwD: 45%</p>
+        </div>
+      </section>
+
+      {/* Eligibility ends  */}
+      {/* History of NEET (Mini Timeline) starts */}
+      <section className="py-12 px-4 bg-gray-100">
+        <h2 className="text-2xl text-center font-semibold mb-6">
+          NEET Timeline
+        </h2>
+        <div className="max-w-2xl mx-auto space-y-4">
+          {events.map((e, idx) => (
+            <div key={idx} className="flex items-start gap-4">
+              <div className="text-blue-600 font-bold w-20">{e.year}</div>
+              <div>{e.event}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* History of NEET (Mini Timeline) ends  */}
+      {/* Inspirational End starts */}
+
+      <section className="py-16 px-4 text-center bg-blue-50">
+        <h2 className="text-2xl font-bold mb-4">
+          Conclusion: A National Vision
+        </h2>
+        <p className="max-w-3xl mx-auto text-lg">
+          NEET is more than an entrance exam – it’s the first step to becoming a
+          healer, a dreamer, and a contributor to the nation’s health.
+        </p>
+        <div className="italic mt-6 text-blue-700">
+          “Doctors are not made overnight; NEET is your beginning to a lifelong
+          commitment to healing and service.”
+        </div>
+      </section>
+
+      {/* Inspirational End ends */}
+      {/* Neet Eligibility starts */}
+      <section className="px-6 py-12 bg-gradient-to-b from-white to-blue-50">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            📝 NEET Eligibility Criteria
+          </h2>
+          <p className="text-gray-600 mb-10">
+            Know if you're eligible to begin your medical journey
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <IconCard
+              icon={<CalendarClock className="w-8 h-8 text-blue-600" />}
+              title="Minimum Age"
+              desc="17 years (by Dec 31 of admission year)"
+            />
+            <IconCard
+              icon={<GraduationCap className="w-8 h-8 text-blue-600" />}
+              title="Qualification"
+              desc="10+2 with PCB & English"
+            />
+            <IconCard
+              icon={<ClipboardList className="w-8 h-8 text-blue-600" />}
+              title="Minimum Marks"
+              desc="Gen: 50%, OBC/SC/ST: 40%, PwD: 45%"
+            />
+            <IconCard
+              icon={<CheckCircle className="w-8 h-8 text-blue-600" />}
+              title="Attempts"
+              desc="No limit on number of attempts"
+            />
+          </div>
+
+          <hr className="my-12 border-blue-200" />
+
+          <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            📊 NEET Exam Pattern
+          </h2>
+          <p className="text-gray-600 mb-10">
+            Get familiar with subject-wise distribution and marking scheme
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <SubjectCard
+              subject="Biology"
+              chapters="Botany & Zoology"
+              marks="360"
+            />
+            <SubjectCard
+              subject="Physics"
+              chapters="Mechanics, Thermo, Modern"
+              marks="180"
+            />
+            <SubjectCard
+              subject="Chemistry"
+              chapters="Organic, Inorganic, Physical"
+              marks="180"
+            />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-white shadow-md rounded-xl p-6 text-left"
+          >
+            <h3 className="text-2xl font-semibold text-blue-700 mb-3">
+              🧪 Pattern Summary
+            </h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>
+                📚 <b>Subjects:</b> Physics, Chemistry, Biology
+              </li>
+              <li>
+                ⏱️ <b>Duration:</b> 3 hrs 20 mins
+              </li>
+              <li>
+                📝 <b>Questions:</b> 180 out of 200 (MCQs)
+              </li>
+              <li>
+                📈 <b>Total Marks:</b> 720
+              </li>
+              <li>
+                ✅ <b>Correct:</b> +4 | ❌ <b>Incorrect:</b> -1
+              </li>
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+      {/* Neet eligibility ends */}
 
       <Section title="🌐 Medium of Examination">
         <p>
@@ -165,35 +297,325 @@ export default function Page() {
         </p>
       </Section>
 
-      <Section title="🎯 Preparation Tips">
-        <ul className="list-disc list-inside space-y-2">
-          <li>NCERT textbooks are the base—master them.</li>
-          <li>Make a strategic and realistic timetable.</li>
-          <li>Revise weekly and keep handy summary notes.</li>
-          <li>Attempt mock tests in timed environments.</li>
-          <li>Analyze weak areas and work on them weekly.</li>
-        </ul>
-      </Section>
+      {/* neet overview starts */}
+      <div className="flex flex-col gap-12 p-6 max-w-5xl mx-auto">
+        {/* 6. Syllabus Overview */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-blue-50 rounded-2xl p-6 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">📘 6. Syllabus Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold text-blue-700">Physics:</h3>
+              <ul className="list-disc list-inside text-sm mt-2">
+                <li>Units & Measurement</li>
+                <li>Motion, Force, Gravitation</li>
+                <li>Thermodynamics</li>
+                <li>Electromagnetism</li>
+                <li>Optics & Modern Physics</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-green-700">
+                Chemistry:
+              </h3>
+              <ul className="list-disc list-inside text-sm mt-2">
+                <li>Structure of Atom</li>
+                <li>Thermodynamics</li>
+                <li>Organic Chemistry</li>
+                <li>Chemical Bonding</li>
+                <li>Surface Chemistry</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-pink-700">Biology:</h3>
+              <ul className="list-disc list-inside text-sm mt-2">
+                <li>Cell Biology</li>
+                <li>Genetics & Evolution</li>
+                <li>Plant & Human Physiology</li>
+                <li>Ecology & Environment</li>
+                <li>Biotech & Microbes</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-xs mt-4 italic text-gray-600">
+            Tip: Stick to NCERT Books as 90–95% of questions are NCERT-based.
+          </p>
+        </motion.section>
 
-      <Section title="🩻 MBBS Course Details">
-        <p className="mb-2">
-          The MBBS (Bachelor of Medicine and Bachelor of Surgery) is a 5.5-year
-          undergraduate program, including 1 year of compulsory internship.
-        </p>
-        <p className="mb-2">
-          The curriculum includes subjects like Anatomy, Physiology,
-          Biochemistry, Pharmacology, Pathology, Microbiology, Forensic
-          Medicine, and clinical postings in major disciplines like Medicine,
-          Surgery, Pediatrics, and Obstetrics & Gynecology.
-        </p>
-        <p>
-          On successful completion, students can practice medicine or pursue
-          specialization through postgraduate courses like MD/MS.
-        </p>
-      </Section>
+        {/* 7. Preparation Strategy */}
+        <motion.section
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-yellow-50 rounded-2xl p-6 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">
+            🧠 7. NEET Preparation Strategy
+          </h2>
+          <div className="space-y-3 text-sm">
+            <div>
+              <h3 className="font-semibold">🕒 Time Management:</h3>
+              <ul className="list-disc list-inside">
+                <li>Create a study timetable.</li>
+                <li>Divide time for all subjects.</li>
+                <li>Include revision and mock tests.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold">📚 Resources:</h3>
+              <p>
+                <strong>Books:</strong> NCERT, HC Verma, MTG & Trueman’s Biology
+              </p>
+              <p>
+                <strong>Mock Tests:</strong> 25–30 full-length papers, join AI
+                Test Series
+              </p>
+              <p>
+                <strong>Coaching:</strong> Online (PW, BYJU'S), Offline (Aakash,
+                Allen)
+              </p>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* 8. Tips for Success */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-green-50 rounded-2xl p-6 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">
+            💡 8. Tips for Success in NEET
+          </h2>
+          <ul className="list-disc list-inside text-sm">
+            <li>Focus on Biology – high weightage.</li>
+            <li>Revise NCERT multiple times.</li>
+            <li>Practice mock tests in time-bound manner.</li>
+            <li>Analyze mistakes regularly.</li>
+            <li>Stay healthy & motivated.</li>
+          </ul>
+        </motion.section>
+
+        {/* 9. Cutoff Trends */}
+        <motion.section
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-red-50 rounded-2xl p-6 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">📊 9. Cutoff Trends</h2>
+          <table className="table-auto w-full text-sm">
+            <thead>
+              <tr className="bg-red-100">
+                <th className="p-2 text-left">Category</th>
+                <th className="p-2 text-left">NEET 2024 Cutoff (Expected)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="p-2">General</td>
+                <td className="p-2">720–137</td>
+              </tr>
+              <tr>
+                <td className="p-2">OBC/SC/ST</td>
+                <td className="p-2">136–107</td>
+              </tr>
+              <tr>
+                <td className="p-2">PwD</td>
+                <td className="p-2">136–121</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="text-xs mt-2 italic text-gray-600">
+            *Subject to variation based on paper difficulty & applicants.
+          </p>
+        </motion.section>
+
+        {/* 10. Counseling Process */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-purple-50 rounded-2xl p-6 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">
+            🎯 10. NEET Counseling Process
+          </h2>
+          <p className="text-sm mb-2">
+            Conducted by: <strong>MCC</strong> (AIQ) &{" "}
+            <strong>State Authorities</strong> (State Quota)
+          </p>
+          <p className="text-sm mb-2">
+            Rounds: Round 1, Round 2, Mop-up, Stray Round
+          </p>
+          <h3 className="font-semibold mt-3">📄 Documents Required:</h3>
+          <ul className="list-disc list-inside text-sm">
+            <li>Admit Card & Scorecard</li>
+            <li>Class 10 & 12 Marksheet</li>
+            <li>Caste & Domicile Certificate</li>
+            <li>Government ID Proof</li>
+          </ul>
+        </motion.section>
+      </div>
+      {/* Neet overview ends  */}
+      {/* secelet starts */}
+      <div className="p-6 space-y-12 max-w-5xl mx-auto">
+        {/* Colleges Section */}
+        <section className="space-y-6">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-center text-blue-700"
+          >
+            🏥 Top Medical Colleges Under NEET
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-green-600">
+                Top Government Colleges
+              </h3>
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>AIIMS Delhi</li>
+                <li>JIPMER Puducherry</li>
+                <li>Maulana Azad Medical College</li>
+                <li>KGMU Lucknow</li>
+                <li>CMC Vellore</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-purple-600">
+                Top Private Colleges
+              </h3>
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>Kasturba Medical College, Manipal</li>
+                <li>SRMC Chennai</li>
+                <li>DY Patil Pune</li>
+                <li>Amrita Kochi</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Seats Section */}
+        <section className="space-y-6">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-3xl font-bold text-center text-blue-700"
+          >
+            🏛️ Medical Seats Through NEET
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-blue-100 rounded-xl p-4 shadow">
+              <p className="font-semibold">AIQ (All India Quota)</p>
+              <p>15% of seats in all government medical colleges.</p>
+            </div>
+            <div className="bg-blue-100 rounded-xl p-4 shadow">
+              <p className="font-semibold">State Quota</p>
+              <p>
+                85% seats reserved for domiciled students of the respective
+                state.
+              </p>
+            </div>
+            <div className="bg-blue-100 rounded-xl p-4 shadow">
+              <p className="font-semibold">Deemed Universities</p>
+              <p>Fully private and central control institutions.</p>
+            </div>
+            <div className="bg-blue-100 rounded-xl p-4 shadow">
+              <p className="font-semibold">Central Institutions</p>
+              <p>AIIMS, JIPMER (via NEET now).</p>
+            </div>
+            <div className="bg-blue-100 rounded-xl p-4 shadow">
+              <p className="font-semibold">AYUSH Courses</p>
+              <p>Includes BAMS, BHMS, BUMS, etc.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Fee Structure Section */}
+        <section className="space-y-6">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-3xl font-bold text-center text-blue-700"
+          >
+            💰 Fee Structure Overview
+          </motion.h2>
+
+          <div className="overflow-x-auto">
+            <table className="w-full table-auto border border-gray-300 rounded-xl">
+              <thead className="bg-gray-100 text-gray-800">
+                <tr>
+                  <th className="px-4 py-2 text-left">College Type</th>
+                  <th className="px-4 py-2 text-left">Fee Range (Per Year)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-4 py-2">Government</td>
+                  <td className="px-4 py-2">₹10,000 – ₹1,00,000</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">Private Medical</td>
+                  <td className="px-4 py-2">₹5,00,000 – ₹25,00,000</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">NRI Quota</td>
+                  <td className="px-4 py-2">₹25L – ₹50L+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      {/* ends  */}
 
       <FAQ />
     </main>
+  );
+}
+
+function IconCard({ icon, title, desc }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+      className="bg-white shadow-lg p-6 rounded-xl"
+    >
+      <div className="mb-3">{icon}</div>
+      <h4 className="text-lg font-bold text-blue-800">{title}</h4>
+      <p className="text-sm text-gray-600">{desc}</p>
+    </motion.div>
+  );
+}
+
+function SubjectCard({ subject, chapters, marks }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-md p-5 rounded-xl border-t-4 border-blue-600"
+    >
+      <h4 className="text-xl font-semibold text-blue-800 mb-2">{subject}</h4>
+      <p className="text-sm text-gray-500 mb-1">
+        <b>Chapters:</b> {chapters}
+      </p>
+      <p className="text-sm text-gray-500">
+        <b>Marks:</b> {marks}
+      </p>
+    </motion.div>
   );
 }
 
