@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 import ApplicationFormModal from "./ApplicationFormModal";
 
 const initialFormState = {
@@ -73,10 +78,10 @@ Coaching Attended: ${formData.coaching}
 
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 text-white text-sm">
+      <div className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 text-white text-sm shadow-md">
         <div className="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center">
           <button
-            className="font-semibold flex items-center gap-1"
+            className="font-semibold flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full hover:bg-white/30 transition-all duration-300 text-sm"
             onClick={() => setShowForm(true)}
             aria-label="Open Application Form"
           >
@@ -90,34 +95,41 @@ Coaching Attended: ${formData.coaching}
             </span>
           </button>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              title="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              title="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              title="Twitter"
-            >
-              <FaXTwitter />
-            </a>
+          <div className="flex items-center gap-4">
+            {[
+              {
+                icon: <FaInstagram className="text-xl" />,
+                link: "https://www.instagram.com/nset.pvt.ltd?igsh=YXRvdWF0c2VkOGx4",
+                label: "Instagram",
+              },
+              {
+                icon: <FaFacebookF className="text-xl" />,
+                link: "https://www.facebook.com/share/1ZAU1GRZKr/",
+                label: "Facebook",
+              },
+              {
+                icon: <FaXTwitter className="text-xl" />,
+                link: "https://x.com",
+                label: "Twitter",
+              },
+              {
+                icon: <FaYoutube className="text-xl" />,
+                link: "https://youtube.com/@nset-b6f?si=FA34n5xgpGXEFa8K",
+                label: "YouTube",
+              },
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.label}
+                title={item.label}
+                className="p-2 rounded-full hover:bg-white/20 transition duration-300"
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

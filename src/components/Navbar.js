@@ -136,8 +136,9 @@ export default function NavBar() {
             </AnimatePresence>
           </div>
 
-          <Link href="/neet-predictor">NEET Predictor</Link>
+          {/* <Link href="/neetpredicter">NEET Predictor</Link> */}
           <Link href="/NEET2025">NEET 2025</Link>
+          <Link href="/wecater">Services</Link>
         </nav>
 
         {/* Desktop CTAs */}
@@ -278,12 +279,15 @@ export default function NavBar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/neet-predictor" className="block py-2 border-b">
+            {/* <Link href="/neetpredicter" className="block py-2 border-b">
               NEET Predictor
-            </Link>
+            </Link> */}
 
             <Link href="/NEET2025" className="block py-2 border-b">
               NEET 2025
+            </Link>
+            <Link href="/wecater" className="block py-2 border-b">
+              Service
             </Link>
 
             <div className="pt-4 flex flex-col space-y-3">
