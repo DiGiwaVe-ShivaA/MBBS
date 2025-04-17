@@ -23,27 +23,29 @@ export default function TestimonialsBanner() {
   ];
 
   return (
-    <div className="bg-[#f9f9f9] p-6 space-y-8">
+    <div className="bg-[#f9f9f9] px-4 py-10 space-y-8">
       {/* Testimonials */}
-      <div className="flex gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center">
         {testimonials.map((t, i) => (
           <div
             key={i}
-            className={`rounded-lg p-4 w-64 shadow-md bg-white border ${
+            className={`rounded-lg p-6 w-full sm:w-64 max-w-xs shadow-md bg-white border transition ${
               i === 0 ? "border-blue-500" : "border-transparent"
             }`}
           >
-            <p className="text-lg italic mb-4">“{t.quote}”</p>
+            <p className="text-base sm:text-lg italic mb-4 text-gray-700">
+              “{t.quote}”
+            </p>
             <div className="flex items-center gap-3">
               <Image
                 src={t.img}
                 alt="Avatar"
                 width={40}
                 height={40}
-                className="rounded-full"
+                className="rounded-full object-cover"
               />
               <div>
-                <p className="font-semibold text-sm">{t.name}</p>
+                <p className="font-semibold text-sm text-gray-800">{t.name}</p>
                 <p className="text-xs text-gray-500">{t.description}</p>
               </div>
             </div>
@@ -53,19 +55,22 @@ export default function TestimonialsBanner() {
 
       {/* Banner Section */}
       <div className="bg-white border-4 border-orange-400 rounded-2xl flex flex-col md:flex-row overflow-hidden">
-        <div className="w-full md:w-1/2 bg-white px-8 py-10 flex items-center justify-center">
-          <h2 className="text-5xl font-extrabold text-black leading-tight text-center md:text-left">
+        {/* Left */}
+        <div className="w-full md:w-1/2 bg-white px-6 py-10 flex items-center justify-center text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight">
             10 YEARS
             <br />
             OF SUCCESS
           </h2>
         </div>
-        <div className="w-full md:w-1/2 bg-gray-800 px-8 py-10 flex flex-col items-center justify-center text-center md:text-left">
-          <p className="text-2xl font-semibold text-white mb-6">
+
+        {/* Right */}
+        <div className="w-full md:w-1/2 bg-gray-800 px-6 py-10 flex flex-col items-center justify-center text-center md:text-left">
+          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-6">
             Transform Confusion Into Confidence – Schedule Your Free Career
             Counselling Call!
           </p>
-          <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-md font-bold">
+          <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
             See Details
           </button>
         </div>
