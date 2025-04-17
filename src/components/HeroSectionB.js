@@ -35,12 +35,7 @@ export default function HeroSectionA() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="w-full bg-gradient-to-br from-purple-700 via-blue-600 to-cyan-500 text-white relative overflow-hidden">
-      {/* Top Label */}
-      <div className="text-center py-4 text-white text-5xl tracking-wider font-semibold bg-black/10 backdrop-blur">
-        (NSET) Namastubhyam Saraswati Edu Tech Private Limited.
-      </div>
-
+    <section className="w-full bg-white text-black relative overflow-hidden">
       {/* Text Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 md:py-20 flex flex-col items-center text-center space-y-10">
         <motion.div
@@ -49,27 +44,22 @@ export default function HeroSectionA() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight drop-shadow-md">
-            <span className="inline-flex items-center justify-center gap-2 text-yellow-300">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight drop-shadow-md text-black">
+            <span className="inline-flex items-center justify-center gap-2 text-blue-500">
               <Sparkles className="w-7 h-7 animate-pulse" />
-              Booking Open for
+              Gear Up Future Doctors!
             </span>
             <br />
-            <span className="text-yellow-200">
-              NEET-UG & PG Premium Counselling Services 2025–26
+            <span className="text-black">
+              NEET-UG & PG 2025-26 Premium Counselling is LIVE!
             </span>
           </h1>
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
-            To ensure the highest quality and accuracy, we limit bookings based
-            on our expert team's capacity. Our service charges may vary
-            dynamically with demand.
-          </p>
         </motion.div>
       </div>
 
-      {/* Full-Width Image Grid */}
+      {/* Full-Width Image Grid with Overlay */}
       <motion.div
-        className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 px-2 md:px-4"
+        className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 px-3 md:px-6 pb-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -78,15 +68,21 @@ export default function HeroSectionA() {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="w-full h-full overflow-hidden"
+            className="relative w-full h-[260px] sm:h-[300px] md:h-[340px] lg:h-[380px] group cursor-pointer overflow-hidden rounded-xl shadow-md"
           >
             <Image
               src={src}
               alt={`Medical Image ${index + 1}`}
-              width={500}
-              height={400}
-              className="object-cover w-full h-52 sm:h-60 md:h-64 lg:h-72"
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
+
+            {/* SLIDE-UP OVERLAY */}
+            <div className="absolute inset-0 bg-black/50 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-center">
+              <span className="text-white text-lg font-semibold">
+                Click to know more
+              </span>
+            </div>
           </motion.div>
         ))}
       </motion.div>

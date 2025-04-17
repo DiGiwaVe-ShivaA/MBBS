@@ -1,10 +1,21 @@
 "use client";
-
+import React, { useState, useCallback } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ApplicationFormModal from "./ApplicationFormModal";
+
+const initialFormState = {
+  name: "",
+  mobile: "",
+  city: "",
+  state: "",
+  course: "",
+  neetAttempt: "",
+  dropper: "",
+  coaching: "",
+};
 
 export default function NavBar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -13,6 +24,50 @@ export default function NavBar() {
     colleges: false,
     courses: false,
   });
+  const [showForm, setShowForm] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState(initialFormState);
+
+  const handleChange = useCallback((e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }, []);
+
+  const resetForm = useCallback(() => {
+    setFormData(initialFormState);
+    setError("");
+  }, []);
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const mobileRegex = /^[0-9]{10}$/;
+
+      if (!formData.mobile || !mobileRegex.test(formData.mobile)) {
+        setError("Please enter a valid 10-digit mobile number");
+        return;
+      }
+      if (
+        !formData.name ||
+        !formData.city ||
+        !formData.state ||
+        !formData.course
+      ) {
+        setError("Please fill in all required fields");
+        return;
+      }
+
+      const message = `*New Application Form:*\nName: ${formData.name}\nMobile: ${formData.mobile}\nCity: ${formData.city}\nState: ${formData.state}\nCourse: ${formData.course}\nNEET Attempt: ${formData.neetAttempt}\nDropper: ${formData.dropper}\nCoaching Attended: ${formData.coaching}`;
+      const url = `https://wa.me/9557911144?text=${encodeURIComponent(
+        message
+      )}`;
+
+      window.open(url, "_blank");
+
+      resetForm();
+      setShowForm(false);
+    },
+    [formData, resetForm]
+  );
 
   const dropdownAnimation = {
     initial: { opacity: 0, y: -10 },
@@ -29,7 +84,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className="bg-gray-100 shadow-sm relative z-50">
+    <header className="bg-white shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
         <Link href="/" className="hidden lg:block">
@@ -139,23 +194,21 @@ export default function NavBar() {
           {/* <Link href="/neetpredicter">NEET Predictor</Link> */}
           <Link href="/NEET2025">NEET 2025</Link>
           <Link href="/wecater">Services</Link>
+          <button
+            className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold px-5 py-2 rounded-full shadow-md hover:opacity-90 transition-all duration-300 text-sm"
+            onClick={() => setShowForm(true)}
+            aria-label="Open Application Form"
+          >
+            Apply Now
+            <span
+              className="text-lg leading-none ml-2"
+              role="img"
+              aria-hidden="true"
+            >
+              📝
+            </span>
+          </button>
         </nav>
-
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex items-center space-x-3">
-          <Link
-            href="/counselling"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full"
-          >
-            Live Counselling
-          </Link>
-          <Link
-            href="/appointment"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full"
-          >
-            Book Appointment
-          </Link>
-        </div>
       </div>
 
       {/* Mobile Dropdown */}
@@ -279,34 +332,34 @@ export default function NavBar() {
               </AnimatePresence>
             </div>
 
-            {/* <Link href="/neetpredicter" className="block py-2 border-b">
-              NEET Predictor
-            </Link> */}
-
             <Link href="/NEET2025" className="block py-2 border-b">
               NEET 2025
             </Link>
             <Link href="/wecater" className="block py-2 border-b">
               Service
             </Link>
-
-            <div className="pt-4 flex flex-col space-y-3">
-              <Link
-                href="/counselling"
-                className="bg-blue-600 text-white text-center py-2 rounded-full"
-              >
-                Live Counselling
-              </Link>
-              <Link
-                href="/appointment"
-                className="bg-blue-600 text-white text-center py-2 rounded-full"
-              >
-                Book Appointment
-              </Link>
-            </div>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setShowForm(true);
+              }}
+              className=" bg-gradient-to-r from-cyan-400 to-purple-500  mt-4 w-full text-left py-2 font-semibold text-blue-600"
+            >
+              📝 Apply Now
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {showForm && (
+        <ApplicationFormModal
+          formData={formData}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          closeModal={() => setShowForm(false)}
+          error={error}
+        />
+      )}
     </header>
   );
 }

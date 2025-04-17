@@ -12,15 +12,14 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1A2A] text-white py-12">
+    <footer className="bg-[#4080ee] text-white py-12">
       <div className="lg:px-12 max-w-7xl mx-auto px-6">
         {/* Upper Section */}
-        <div className="grid grid-cols-1 border-b border-gray-700 gap-8 md:grid-cols-3 pb-8">
+        <div className="grid grid-cols-1 border-b border-gray-300 gap-8 md:grid-cols-3 pb-8">
           {/* Logo Section */}
           <div className="flex flex-col text-center items-center md:items-center">
-            {/* Logo Image */}
             <Image
-              src="/images/Logoa.jpg"
+              src="/lago.png"
               alt="Company Logo"
               width={100}
               height={100}
@@ -29,15 +28,14 @@ export default function Footer() {
               fetchPriority="high"
               className="h-16 rounded-full w-16 hover:scale-105 lg:h-24 lg:w-24 mt-3 mx-auto object-cover transition-transform"
             />
-
-            <p className="text-center text-gray-400 text-sm md:text-left mt-3">
+            <p className="text-center text-gray-200 text-sm md:text-left mt-3">
               Your trusted guide to a career in medicine.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center">
-            <h3 className="text-[#18A0FB] text-xl font-semibold mb-4">
+            <h3 className="text-white text-xl font-semibold mb-4">
               Quick Links
             </h3>
             <div className="grid grid-cols-2 text-left gap-x-6 gap-y-3">
@@ -50,12 +48,11 @@ export default function Footer() {
                 { name: "Blogs", link: "/blogs" },
                 { name: "State", link: "/state" },
                 { name: "Counseling", link: "/counseling" },
-                // { name: "Privacy Policy", link: "/privacy-policy" },
               ].map(({ name, link }, index) => (
                 <Link
                   key={index}
                   href={link}
-                  className="flex text-gray-400 duration-300 hover:text-[#18A0FB] items-center transition"
+                  className="flex text-white hover:underline items-center transition"
                 >
                   <span className="mr-2">➤</span> {name}
                 </Link>
@@ -65,17 +62,17 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-[#18A0FB] text-xl font-semibold mb-4">
+            <h3 className="text-white text-xl font-semibold mb-4">
               Contact Details
             </h3>
-            <p className="flex text-gray-300 items-center">
-              <FaPhoneAlt className="text-green-400 mr-2" /> +91 1234 656 789
+            <p className="flex text-white items-center">
+              <FaPhoneAlt className="text-green-300 mr-2" /> +91 1234 656 789
             </p>
-            <p className="flex text-gray-300 items-center mt-2">
-              <FaEnvelope className="text-yellow-400 mr-2" /> info@BADOC.com
+            <p className="flex text-white items-center mt-2">
+              <FaEnvelope className="text-yellow-300 mr-2" /> info@BADOC.com
             </p>
-            <p className="flex text-gray-300 items-start mt-2">
-              <FaMapMarkerAlt className="text-red-400 mr-2 mt-1" />
+            <p className="flex text-white items-start mt-2">
+              <FaMapMarkerAlt className="text-red-300 mr-2 mt-1" />
               01/A Best Place, Bhagwanpur, Dehradun
             </p>
           </div>
@@ -89,23 +86,23 @@ export default function Footer() {
               {
                 icon: FaFacebookF,
                 link: "#",
-                hoverColor: "hover:text-blue-500 bg-blue-900/20",
+                bg: "bg-[#1877F2]", // Facebook Blue
               },
               {
                 icon: FaInstagram,
                 link: "#",
-                hoverColor: "hover:text-pink-500 bg-pink-900/20",
+                bg: "bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600", // Instagram gradient
               },
               {
                 icon: FaLinkedinIn,
                 link: "#",
-                hoverColor: "hover:text-blue-400 bg-blue-800/20",
+                bg: "bg-[#0A66C2]", // LinkedIn Blue
               },
-            ].map(({ icon: Icon, link, hoverColor }, index) => (
+            ].map(({ icon: Icon, link, bg }, index) => (
               <Link
                 key={index}
                 href={link}
-                className={`text-gray-300 p-3 rounded-full transition duration-300 ${hoverColor} shadow-md hover:shadow-lg`}
+                className={`text-white p-3 rounded-full transition duration-300 ${bg} shadow-md hover:scale-110`}
                 aria-label="Social Media"
               >
                 <Icon size={20} />
@@ -114,15 +111,15 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-gray-400 text-sm md:mt-0 mt-4">
+          <p className="text-gray-200 text-sm md:mt-0 mt-4">
             © {new Date().getFullYear()} B'a'Doc. All Rights Reserved. Designed
-            By <span className="text-green-400 font-semibold">DIGIWAVE</span>
+            By <span className="text-green-200 font-semibold">DIGIWAVE</span>
           </p>
         </div>
       </div>
 
       {/* Floating WhatsApp Button */}
-      <div className="flex flex-col bottom-6 fixed right-6 space-y-3">
+      <div className="flex flex-col bottom-6 fixed right-6 space-y-3 z-50">
         <Link
           href="#"
           className="bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600"

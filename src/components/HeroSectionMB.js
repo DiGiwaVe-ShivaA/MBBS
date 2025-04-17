@@ -16,7 +16,7 @@ const colleges = [
   },
   {
     name: "AIIMS Delhi - MBBS",
-    location: "Kashmir",
+    location: "New Delhi",
     category: "MBBS",
     fees: "₹1,500",
     deadline: "01 Apr - 30 Apr 2024",

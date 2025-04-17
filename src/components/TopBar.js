@@ -7,6 +7,8 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import { FaHeadset } from "react-icons/fa"; // this exists ✅
+import { FaCalendarCheck, FaUserHeadset } from "react-icons/fa6";
 import ApplicationFormModal from "./ApplicationFormModal";
 
 const initialFormState = {
@@ -78,42 +80,44 @@ Coaching Attended: ${formData.coaching}
 
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 text-white text-sm shadow-md">
-        <div className="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center">
-          <button
-            className="font-semibold flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full hover:bg-white/30 transition-all duration-300 text-sm"
-            onClick={() => setShowForm(true)}
-            aria-label="Open Application Form"
-          >
-            Apply Now
-            <span
-              className="text-lg leading-none"
-              role="img"
-              aria-hidden="true"
-            >
-              📝
-            </span>
-          </button>
+      <div className="text-sm shadow-md">
+        <div className="max-w-screen-xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="w-full flex justify-center">
+            <div className="flex gap-4">
+              <button
+                className="flex items-center gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
+                onClick={() => alert("Book Appointment clicked")}
+              >
+                <FaCalendarCheck className="text-white" /> Book Appointment
+              </button>
+              <button
+                className="flex items-center gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
+                onClick={() => alert("Live Counseling clicked")}
+              >
+                <FaHeadset className="text-white" /> Live Counseling
+              </button>
+            </div>
+          </div>
 
           <div className="flex items-center gap-4">
             {[
               {
-                icon: <FaInstagram className="text-xl" />,
+                icon: <FaInstagram className="text-xl text-[#E4405F]" />,
                 link: "https://www.instagram.com/nset.pvt.ltd?igsh=YXRvdWF0c2VkOGx4",
                 label: "Instagram",
               },
               {
-                icon: <FaFacebookF className="text-xl" />,
+                icon: <FaFacebookF className="text-xl text-[#1877F2]" />,
                 link: "https://www.facebook.com/share/1ZAU1GRZKr/",
                 label: "Facebook",
               },
               {
-                icon: <FaXTwitter className="text-xl" />,
+                icon: <FaXTwitter className="text-xl text-black" />,
                 link: "https://x.com",
                 label: "Twitter",
               },
               {
-                icon: <FaYoutube className="text-xl" />,
+                icon: <FaYoutube className="text-xl text-[#FF0000]" />,
                 link: "https://youtube.com/@nset-b6f?si=FA34n5xgpGXEFa8K",
                 label: "YouTube",
               },
@@ -125,7 +129,7 @@ Coaching Attended: ${formData.coaching}
                 rel="noopener noreferrer"
                 aria-label={item.label}
                 title={item.label}
-                className="p-2 rounded-full hover:bg-white/20 transition duration-300"
+                className="p-2 rounded-full hover:bg-gray-200 transition duration-300"
               >
                 {item.icon}
               </a>

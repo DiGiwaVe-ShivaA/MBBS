@@ -1,161 +1,130 @@
-// import React from "react";
+"use client";
 
-// const colleges = [
-//   {
-//     rank: 1,
-//     logo: "/college1.jpg",
-//     name: "Maulana Azad Institute of Dental Sciences - BDS",
-//     location: "New Delhi",
-//     ranking: "#1 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 550",
-//     deadline: "01 Apr - 30 Apr 2024",
-//     fees: "₹85,000 1st Year Fees",
-//     rating: "5/5",
-//   },
-//   {
-//     rank: 2,
-//     logo: "/college2.jpg",
-//     name: "Manipal College of Dental Sciences - BDS",
-//     location: "Manipal, Karnataka",
-//     ranking: "#2 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 520",
-//     deadline: "10 May - 31 May 2024",
-//     fees: "₹5,50,000 1st Year Fees",
-//     rating: "4.9/5",
-//   },
-//   {
-//     rank: 3,
-//     logo: "/college3.jpg",
-//     name: "Indian Institute of Science - M.Sc Physics",
-//     location: "Bangalore, Karnataka",
-//     ranking: "#1 Science University in India 2024",
-//     cutoff: "JEST 2024 Cut off 90%",
-//     deadline: "05 June - 20 June 2024",
-//     fees: "₹30,000 1st Year Fees",
-//     rating: "4.9/5",
-//   },
-//   {
-//     rank: 4,
-//     logo: "/college4.jpg",
-//     name: "Government Dental College - BDS",
-//     location: "Mumbai, Maharashtra",
-//     ranking: "#3 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 500",
-//     deadline: "15 Apr - 10 May 2024",
-//     fees: "₹75,000 1st Year Fees",
-//     rating: "4.8/5",
-//   },
-//   {
-//     rank: 5,
-//     logo: "/college5.jpg",
-//     name: "University of Hyderabad - M.Sc Biochemistry",
-//     location: "Hyderabad, Telangana",
-//     ranking: "#2 Life Sciences University in India 2024",
-//     cutoff: "CUET 2024 Cut off 88%",
-//     deadline: "01 May - 25 May 2024",
-//     fees: "₹20,000 1st Year Fees",
-//     rating: "4.9/5",
-//   },
-//   {
-//     rank: 6,
-//     logo: "/college6.jpg",
-//     name: "SRM Dental College - BDS",
-//     location: "Chennai, Tamil Nadu",
-//     ranking: "#4 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 480",
-//     deadline: "10 June - 30 June 2024",
-//     fees: "₹4,00,000 1st Year Fees",
-//     rating: "4.7/5",
-//   },
-//   {
-//     rank: 7,
-//     logo: "/college7.jpg",
-//     name: "Jawaharlal Nehru University - M.Sc Biotechnology",
-//     location: "New Delhi",
-//     ranking: "#1 Science University in India 2024",
-//     cutoff: "CUET 2024 Cut off 90%",
-//     deadline: "20 May - 10 June 2024",
-//     fees: "₹12,000 1st Year Fees",
-//     rating: "4.8/5",
-//   },
-//   {
-//     rank: 8,
-//     logo: "/college8.jpg",
-//     name: "Bangalore Institute of Dental Sciences - BDS",
-//     location: "Bangalore, Karnataka",
-//     ranking: "#5 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 470",
-//     deadline: "05 Apr - 20 Apr 2024",
-//     fees: "₹3,50,000 1st Year Fees",
-//     rating: "4.7/5",
-//   },
-//   {
-//     rank: 9,
-//     logo: "/college9.jpg",
-//     name: "Pondicherry University - M.Sc Environmental Science",
-//     location: "Puducherry",
-//     ranking: "#3 Science University in India 2024",
-//     cutoff: "CUET 2024 Cut off 85%",
-//     deadline: "10 Apr - 30 Apr 2024",
-//     fees: "₹15,000 1st Year Fees",
-//     rating: "4.7/5",
-//   },
-//   {
-//     rank: 10,
-//     logo: "/college10.jpg",
-//     name: "Saveetha Dental College - BDS",
-//     location: "Chennai, Tamil Nadu",
-//     ranking: "#6 Dental College in India 2024",
-//     cutoff: "NEET 2024 Cut off 460",
-//     deadline: "15 May - 10 June 2024",
-//     fees: "₹5,00,000 1st Year Fees",
-//     rating: "4.6/5",
-//   },
-// ];
+import { FaArrowRight } from "react-icons/fa6";
 
-// const CollegeTable = () => {
-//   return (
-//     <div className="overflow-x-auto p-4 px-48">
-//       <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden text-sm md:text-base">
-//         <thead className="bg-gray-800 text-white">
-//           <tr>
-//             <th className="p-3 text-left">College</th>
-//             <th className="p-3 text-left hidden md:table-cell">Location</th>
-//             <th className="p-3 text-left">Ranking</th>
-//             <th className="p-3 text-left hidden md:table-cell">Cutoff</th>
-//             <th className="p-3 text-left hidden md:table-cell">
-//               Application Deadline
-//             </th>
-//             <th className="p-3 text-left">Fees</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {colleges.map((college, index) => (
-//             <tr key={index} className="border-b hover:bg-gray-100">
-//               <td className="p-3 flex items-center space-x-2">
-//                 <img
-//                   src={college.logo}
-//                   alt={college.name}
-//                   className="h-10 w-10 object-contain"
-//                 />
-//                 <div>
-//                   <span className="font-semibold block">{college.name}</span>
-//                   <span className="text-yellow-500 flex items-center">
-//                     ⭐ {college.rating}
-//                   </span>
-//                 </div>
-//               </td>
-//               <td className="p-3 hidden md:table-cell">{college.location}</td>
-//               <td className="p-3">{college.ranking}</td>
-//               <td className="p-3 hidden md:table-cell">{college.cutoff}</td>
-//               <td className="p-3 hidden md:table-cell">{college.deadline}</td>
-//               <td className="p-3 font-bold">{college.fees}</td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
+const courseGroups = [
+  {
+    title: "Undergraduate (UG) Courses",
+    courses: [
+      "MBBS",
+      "BDS",
+      "BAMS (Ayurveda)",
+      "BHMS (Homeopathy)",
+      "BUMS (Unani)",
+      "BSMS (Siddha)",
+      "B.Sc Nursing",
+      "BPT (Physiotherapy)",
+      "BOT (Occupational Therapy)",
+      "BMLT (Medical Lab Tech)",
+      "BASLP (Audiology & Speech)",
+      "B.Pharm (Pharmacy)",
+      "B.VSc (Veterinary Science)",
+      "BNYS (Naturopathy)",
+      "B.Sc Biology",
+      "B.Sc Chemistry",
+      "B.Sc Physics",
+      "B.Sc Biotechnology",
+      "B.Sc Microbiology",
+      "B.Sc Biochemistry",
+      "B.Sc Zoology",
+      "B.Sc Botany",
+      "B.Sc Biomedical Science",
+      "B.Sc Forensic Science",
+      "B.Sc Genetics",
+    ],
+  },
+  {
+    title: "Diplomas & Certifications",
+    courses: [
+      "DMLT (Diploma Lab Tech)",
+      "D.Pharm",
+      "Diploma in Nursing",
+      "Diploma in Radiology",
+      "Diploma in Ophthalmic Tech",
+      "Diploma in Dental Hygiene",
+      "Diploma in OT Technology",
+      "Diploma in Physiotherapy",
+      "Diploma in Dialysis Technology",
+      "Diploma in Anesthesia Tech",
+    ],
+  },
+  {
+    title: "Postgraduate (PG) Courses",
+    courses: [
+      "MD (Doctor of Medicine)",
+      "MS (Master of Surgery)",
+      "MDS (Dental Surgery)",
+      "M.Sc Nursing",
+      "MPT (Physiotherapy)",
+      "M.Sc Anatomy",
+      "M.Sc Physiology",
+      "M.Sc Biochemistry",
+      "M.Sc Microbiology",
+      "M.Sc Biotechnology",
+      "M.Sc Medical Imaging",
+      "M.Sc Genetics",
+      "M.Sc Forensic Science",
+      "M.Pharm",
+      "M.Sc Clinical Psychology",
+    ],
+  },
+  {
+    title: "Doctorates & Research",
+    courses: [
+      "Ph.D in Medicine",
+      "Ph.D in Nursing",
+      "Ph.D in Pharmacy",
+      "Ph.D in Biomedical Sciences",
+      "Ph.D in Genetics",
+      "Ph.D in Microbiology",
+      "Ph.D in Public Health",
+      "Ph.D in Biotechnology",
+      "Ph.D in Clinical Research",
+    ],
+  },
+  {
+    title: "Global & Allied Medical Courses",
+    courses: [
+      "MBBS (USMLE/PLAB Pathway)",
+      "Doctor of Osteopathic Medicine (DO)",
+      "Chiropractic Medicine (DC)",
+      "Doctor of Podiatric Medicine (DPM)",
+      "MD Integrative Medicine",
+      "Bachelor of Health Sciences (BHSc)",
+      "Bachelor of Public Health (BPH)",
+      "Master of Public Health (MPH)",
+    ],
+  },
+];
 
-// export default CollegeTable;
+export default function TopMedicalCourses() {
+  return (
+    <section className="bg-gray-50 py-10">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-10 text-center">
+          Top Medical & Science Courses
+        </h2>
+        <div className="grid gap-10">
+          {courseGroups.map((group, index) => (
+            <div key={index}>
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 border-l-4 border-blue-600 pl-3">
+                {group.title}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {group.courses.map((course, idx) => (
+                  <button
+                    key={idx}
+                    className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-full shadow-sm hover:bg-blue-100 transition text-sm"
+                  >
+                    {course}
+                    {/* <FaArrowRight className="text-xs" /> */}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
