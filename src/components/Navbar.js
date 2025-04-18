@@ -85,10 +85,10 @@ export default function NavBar() {
 
   return (
     <header className="bg-white shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
         <Link href="/" className="hidden lg:block">
-          <Image src="/lago.png" alt="Logo" width={100} height={100} />
+          <Image src="/lago.png" alt="Logo" width={120} height={120} />
         </Link>
 
         {/* Mobile Header */}
@@ -105,7 +105,7 @@ export default function NavBar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold">
+        <nav className="hidden lg:flex items-center space-x-10 text-black font-semibold">
           <Link href="/">Home</Link>
           <Link href="/about">About us</Link>
 

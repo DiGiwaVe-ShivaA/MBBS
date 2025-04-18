@@ -17,7 +17,7 @@ const states = [
   { name: "Nepal", img: "/images/nepal.png" },
   { name: "Philippines", img: "/images/Philippines.png" },
   { name: "Russia", img: "/images/russia.webp" },
-  { name: "Uzbekistan", img: "/images/Uzbekistan.webg" },
+  { name: "Uzbekistan", img: "/images/Uzbekistan.webp" },
 ];
 
 export default function StatesSlider() {

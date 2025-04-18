@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 export default function HeroSection() {
   const images = [
     "/images/heroimga.jpg",
-    "/images/heroimg.jpg", // <- Your uploaded image (renamed)
+    "/images/heroimgaa.jpeg", // <- Your uploaded image (renamed)
     "/images/heroimgc.jpg",
   ];
 
