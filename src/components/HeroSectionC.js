@@ -4,11 +4,11 @@ import { ArrowRight } from "lucide-react";
 export default function NeetDifficultySection() {
   return (
     <section className="bg-white py-12 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         {/* Left: Text Content */}
-        <div className="space-y-6">
-          <h2 className="inline-flex items-center px-6 py-3  bg-gradient-to-r from-cyan-400 to-violet-600 text-white font-semibold text-sm sm:text-base md:text-4xl shadow-lg">
-            All about NEET Difficulty Level 2025–26
+        <div className="space-y-6 px-4 sm:px-8 md:px-16">
+          <h2 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-violet-600 text-white font-semibold text-sm sm:text-base md:text-4xl shadow-lg">
+            NEET 2025–26 Difficulty Level
           </h2>
 
           <ol className="list-decimal list-inside text-gray-700 space-y-2 text-base sm:text-lg">
@@ -37,8 +37,8 @@ export default function NeetDifficultySection() {
           </button>
         </div>
 
-        {/* Right: Image or Video */}
-        <div className="flex flex-col items-center">
+        {/* Right: Video Section */}
+        <div className="flex justify-center px-4 sm:px-8 md:px-4">
           <div className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-md">
             <iframe
               className="w-full h-full"
