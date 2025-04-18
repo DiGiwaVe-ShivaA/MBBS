@@ -31,6 +31,20 @@ const testimonials = [
     quote:
       "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
   },
+  {
+    name: "Sophia Ray",
+    role: "Adventurer",
+    image: "/deal9.jpg",
+    quote:
+      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+  },
+  {
+    name: "Tommy Clark",
+    role: "Mountaineer",
+    image: "/deal9.jpg",
+    quote:
+      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+  },
 ];
 
 const Testimonials = () => {
@@ -38,57 +52,57 @@ const Testimonials = () => {
     <section className="bg-white px-6 py-4 md:py-8 lg:py-12 text-gray-800 overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-wider relative inline-block">
-          {/* <p className="text-3xl text-[#00E5FF] font-semibold uppercase tracking-wide">
-            Testimonials
-          </p> */}
-          <h2 className="text-4xl font-extrabold mb-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white p-3 rounded-3xl inline-block shadow-md">
-            Testimonials
-          </h2>
-          <br></br>
-          <span className="text-black relative z-10">
-            What They Say About NSET
-          </span>
+        <h2 className="text-4xl font-extrabold mb-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white p-3 rounded-3xl inline-block shadow-md">
+          Testimonials
         </h2>
+        <span className="text-black relative z-10 block text-xl font-semibold mt-2">
+          What They Say About NSET
+        </span>
         <p className="mt-4 max-w-2xl mx-auto text-gray-600">
           See what our students are saying about their journey with us.
         </p>
       </div>
 
-      {/* Swiper Slider */}
+      {/* Swiper Grid */}
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 4000 }}
         loop={true}
         navigation
         pagination={{ clickable: true }}
-        className="max-w-4xl mx-auto bg-[#F3F4F6] rounded-xl shadow-md p-6 md:p-10"
+        spaceBetween={30}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="max-w-7xl mx-auto"
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              {/* Avatar */}
-              <div className="relative">
-                <Image
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover"
-                />
-                <div className="absolute -top-2 -right-2 bg-[#8A05FF] text-white p-2 rounded-full shadow-md">
-                  <FaQuoteLeft />
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 md:p-8 h-full">
+              <div className="flex flex-col items-center text-center gap-4 h-full">
+                {/* Avatar */}
+                <div className="relative">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={100}
+                    height={100}
+                    className="rounded-full object-cover"
+                  />
+                  <div className="absolute -top-2 -right-2 bg-[#8A05FF] text-white p-2 rounded-full shadow-md">
+                    <FaQuoteLeft />
+                  </div>
                 </div>
-              </div>
 
-              {/* Text */}
-              <div className="flex-1 text-center md:text-left">
-                <p className="italic text-lg text-gray-700 mb-4">
-                  {testimonial.quote}
+                {/* Quote */}
+                <p className="italic text-base text-gray-700 flex-1">
+                  "{testimonial.quote}"
                 </p>
 
                 {/* Stars */}
-                <div className="flex justify-center md:justify-start text-[#00E5FF] mb-2">
+                <div className="flex text-[#00E5FF]">
                   {Array(5)
                     .fill(0)
                     .map((_, i) => (
