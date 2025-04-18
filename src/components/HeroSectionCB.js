@@ -63,8 +63,8 @@ export default function FlagCarouselSection() {
             are recognized worldwide, and more affordable tuition fees—making it
             an attractive option for future doctors.
           </p>
-          <button className="bg-green-500 hover:bg-green-700 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
-            See Details
+          <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
+            Read More
           </button>
         </div>
       </div>

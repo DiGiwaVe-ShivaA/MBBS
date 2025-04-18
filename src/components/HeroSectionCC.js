@@ -1,80 +1,115 @@
+"use client";
+
 import Image from "next/image";
+import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-export default function TestimonialsBanner() {
-  const testimonials = [
-    {
-      quote: "A terrific piece of praise",
-      img: "/avatar1.jpg",
-      name: "Name",
-      description: "Description",
-    },
-    {
-      quote: "A fantastic bit of feedback",
-      img: "/avatar2.jpg",
-      name: "Name",
-      description: "Description",
-    },
-    {
-      quote: "A genuinely glowing review",
-      img: "/avatar3.jpg",
-      name: "Name",
-      description: "Description",
-    },
-  ];
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
+const testimonials = [
+  {
+    name: "Lenny Dotson",
+    role: "Hiker",
+    image: "/deal9.jpg",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim ad minim veniam, quis nostrud exercitation ullamco.",
+  },
+  {
+    name: "Emma Collins",
+    role: "Backpacker",
+    image: "/deal9.jpg",
+    quote:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+  },
+  {
+    name: "Marcus Lee",
+    role: "Trail Explorer",
+    image: "/deal9.jpg",
+    quote:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+  },
+];
+
+const Testimonials = () => {
   return (
-    <div className="bg-[#f9f9f9] px-4 py-10 space-y-8">
-      {/* Testimonials */}
-      <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className={`rounded-lg p-6 w-full sm:w-64 max-w-xs shadow-md bg-white border transition ${
-              i === 0 ? "border-blue-500" : "border-transparent"
-            }`}
-          >
-            <p className="text-base sm:text-lg italic mb-4 text-gray-700">
-              “{t.quote}”
-            </p>
-            <div className="flex items-center gap-3">
-              <Image
-                src={t.img}
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="rounded-full object-cover"
-              />
-              <div>
-                <p className="font-semibold text-sm text-gray-800">{t.name}</p>
-                <p className="text-xs text-gray-500">{t.description}</p>
+    <section className="bg-white px-6 py-4 md:py-8 lg:py-12 text-gray-800 overflow-hidden">
+      {/* Heading */}
+      <div className="text-center mb-8">
+        <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-wider relative inline-block">
+          {/* <p className="text-3xl text-[#00E5FF] font-semibold uppercase tracking-wide">
+            Testimonials
+          </p> */}
+          <h2 className="text-4xl font-extrabold mb-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white p-3 rounded-3xl inline-block shadow-md">
+            Testimonials
+          </h2>
+          <br></br>
+          <span className="text-black relative z-10">
+            What They Say About NSET
+          </span>
+        </h2>
+        <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+          See what our students are saying about their journey with us.
+        </p>
+      </div>
+
+      {/* Swiper Slider */}
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        autoplay={{ delay: 5000 }}
+        loop={true}
+        navigation
+        pagination={{ clickable: true }}
+        className="max-w-4xl mx-auto bg-[#F3F4F6] rounded-xl shadow-md p-6 md:p-10"
+      >
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              {/* Avatar */}
+              <div className="relative">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={120}
+                  height={120}
+                  className="rounded-full object-cover"
+                />
+                <div className="absolute -top-2 -right-2 bg-[#8A05FF] text-white p-2 rounded-full shadow-md">
+                  <FaQuoteLeft />
+                </div>
+              </div>
+
+              {/* Text */}
+              <div className="flex-1 text-center md:text-left">
+                <p className="italic text-lg text-gray-700 mb-4">
+                  {testimonial.quote}
+                </p>
+
+                {/* Stars */}
+                <div className="flex justify-center md:justify-start text-[#00E5FF] mb-2">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, i) => (
+                      <FaStar key={i} />
+                    ))}
+                </div>
+
+                {/* Author */}
+                <div>
+                  <h4 className="font-semibold text-lg text-[#8A05FF]">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
-
-      {/* Banner Section */}
-      <div className="bg-white border-4 border-orange-400 rounded-2xl flex flex-col md:flex-row overflow-hidden">
-        {/* Left */}
-        <div className="w-full md:w-1/2 bg-white px-6 py-10 flex items-center justify-center text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight">
-            10 YEARS
-            <br />
-            OF SUCCESS
-          </h2>
-        </div>
-
-        {/* Right */}
-        <div className="w-full md:w-1/2 bg-gray-800 px-6 py-10 flex flex-col items-center justify-center text-center md:text-left">
-          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-6">
-            Transform Confusion Into Confidence – Schedule Your Free Career
-            Counselling Call!
-          </p>
-          <button className="bg-green-500 hover:bg-green-700 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
-            See Details
-          </button>
-        </div>
-      </div>
-    </div>
+      </Swiper>
+    </section>
   );
-}
+};
+
+export default Testimonials;
