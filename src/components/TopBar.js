@@ -92,7 +92,7 @@ Coaching Attended: ${formData.coaching}
 
         .animate-moving-gradient {
           animation: movingGradient 4s linear infinite;
-          background-size: 200% 100%;
+          background-size: 50% 10%;
         }
       `}</style>
 

@@ -8,12 +8,12 @@ import "swiper/css/effect-fade";
 export default function HeroSection() {
   const images = [
     "/images/heroimga.jpg",
-    "/images/heroimgaa.jpeg", // <- Your uploaded image (renamed)
+    "/images/heroimgaa.jpg", // <- Your uploaded image (renamed)
     "/images/heroimgc.jpg",
   ];
 
   return (
-    <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+    <section className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
       <Swiper
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
