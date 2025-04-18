@@ -70,7 +70,7 @@ export default function TestimonialsBanner() {
             Transform Confusion Into Confidence – Schedule Your Free Career
             Counselling Call!
           </p>
-          <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
+          <button className="bg-green-500 hover:bg-green-700 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
             See Details
           </button>
         </div>

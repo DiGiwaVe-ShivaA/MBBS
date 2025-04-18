@@ -9,11 +9,11 @@ export default function HeroSection() {
   const images = [
     "/images/heroimga.jpg",
     "/images/heroimgaa.jpg", // <- Your uploaded image (renamed)
-    "/images/heroimgc.jpg",
+    "/images/heroimgcnew.jpg",
   ];
 
   return (
-    <section className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]">
+    <section className="relative w-full h-[400px] md:h-[550px] lg:h-[600px] xl:h-[650px]">
       <Swiper
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -47,6 +47,8 @@ export default function HeroSection() {
             <span className="text-white">
               Experts <br /> Colleges
             </span>
+            <br />
+            <span className="text-white">Guidance </span>
             <br />
             <span className="text-white">Counseling</span>
             <br />

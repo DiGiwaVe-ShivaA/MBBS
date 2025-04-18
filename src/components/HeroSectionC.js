@@ -7,7 +7,7 @@ export default function NeetDifficultySection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         {/* Left: Text Content */}
         <div className="space-y-6 px-4 sm:px-8 md:px-16">
-          <h2 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-violet-600 text-white font-semibold text-sm sm:text-base md:text-4xl shadow-lg">
+          <h2 className="inline-flex items-center px-6 py-3 rounded-3xl bg-gradient-to-r from-cyan-400 to-violet-600 text-white font-semibold text-sm sm:text-base md:text-4xl shadow-lg">
             NEET 2025–26 Difficulty Level
           </h2>
 
@@ -32,14 +32,14 @@ export default function NeetDifficultySection() {
             </li>
           </ol>
 
-          <button className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
+          <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
             Read More <ArrowRight className="ml-2 w-5 h-5" />
           </button>
         </div>
 
         {/* Right: Video Section */}
-        <div className="flex justify-center px-4 sm:px-8 md:px-4">
-          <div className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-md">
+        <div className="flex justify-center  px-4 sm:px-8 md:px-4">
+          <div className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden shadow-md">
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/I0S1Vv2DrjE"
