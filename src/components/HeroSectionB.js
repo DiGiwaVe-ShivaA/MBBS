@@ -1,10 +1,20 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import ApplicationFormModal from "./ApplicationFormModal";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+
+const initialFormState = {
+  name: "",
+  mobile: "",
+  city: "",
+  state: "",
+  course: "",
+  neetAttempt: "",
+  dropper: "",
+  coaching: "",
+};
 
 const imageSources = [
   "/images/med1.jpg",
@@ -33,6 +43,70 @@ export default function HeroSectionA() {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState({
+    colleges: false,
+    courses: false,
+  });
+  const [showForm, setShowForm] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState(initialFormState);
+
+  const handleChange = useCallback((e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }, []);
+
+  const resetForm = useCallback(() => {
+    setFormData(initialFormState);
+    setError("");
+  }, []);
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const mobileRegex = /^[0-9]{10}$/;
+
+      if (!formData.mobile || !mobileRegex.test(formData.mobile)) {
+        setError("Please enter a valid 10-digit mobile number");
+        return;
+      }
+      if (
+        !formData.name ||
+        !formData.city ||
+        !formData.state ||
+        !formData.course
+      ) {
+        setError("Please fill in all required fields");
+        return;
+      }
+
+      const message = `*New Application Form:*\nName: ${formData.name}\nMobile: ${formData.mobile}\nCity: ${formData.city}\nState: ${formData.state}\nCourse: ${formData.course}\nNEET Attempt: ${formData.neetAttempt}\nDropper: ${formData.dropper}\nCoaching Attended: ${formData.coaching}`;
+      const url = `https://wa.me/9557911144?text=${encodeURIComponent(
+        message
+      )}`;
+
+      window.open(url, "_blank");
+
+      resetForm();
+      setShowForm(false);
+    },
+    [formData, resetForm]
+  );
+
+  const dropdownAnimation = {
+    initial: { opacity: 0, y: -10 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -10 },
+    transition: { duration: 0.2 },
+  };
+
+  const mobileDropdownAnimation = {
+    initial: { opacity: 0, height: 0 },
+    animate: { opacity: 1, height: "auto" },
+    exit: { opacity: 0, height: 0 },
+    transition: { duration: 0.2 },
+  };
 
   return (
     <section className="w-full bg-white text-black relative overflow-hidden">
@@ -55,6 +129,18 @@ export default function HeroSectionA() {
             </span>
           </h1>
         </motion.div>
+        <button
+          className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold px-5 py-2 rounded-full shadow-md hover:opacity-90 transition-all duration-300 text-sm"
+          onClick={() => setShowForm(true)}
+          aria-label="Open Application Form"
+        >
+          Get Councelling NOW !
+          <span
+            className="text-lg leading-none ml-2"
+            role="img"
+            aria-hidden="true"
+          ></span>
+        </button>
       </div>
 
       {/* Full-Width Image Grid with Overlay */}
@@ -88,6 +174,15 @@ export default function HeroSectionA() {
       </motion.div>
 
       {isModalOpen && <ApplicationFormModal onClose={closeModal} />}
+      {showForm && (
+        <ApplicationFormModal
+          formData={formData}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          closeModal={() => setShowForm(false)}
+          error={error}
+        />
+      )}
     </section>
   );
 }

@@ -58,7 +58,7 @@ export default function AboutContact() {
           transforming uncertainties into opportunities and turning dreams into
           reality—empowering you to create a bright and fulfilling future in the
           medical field.{" "}
-          <span className="font-bold text-blue-600">Learn More</span>
+          {/* <span className="font-bold text-blue-600">Learn More</span> */}
         </p>
         <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
           Read More
