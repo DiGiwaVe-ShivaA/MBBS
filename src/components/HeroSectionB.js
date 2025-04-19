@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 const imageSources = [
-  "/images/med1.jpeg",
+  "/images/med1.jpg",
   "/images/med2.jpg",
-  "/images/med3.webp",
-  "/images/med4.webp",
+  "/images/med3.jpg",
+  "/images/med4.jpg",
   "/images/med5.webp",
 ];
 

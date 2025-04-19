@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "Lenny Dotson",
     role: "Hiker",
-    image: "/images/med5.webp",
+    image: "/images/med5.jpg",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim ad minim veniam, quis nostrud exercitation ullamco.",
   },
