@@ -1,80 +1,27 @@
-// "use client";
+const SuccessBanner = () => {
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 py-6">
+      <div className="flex flex-col md:flex-row items-center justify-between border-4 border-green-400 rounded-2xl overflow-hidden bg-white shadow-md">
+        {/* Left Section */}
+        <div className="flex-1 w-full text-center md:text-left p-6">
+          <h2 className="text-3xl font-extrabold text-black leading-snug">
+            10 YEARS <br /> OF SUCCESS
+          </h2>
+        </div>
 
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import Image from "next/image";
+        {/* Right Section */}
+        <div className="flex-1 w-full bg-gray-800 text-white p-6 flex flex-col items-center md:items-start justify-center gap-4">
+          <p className="text-xl font-semibold text-center md:text-left">
+            Transform Confusion Into Confidence – Schedule Your Free Career
+            Counselling Call!
+          </p>
+          <button className="bg-green-400 text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-500 transition">
+            See Details
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-// const states = [
-//   { name: "America", img: "/images/america.webp" },
-//   { name: "Canada", img: "/images/cana.webp" },
-//   { name: "Georgia", img: "/images/Georgia.webp" },
-//   { name: "Germany", img: "/images/germn.jpg" },
-//   { name: "Italy", img: "/images/italy.png" },
-//   { name: "Kazakhastan", img: "/images/kazakhastan.jpeg" },
-//   { name: "Kyrgyzstan", img: "/images/Kyrgyzstan.jpg" },
-//   { name: "Nepal", img: "/images/nepal.png" },
-//   { name: "Philippines", img: "/images/Philippines.png" },
-//   { name: "Russia", img: "/images/russia.webp" },
-//   { name: "Uzbekistan", img: "/images/Uzbekistan.webp" },
-// ];
-
-// export default function StatesSlider() {
-//   return (
-//     <section className="bg-[#f9f9ff] py-12 px-4">
-//       <div className="text-center mb-8">
-//         <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-//           Expert Study Abroad Consultancy Services Across All States In India
-//         </h2>
-//         <p className="text-gray-600 mt-2 max-w-3xl mx-auto">
-//           Get expert study abroad consultancy services across all states in
-//           India, guiding students to top global universities with personalized
-//           support and hassle-free processes.
-//         </p>
-//       </div>
-
-//       <Swiper
-//         modules={[Autoplay, Pagination]}
-//         autoplay={{
-//           delay: 2500, // 2.5 seconds delay between slides
-//           disableOnInteraction: false,
-//         }}
-//         pagination={{ clickable: true }}
-//         spaceBetween={20}
-//         breakpoints={{
-//           0: {
-//             slidesPerView: 2,
-//           },
-//           640: {
-//             slidesPerView: 3,
-//           },
-//           768: {
-//             slidesPerView: 4,
-//           },
-//           1024: {
-//             slidesPerView: 6,
-//           },
-//         }}
-//       >
-//         {states.map((state, index) => (
-//           <SwiperSlide key={index}>
-//             <div className="bg-white rounded-xl border shadow-md p-4 flex flex-col items-center transition-transform hover:scale-105">
-//               <div className="w-24 h-24 relative mb-2">
-//                 <Image
-//                   src={state.img}
-//                   alt={state.name}
-//                   fill
-//                   className="object-contain"
-//                 />
-//               </div>
-//               <p className="text-center text-sm font-medium text-gray-700">
-//                 {state.name}
-//               </p>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//     </section>
-//   );
-// }
+export default SuccessBanner;

@@ -8,7 +8,7 @@ import { Sparkles } from "lucide-react";
 
 const imageSources = [
   "/images/med1.jpeg",
-  "/images/med2.webp",
+  "/images/med2.jpg",
   "/images/med3.webp",
   "/images/med4.webp",
   "/images/med5.webp",

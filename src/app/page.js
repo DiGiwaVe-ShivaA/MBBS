@@ -9,7 +9,7 @@ import HeroSectionCB from "../components/HeroSectionCB";
 import HeroSectionCC from "../components/HeroSectionCC";
 import HeroSectionDB from "../components/HeroSectionDB";
 import HeroSectionDC from "../components/HeroSectionDC";
-// import HeroSectionD from "../components/HeroSectionD";
+import HeroSectionD from "../components/HeroSectionD";
 // import HeroSectionDA from "../components/HeroSectionDA";
 // import HeroSectionE from "../components/HeroSectionE";
 // import HeroSectionF from "../components/HeroSectionF";
@@ -36,7 +36,7 @@ export default function Home() {
         <HeroSectionDB />
         <HeroSectionDC />
         <HeroSectionCC />
-        {/* <HeroSectionD /> */}
+        <HeroSectionD />
         {/* <HeroSectionDA /> */}
         {/* <HeroSectionI />
         <HeroSectionH />
