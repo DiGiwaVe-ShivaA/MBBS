@@ -13,35 +13,35 @@ const testimonials = [
   {
     name: "Lenny Dotson",
     role: "Hiker",
-    image: "/deal9.jpg",
+    image: "/images/med5.webp",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim ad minim veniam, quis nostrud exercitation ullamco.",
   },
   {
     name: "Emma Collins",
     role: "Backpacker",
-    image: "/deal9.jpg",
+    image: "/images/med5.webp",
     quote:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
   },
   {
     name: "Marcus Lee",
     role: "Trail Explorer",
-    image: "/deal9.jpg",
+    image: "/images/med5.webp",
     quote:
       "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
   },
   {
     name: "Sophia Ray",
     role: "Adventurer",
-    image: "/deal9.jpg",
+    image: "/images/med5.webp",
     quote:
       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
   },
   {
     name: "Tommy Clark",
     role: "Mountaineer",
-    image: "/deal9.jpg",
+    image: "/images/med5.webp",
     quote:
       "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
   },
@@ -91,9 +91,9 @@ const Testimonials = () => {
                     height={100}
                     className="rounded-full object-cover"
                   />
-                  <div className="absolute -top-2 -right-2 bg-[#8A05FF] text-white p-2 rounded-full shadow-md">
+                  {/* <div className="absolute -top-2 -right-2 bg-[#8A05FF] text-white p-2 rounded-full shadow-md">
                     <FaQuoteLeft />
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Quote */}
