@@ -29,7 +29,7 @@ const colleges = [
     rating: "5/5",
     ranking: "#2 Medical College in India 2024",
     cutoff: "NEET 2024 Cut off 700",
-    image: "/images/collegedata/aiims-delhi.png",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/aiims-delhi",
   },
   {
@@ -41,7 +41,7 @@ const colleges = [
     rating: "4.5/5",
     ranking: "#3 Ayurveda College in India 2024",
     cutoff: "NEET 2024 Cut off 600",
-    image: "/images/collegedata/national-institute-ayurveda.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/national-institute-ayurveda",
   },
   {
@@ -53,7 +53,7 @@ const colleges = [
     rating: "4.7/5",
     ranking: "#4 Medical College in India 2024",
     cutoff: "NEET 2024 Cut off 620",
-    image: "/images/collegedata/institute-of-medical-sciences.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/institute-of-medical-sciences",
   },
   {
@@ -65,7 +65,7 @@ const colleges = [
     rating: "4.6/5",
     ranking: "#5 Nursing College in India 2024",
     cutoff: "NEET 2024 Cut off 580",
-    image: "/images/collegedata/college-of-nursing.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/college-of-nursing",
   },
 
@@ -79,7 +79,7 @@ const colleges = [
     rating: "4.3/5",
     ranking: "#6 Medical College in Bihar 2024",
     cutoff: "NEET 2024 Cut off 520",
-    image: "/images/collegedata/katihar-medical-college.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/katihar-medical-college",
   },
   {
@@ -90,7 +90,7 @@ const colleges = [
     rating: "4.0/5",
     ranking: "#7 Medical College in Bihar 2024",
     cutoff: "NEET 2024 Cut off 510",
-    image: "/images/collegedata/madhubani-medical-college.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/madhubani-medical-college",
   },
   {
@@ -101,7 +101,7 @@ const colleges = [
     rating: "4.4/5",
     ranking: "#8 Medical College in Bihar 2024",
     cutoff: "NEET 2024 Cut off 530",
-    image: "/images/collegedata/narayan-medical-college.jpg",
+    image: "/images/collegedata/maulana-azad.jpeg",
     link: "/narayan-medical-college",
   },
   {
@@ -162,7 +162,7 @@ const colleges = [
 
   {
     name: "Shri Shankaracharya Institute of Medical Science",
-    location: "Bhilai, Chhattisgarh",
+    location: "Chhattisgarh",
     category: "MBBS",
     fees: "₹9,00,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -174,7 +174,7 @@ const colleges = [
   },
   {
     name: "Raipur Institute of Medical Sciences",
-    location: "Raipur, Chhattisgarh",
+    location: "Chhattisgarh",
     category: "MBBS",
     fees: "₹8,75,000",
     deadline: "12 Apr - 28 Apr 2024",
@@ -186,7 +186,7 @@ const colleges = [
   },
   {
     name: "Shri Balaji Institute of Medical Science",
-    location: "Raipur, Chhattisgarh",
+    location: "Chhattisgarh",
     category: "MBBS",
     fees: "₹8,60,000",
     deadline: "08 Apr - 27 Apr 2024",
@@ -198,7 +198,7 @@ const colleges = [
   },
   {
     name: "All India Institute of Medical Sciences (AIIMS), Rishikesh",
-    location: "Rishikesh, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹1,628",
     deadline: "01 Apr - 30 Apr 2024",
@@ -210,7 +210,7 @@ const colleges = [
   },
   {
     name: "Doon Medical College",
-    location: "Dehradun, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹4,26,500",
     deadline: "05 Apr - 25 Apr 2024",
@@ -222,7 +222,7 @@ const colleges = [
   },
   {
     name: "Government Medical College, Haldwani",
-    location: "Haldwani, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹4,00,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -234,7 +234,7 @@ const colleges = [
   },
   {
     name: "Veer Chandra Singh Garhwali Government Institute of Medical Science & Research",
-    location: "Srinagar, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹4,00,000",
     deadline: "12 Apr - 28 Apr 2024",
@@ -246,7 +246,7 @@ const colleges = [
   },
   {
     name: "Soban Singh Jeena Government Institute of Medical Science and Research",
-    location: "Almora, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹4,00,000",
     deadline: "08 Apr - 27 Apr 2024",
@@ -258,7 +258,7 @@ const colleges = [
   },
   {
     name: "All India Institute of Medical Sciences (AIIMS) Rishikesh",
-    location: "Rishikesh, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹1,628",
     deadline: "01 Apr - 30 Apr 2024",
@@ -270,7 +270,7 @@ const colleges = [
   },
   {
     name: "Government Medical College, Haldwani",
-    location: "Haldwani, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹10,79,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -282,7 +282,7 @@ const colleges = [
   },
   {
     name: "Doon Medical College, Dehradun",
-    location: "Dehradun, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹4,26,500",
     deadline: "01 Apr - 30 Apr 2024",
@@ -294,7 +294,7 @@ const colleges = [
   },
   {
     name: "Veer Chandra Singh Garhwali Government Institute of Medical Science & Research",
-    location: "Srinagar, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹10,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -306,7 +306,7 @@ const colleges = [
   },
   {
     name: "Soban Singh Jeena Government Institute of Medical Science & Research",
-    location: "Almora, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹10,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -318,7 +318,7 @@ const colleges = [
   },
   {
     name: "Graphic Era Institute of Medical Sciences",
-    location: "Dehradun, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹15,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -330,7 +330,7 @@ const colleges = [
   },
   {
     name: "Kingston Imperial Institute of Medical Sciences",
-    location: "Dehradun, Uttarakhand",
+    location: "Uttarakhand",
     category: "MBBS",
     fees: "₹14,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -342,7 +342,7 @@ const colleges = [
   },
   {
     name: "Shri Ram Murti Smarak Institute of Medical Sciences",
-    location: "Bareilly, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹12,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -354,7 +354,7 @@ const colleges = [
   },
   {
     name: "School of Medical Sciences & Research (Sharda University)",
-    location: "Greater Noida, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,50,000",
     deadline: "05 Apr - 25 Apr 2024",
@@ -366,7 +366,7 @@ const colleges = [
   },
   {
     name: "Subharti Medical College",
-    location: "Meerut, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,00,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -378,7 +378,7 @@ const colleges = [
   },
   {
     name: "Muzaffarnagar Medical College",
-    location: "Muzaffarnagar, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,80,000",
     deadline: "05 Apr - 30 Apr 2024",
@@ -390,7 +390,7 @@ const colleges = [
   },
   {
     name: "Rohilkhand Medical College & Hospital",
-    location: "Bareilly, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹12,30,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -402,7 +402,7 @@ const colleges = [
   },
   {
     name: "Rama Medical College Hospital and Research Centre",
-    location: "Kanpur, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹12,00,000",
     deadline: "05 Apr - 25 Apr 2024",
@@ -414,7 +414,7 @@ const colleges = [
   },
   {
     name: "Hind Institute of Medical Sciences",
-    location: "Sitapur, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,70,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -426,7 +426,7 @@ const colleges = [
   },
   {
     name: "Mayo Institute of Medical Sciences",
-    location: "Barabanki, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,90,000",
     deadline: "08 Apr - 28 Apr 2024",
@@ -438,7 +438,7 @@ const colleges = [
   },
   {
     name: "Heritage Institute of Medical Sciences",
-    location: "Varanasi, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹12,10,000",
     deadline: "12 Apr - 30 Apr 2024",
@@ -450,7 +450,7 @@ const colleges = [
   },
   {
     name: "Era's Lucknow Medical College and Hospital",
-    location: "Lucknow, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹13,00,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -462,7 +462,7 @@ const colleges = [
   },
   {
     name: "Integral Institute of Medical Sciences & Research",
-    location: "Lucknow, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,90,000",
     deadline: "05 Apr - 30 Apr 2024",
@@ -474,7 +474,7 @@ const colleges = [
   },
   {
     name: "Career Institute of Medical Sciences & Hospital",
-    location: "Lucknow, Uttar Pradesh",
+    location: "Uttar Pradesh",
     category: "MBBS",
     fees: "₹11,75,000",
     deadline: "10 Apr - 30 Apr 2024",
@@ -486,7 +486,7 @@ const colleges = [
   },
   {
     name: "Adesh Institute of Medical Sciences & Research",
-    location: "Bathinda, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹13,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -498,7 +498,7 @@ const colleges = [
   },
   {
     name: "Christian Medical College",
-    location: "Ludhiana, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹6,60,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -510,7 +510,7 @@ const colleges = [
   },
   {
     name: "Dayanand Medical College & Hospital",
-    location: "Ludhiana, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹6,60,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -522,7 +522,7 @@ const colleges = [
   },
   {
     name: "Punjab Institute of Medical Sciences",
-    location: "Jalandhar, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹10,94,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -534,7 +534,7 @@ const colleges = [
   },
   {
     name: "Sri Guru Ram Das Institute of Medical Sciences and Research",
-    location: "Amritsar, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹10,94,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -546,7 +546,7 @@ const colleges = [
   },
   {
     name: "Gian Sagar Hospital & Medical College",
-    location: "Patiala, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹10,94,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -558,7 +558,7 @@ const colleges = [
   },
   {
     name: "Government Medical College",
-    location: "Patiala, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹1,83,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -570,7 +570,7 @@ const colleges = [
   },
   {
     name: "Government Medical College",
-    location: "Amritsar, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹1,83,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -582,7 +582,7 @@ const colleges = [
   },
   {
     name: "Guru Gobind Singh Medical College",
-    location: "Faridkot, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹1,83,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -594,7 +594,7 @@ const colleges = [
   },
   {
     name: "Dr BR Ambedkar State Institute of Medical Sciences",
-    location: "Mohali, Punjab",
+    location: "Punjab",
     category: "MBBS",
     fees: "₹1,83,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -607,7 +607,7 @@ const colleges = [
   // West Bengal Medical Colleges
   {
     name: "Santiniketan Medical College",
-    location: "Bolpur, West Bengal",
+    location: "West Bengal",
     category: "MBBS",
     fees: "₹13,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -619,7 +619,7 @@ const colleges = [
   },
   {
     name: "JIS School of Medical Science and Research",
-    location: "Howrah, West Bengal",
+    location: "West Bengal",
     category: "MBBS",
     fees: "₹12,90,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -631,7 +631,7 @@ const colleges = [
   },
   {
     name: "I Care Institute of Medical Sciences and Research",
-    location: "Haldia, West Bengal",
+    location: "West Bengal",
     category: "MBBS",
     fees: "₹11,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -643,7 +643,7 @@ const colleges = [
   },
   {
     name: "Jagannath Gupta Institute of Medical Sciences and Hospital",
-    location: "Budge Budge, West Bengal",
+    location: "West Bengal",
     category: "MBBS",
     fees: "₹12,30,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -655,7 +655,7 @@ const colleges = [
   },
   {
     name: "KPC Medical College & Hospital",
-    location: "Jadavpur, West Bengal",
+    location: "West Bengal",
     category: "MBBS",
     fees: "₹13,20,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -667,7 +667,7 @@ const colleges = [
   },
   {
     name: "Terna Medical College",
-    location: "Navi Mumbai, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     deadline: "01 Apr - 30 Apr 2024",
     rating: "4.3/5",
@@ -678,7 +678,7 @@ const colleges = [
   },
   {
     name: "Dr. Vitthalrao Vikhe Patil Foundation’s Medical College & Hospital",
-    location: "Ahmednagar, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     deadline: "01 Apr - 30 Apr 2024",
     rating: "4.2/5",
@@ -689,7 +689,7 @@ const colleges = [
   },
   {
     name: "MAEER's Maharashtra Institute of Medical Sciences & Research",
-    location: "Latur, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     deadline: "01 Apr - 30 Apr 2024",
     rating: "4.1/5",
@@ -700,7 +700,7 @@ const colleges = [
   },
   {
     name: "MIT’s Maharashtra Institute of Medical Education & Research",
-    location: "Pune, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     deadline: "01 Apr - 30 Apr 2024",
     rating: "4.4/5",
@@ -711,7 +711,7 @@ const colleges = [
   },
   {
     name: "Smt. Kashibai Navale Medical College and General Hospital",
-    location: "Pune, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     deadline: "01 Apr - 30 Apr 2024",
     rating: "4.5/5",
@@ -854,7 +854,7 @@ const colleges = [
   },
   {
     name: "Bharatratna Atalbihari Vajpayee Medical College & Kamla Nehru Hospital, Pune",
-    location: "Pune, Maharashtra",
+    location: "Maharashtra",
     category: "MBBS",
     fees: "₹1,50,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -926,7 +926,7 @@ const colleges = [
   },
   {
     name: "AMALA Institute of Medical Sciences",
-    location: "Thrissur, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,00,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -938,7 +938,7 @@ const colleges = [
   },
   {
     name: "Jubilee Mission Medical College",
-    location: "Thrissur, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,10,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -950,7 +950,7 @@ const colleges = [
   },
   {
     name: "Malankara Orthodox Syrian Church Medical College",
-    location: "Kolencherry, Ernakulam, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,20,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -963,7 +963,7 @@ const colleges = [
   },
   {
     name: "Pushpagiri Institute of Medical Sciences",
-    location: "Thiruvalla, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,30,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -975,7 +975,7 @@ const colleges = [
   },
   {
     name: "MES Medical College",
-    location: "Perinthalmanna, Malappuram, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,15,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -987,7 +987,7 @@ const colleges = [
   },
   {
     name: "Malabar Medical College Hospital and Research Centre",
-    location: "Ulliyeri, Calicut, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,20,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -999,7 +999,7 @@ const colleges = [
   },
   {
     name: "Sree Uthradom Thirunal Academy of Medical Sciences",
-    location: "Thiruvananthapuram, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,30,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1012,7 +1012,7 @@ const colleges = [
   },
   {
     name: "Sree Narayana Institute of Medical Sciences",
-    location: "Chalakka, Ernakulam, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,10,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1024,7 +1024,7 @@ const colleges = [
   },
   {
     name: "Sree Gokulam Medical College and Research Foundation",
-    location: "Venjaramoodu, Thiruvananthapuram, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,25,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1036,7 +1036,7 @@ const colleges = [
   },
   {
     name: "Mount Zion Medical College",
-    location: "Adoor, Pathanamthitta, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,00,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1048,7 +1048,7 @@ const colleges = [
   },
   {
     name: "PK Das Institute of Medical Sciences",
-    location: "Vaniyamkulam, Palakkad, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,15,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1060,7 +1060,7 @@ const colleges = [
   },
   {
     name: "KMCT Medical College",
-    location: "Manassery, Calicut, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,25,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1072,7 +1072,7 @@ const colleges = [
   },
   {
     name: "Travancore Medical College",
-    location: "Mylapore, Kollam, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,30,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1084,7 +1084,7 @@ const colleges = [
   },
   {
     name: "Wayanad Dr. Moopen's Medical College",
-    location: "Wayanad, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,00,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1096,7 +1096,7 @@ const colleges = [
   },
   {
     name: "Azeezia Institute of Medical Sciences and Research",
-    location: "Meeyannoor, Kollam, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,10,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1108,7 +1108,7 @@ const colleges = [
   },
   {
     name: "Dr. Somervell Memorial CSI Medical College",
-    location: "Karakonam, Thiruvananthapuram, Kerala",
+    location: "Thiruvananthapuram, Kerala",
     category: "MBBS",
     fees: "₹1,05,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1120,7 +1120,7 @@ const colleges = [
   },
   {
     name: "Karuna Medical College",
-    location: "Vilayodi, Palakkad, Kerala",
+    location: "Palakkad, Kerala",
     category: "MBBS",
     fees: "₹1,20,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1132,7 +1132,7 @@ const colleges = [
   },
   {
     name: "Al Azhar Medical College and Super Speciality Hospital",
-    location: "Thodupuzha, Kerala",
+    location: "Kerala",
     category: "MBBS",
     fees: "₹1,25,000", // Update with actual fee
     deadline: "01 Apr - 30 Apr 2024", // Update as needed
@@ -1175,7 +1175,7 @@ const colleges = [
   // Karnataka Colleges Start
   {
     name: "A.J. Institute of Medical Sciences",
-    location: "Mangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1187,7 +1187,7 @@ const colleges = [
   },
   {
     name: "Adichunchanagiri Institute of Medical Sciences",
-    location: "Mandya, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1199,7 +1199,7 @@ const colleges = [
   },
   {
     name: "Akash Institute of Medical Sciences and Research Centre",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1211,7 +1211,7 @@ const colleges = [
   },
   {
     name: "Al-Ameen Medical College",
-    location: "Vijayapur, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,20,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1223,7 +1223,7 @@ const colleges = [
   },
   {
     name: "BGS Global Institute of Medical Sciences",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,20,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1235,7 +1235,7 @@ const colleges = [
   },
   {
     name: "Dr. B.R. Ambedkar Medical College",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1247,7 +1247,7 @@ const colleges = [
   },
   {
     name: "East Point College of Medical Sciences and Research Center",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,70,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1259,7 +1259,7 @@ const colleges = [
   },
   {
     name: "Father Muller Institute of Medical Education & Research",
-    location: "Mangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1271,7 +1271,7 @@ const colleges = [
   },
   {
     name: "Jaya Jagadguru Murugharajendra Medical College",
-    location: "Davangere, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,60,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1283,7 +1283,7 @@ const colleges = [
   },
   {
     name: "K.Venkataramana Gowda Medical College and Hospital",
-    location: "Sullia, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,30,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1295,7 +1295,7 @@ const colleges = [
   },
   {
     name: "Kanachur Institute of Medical Sciences and Research Centre",
-    location: "Mangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1307,7 +1307,7 @@ const colleges = [
   },
   {
     name: "Kempegowda Institute of Medical Sciences",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,20,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1319,7 +1319,7 @@ const colleges = [
   },
   {
     name: "Khaja Bande Navaz Institute Of Medical Sciences",
-    location: "Gulbarga, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,20,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1331,7 +1331,7 @@ const colleges = [
   },
   {
     name: "M.S. Ramaiah Medical College",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1343,7 +1343,7 @@ const colleges = [
   },
   {
     name: "M.V.J. Medical College and Research Hospital",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,70,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1355,7 +1355,7 @@ const colleges = [
   },
   {
     name: "Mahadevappa Rampure Medical College",
-    location: "Kalaburgi, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,60,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1367,7 +1367,7 @@ const colleges = [
   },
   {
     name: "Navodaya Medical College",
-    location: "Raichur, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1379,7 +1379,7 @@ const colleges = [
   },
   {
     name: "S. Nijalingappa Medical College and Research Centre",
-    location: "Bagalkot, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1391,7 +1391,7 @@ const colleges = [
   },
   {
     name: "Sapthagiri Institute of Medical Sciences",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,00,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1403,7 +1403,7 @@ const colleges = [
   },
   {
     name: "SDM College of Medical Sciences and Hospital",
-    location: "Dharwad, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1415,7 +1415,7 @@ const colleges = [
   },
   {
     name: "Shridevi Institute of Medical Sciences and Research Hospital",
-    location: "Tumkur, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,40,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1427,7 +1427,7 @@ const colleges = [
   },
   {
     name: "Shymanuru Shivashankarappa Institute Of Medical Sciences",
-    location: "Davangere, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,60,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1439,7 +1439,7 @@ const colleges = [
   },
   {
     name: "Sri Basaveshwara Medical College and Hospital",
-    location: "Chitradurga, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,40,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1451,7 +1451,7 @@ const colleges = [
   },
   {
     name: "Srinivasa Institute of Medical Research Center",
-    location: "Surathkal, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1463,7 +1463,7 @@ const colleges = [
   },
   {
     name: "St John Medical College",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹6,28,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1475,7 +1475,7 @@ const colleges = [
   },
   {
     name: "Subbaiah Institute of Medical Science",
-    location: "Shimoga, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1487,7 +1487,7 @@ const colleges = [
   },
   {
     name: "The Oxford Medical College Hospital and Research Center",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,80,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1499,7 +1499,7 @@ const colleges = [
   },
   {
     name: "Vydehi Institute of Medical Science and Research Centre",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹10,40,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1511,7 +1511,7 @@ const colleges = [
   },
   {
     name: "Dr. Chandramma Dayananda Sagar Institute of Medical Education",
-    location: "Bangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,90,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1523,7 +1523,7 @@ const colleges = [
   },
   {
     name: "GR Medical College and Research Center",
-    location: "Mangalore, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,50,000",
     deadline: "01 Apr - 30 Apr 2024",
@@ -1535,7 +1535,7 @@ const colleges = [
   },
   {
     name: "Siddaganga Medical College and Research Institute",
-    location: "Tumakuru, Karnataka",
+    location: "Karnataka",
     category: "MBBS",
     fees: "₹9,70,000",
     deadline: "01 Apr - 30 Apr 2024",
