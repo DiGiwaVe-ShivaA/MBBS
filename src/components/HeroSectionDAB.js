@@ -55,7 +55,7 @@ export default function SlantedImages() {
         {[...images].reverse().map((imgSrc, i) => (
           <motion.div
             key={i}
-            className="relative min-w-[180px] md:w-1/5 h-[200px] md:h-full overflow-hidden rounded-xl shadow-lg shrink-0"
+            className="relative min-w-[180px] md:w-1/5 h-[200px] md:h-full overflow-hidden rounded-xl  shrink-0"
             variants={childVariants}
           >
             <Image
