@@ -227,24 +227,24 @@ export default function NavBar() {
                   >
                     PG
                   </Link> */}
-                  <Link
+                  {/* <Link
                     href="/courses/paramedical"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Paramedical
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/courses/diploma"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Diploma
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/courses/others"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Others
-                  </Link>
+                  </Link> */}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -462,21 +462,21 @@ export default function NavBar() {
                         PG
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/courses/paramedical" className="block">
                         Paramedical
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/courses/diploma" className="block">
                         Diploma
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/courses/others" className="block">
                         Others
                       </Link>
-                    </li>
+                    </li> */}
                   </motion.ul>
                 )}
               </AnimatePresence>
