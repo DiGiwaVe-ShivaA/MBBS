@@ -3,7 +3,7 @@ import { useState } from "react";
 import TopBar from "../../../../components/TopBar";
 import Navbar from "../../../../components/Navbar";
 import HeroSectionMBBSA from "../../../../components/HeroSectionMBBSA";
-// import HeroSectionPGA from "../../../../components/HeroSectionPGA";
+
 import Footer from "../../../../components/Footer";
 
 export default function CollegeStatePage() {
@@ -13,7 +13,6 @@ export default function CollegeStatePage() {
       <Navbar />
       <main>
         <HeroSectionMBBSA />
-        {/* <HeroSectionPGB /> */}
       </main>
       <Footer />
     </div>
