@@ -18,7 +18,7 @@ export default function AdmissionProcessPage() {
       </motion.h1>
 
       {/* Image Section */}
-      <div className="flex justify-center mb-10">
+      {/* <div className="flex justify-center mb-10">
         <Image
           src="/admission-info.jpeg"
           alt="Admission Information"
@@ -26,7 +26,7 @@ export default function AdmissionProcessPage() {
           height={900}
           className="rounded-xl shadow-lg"
         />
-      </div>
+      </div> */}
 
       {/* Step-by-Step Info */}
       <div className="space-y-8 max-w-4xl mx-auto">
