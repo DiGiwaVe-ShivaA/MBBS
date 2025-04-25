@@ -1661,14 +1661,14 @@ const CollegeTable = () => {
             {filtered.map((college, i) => (
               <tr key={i} className="border-t hover:bg-gray-50">
                 <td className="py-4 px-4 flex items-center gap-3">
-                  <img
+                  {/* <img
                     src={college.image}
                     alt={college.name}
                     className="w-10 h-10 object-contain"
                     onError={(e) =>
                       (e.currentTarget.src = "https://via.placeholder.com/40")
                     }
-                  />
+                  /> */}
                   <div>
                     <div className="font-medium hover:underline">
                       {college.name}

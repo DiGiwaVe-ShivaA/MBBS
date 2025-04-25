@@ -11,39 +11,39 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Lenny Dotson",
-    role: "Hiker",
+    name: "Satisfied Student",
+    role: "AIIMS DELHI",
     image: "/images/med5.jpg",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "Counseling was tough, but NSET made it simple and smooth. Their guidance helped me navigate the entire process with confidence. I’m truly grateful for their support!",
   },
   {
-    name: "Emma Collins",
-    role: "Backpacker",
+    name: "Krishna Thapa",
+    role: "KINGSTON COLLEGE",
     image: "/images/med5.webp",
     quote:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "While many gave empty promises, NSET stood out by providing clear, honest guidance. They helped me stay focused and choose the right direction.",
   },
   {
-    name: "Marcus Lee",
-    role: "Trail Explorer",
+    name: "Rohan Sharma",
+    role: "Institute of Medical Sciences",
     image: "/images/med5.webp",
     quote:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+      "Placing our trust in NSET was the best decision—we secured the seat we had always dreamed of. Truly thankful for their dedication and support.— Happy Parent & Student",
   },
   {
     name: "Sophia Ray",
-    role: "Adventurer",
+    role: "R.D.J.M. Medical College & Hospital",
     image: "/images/med5.webp",
     quote:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+      "NSET guided us through every stage—from NEET results to final admission. Their step-by-step support made all the difference.",
   },
   {
-    name: "Tommy Clark",
-    role: "Mountaineer",
+    name: "Joseph",
+    role: "Lord Buddha Medical College",
     image: "/images/med5.webp",
     quote:
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      "Choosing NSET was a game-changer. They kept every promise and cleared every doubt—we couldn’t have asked for a better partner in our medical admission journey",
   },
 ];
 

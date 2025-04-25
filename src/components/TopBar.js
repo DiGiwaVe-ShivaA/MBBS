@@ -99,17 +99,17 @@ Coaching Attended: ${formData.coaching}
       <div className="text-sm shadow-md border-b-1 border-transparent relative">
         <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-[#00E5FF] via-[#4b028b] to-[#00E5FF] bg-[length:200%_100%] animate-moving-gradient"></div>
 
-        <div className="w-full px-4 md:px-8 py-2 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="w-full flex justify-center">
+        <div className="w-full px-4 md:px-8 py-2 flex flex-col md:flex-row justify-end items-end gap-4">
+          <div className="w-full flex justify-end">
             <div className="flex gap-4">
               <button
-                className="flex items-center gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
+                className="flex items-end gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
                 onClick={() => alert("Book Appointment clicked")}
               >
                 <FaCalendarCheck className="text-white" /> Book Appointment
               </button>
               <button
-                className="flex items-center gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
+                className="flex items-end gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
                 onClick={() => alert("Live Counseling clicked")}
               >
                 <FaHeadset className="text-white" /> Live Counseling

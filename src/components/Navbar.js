@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronUp, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,6 +23,10 @@ export default function NavBar() {
   const [mobileDropdown, setMobileDropdown] = useState({
     colleges: false,
     courses: false,
+    ug: false,
+    pg: false,
+    paramedical: false,
+    diploma: false,
   });
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState("");
@@ -156,18 +160,73 @@ export default function NavBar() {
                   {...dropdownAnimation}
                   className="absolute top-full mt-2 w-48 bg-white border rounded shadow-md py-2"
                 >
-                  <Link
-                    href="/courses/ug"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    UG
-                  </Link>
-                  <Link
+                  {/* UG with nested submenu */}
+                  <div className="relative group">
+                    <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100">
+                      UG <ChevronRight className="w-4 h-4 ml-2" />
+                    </button>
+                    <div className="absolute left-full top-0 mt-0 hidden group-hover:block w-48 bg-white border rounded shadow-md">
+                      <Link
+                        href="/courses/ug/mbbs"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        MBBS
+                      </Link>
+                      <Link
+                        href="/courses/ug/bds"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        BDS
+                      </Link>
+                      <Link
+                        href="/courses/ug/bams"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        BAMS
+                      </Link>
+                      <Link
+                        href="/courses/ug/bhms"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        BHMS
+                      </Link>
+                      <Link
+                        href="/courses/ug/bvsc"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        BVSC
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* PG dropdown */}
+                  <div className="relative group">
+                    <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100">
+                      PG <ChevronRight className="w-4 h-4 ml-2" />
+                    </button>
+                    <div className="absolute left-full top-0 mt-0 hidden group-hover:block w-48 bg-white border rounded shadow-md">
+                      <Link
+                        href="/courses/ug/mbbs"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        MD/MS in INDIA
+                      </Link>
+                      <Link
+                        href="/courses/ug/bds"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        MDS in INDIA
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Other main categories */}
+                  {/* <Link
                     href="/courses/pg"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     PG
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/courses/paramedical"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -181,7 +240,7 @@ export default function NavBar() {
                     Diploma
                   </Link>
                   <Link
-                    href="/courses/pg"
+                    href="/courses/others"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Others
@@ -302,11 +361,102 @@ export default function NavBar() {
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                     className="pl-4 space-y-1 pb-2"
                   >
+                    {/* UG with nested MBBS, BDS, BAMS, BHMS, BVSC */}
                     <li>
-                      <Link href="/courses/ug" className="block">
-                        UG
-                      </Link>
+                      <button
+                        className="flex items-center justify-between w-full"
+                        onClick={() =>
+                          setMobileDropdown((prev) => ({
+                            ...prev,
+                            ug: !prev.ug,
+                          }))
+                        }
+                      >
+                        <span>UG</span>
+                        {mobileDropdown.ug ? <ChevronUp /> : <ChevronDown />}
+                      </button>
+
+                      <AnimatePresence>
+                        {mobileDropdown.ug && (
+                          <motion.ul
+                            key="ug-submenu"
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="pl-4 space-y-1"
+                          >
+                            <li>
+                              <Link href="/courses/ug/mbbs" className="block">
+                                MBBS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/courses/ug/bds" className="block">
+                                BDS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/courses/ug/bams" className="block">
+                                BAMS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/courses/ug/bhms" className="block">
+                                BHMS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/courses/ug/bvsc" className="block">
+                                BVSC
+                              </Link>
+                            </li>
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     </li>
+
+                    {/* pg dropdown */}
+                    <li>
+                      <button
+                        className="flex items-center justify-between w-full"
+                        onClick={() =>
+                          setMobileDropdown((prev) => ({
+                            ...prev,
+                            ug: !prev.ug,
+                          }))
+                        }
+                      >
+                        <span>UG</span>
+                        {mobileDropdown.ug ? <ChevronUp /> : <ChevronDown />}
+                      </button>
+
+                      <AnimatePresence>
+                        {mobileDropdown.ug && (
+                          <motion.ul
+                            key="ug-submenu"
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="pl-4 space-y-1"
+                          >
+                            <li>
+                              <Link href="/courses/ug/md" className="block">
+                                MD/MS in INDIA
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/courses/ug/mds" className="block">
+                                MDS
+                              </Link>
+                            </li>
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
+                    </li>
+
+                    {/* Other main categories */}
                     <li>
                       <Link href="/courses/pg" className="block">
                         PG
@@ -323,7 +473,7 @@ export default function NavBar() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/" className="block">
+                      <Link href="/courses/others" className="block">
                         Others
                       </Link>
                     </li>

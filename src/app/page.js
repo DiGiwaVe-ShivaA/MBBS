@@ -38,9 +38,9 @@ export default function Home() {
         <HeroSectionDB />
         <HeroSectionDC />
         <HeroSectionCC />
-        <HeroSectionD />
 
         <HeroSectionL />
+        <HeroSectionD />
         {/* <HeroSectionDA /> */}
         {/* <HeroSectionI />
         <HeroSectionH />
