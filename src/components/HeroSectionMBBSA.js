@@ -253,8 +253,6 @@ const CombinedLayout = () => {
             </button>
           </motion.div>
         </section>
-
-        {/* Footer Section */}
       </div>
     </>
   );
