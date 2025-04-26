@@ -1,6 +1,7 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
 
 export default function NeetDifficultySection() {
   const [iframeLoaded, setIframeLoaded] = useState(false);
