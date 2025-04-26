@@ -1,162 +1,102 @@
 "use client";
 
-export default function CareerPathsAfterNeetUg() {
+export default function CoursesTableAfterNeetUg() {
   const courses = [
     {
-      title: "MBBS (Bachelor of Medicine and Bachelor of Surgery)",
-      duration: "5.5 years (including 1-year internship)",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "General Physician",
-        "Surgeon",
-        "Postgraduate (MD/MS) Studies",
-        "Medical Research",
-        "Government Medical Officer",
-      ],
-      futureScope:
-        "MBBS graduates are in high demand across India and abroad, with endless specialization opportunities.",
+      name: "MBBS",
+      duration: "5.5 years",
+      coreField: "Allopathic Medicine",
+      careerProspects: "Doctor, Surgeon, Specialist",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BDS (Bachelor of Dental Surgery)",
+      name: "BDS",
       duration: "5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Dentist",
-        "Orthodontist",
-        "Dental Surgeon",
-        "Private Clinic Owner",
-        "Pursue MDS",
-      ],
-      futureScope:
-        "Excellent scope in clinical practice, private setups, and teaching institutions.",
+      coreField: "Dentistry",
+      careerProspects: "Dentist, Orthodontist",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BAMS (Bachelor of Ayurvedic Medicine and Surgery)",
+      name: "BAMS",
       duration: "5.5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Ayurvedic Doctor",
-        "Panchakarma Specialist",
-        "Hospital Administrator",
-        "PG in Ayurveda",
-      ],
-      futureScope:
-        "Rising global popularity of Ayurveda ensures bright prospects nationally and internationally.",
+      coreField: "Ayurvedic Medicine",
+      careerProspects: "Ayurvedic Doctor, Consultant",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BHMS (Bachelor of Homeopathic Medicine and Surgery)",
+      name: "BHMS",
       duration: "5.5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Homeopathic Doctor",
-        "Medical Researcher",
-        "Health Consultant",
-        "Lecturer in Homeopathy Colleges",
-      ],
-      futureScope:
-        "Increasing demand in holistic and alternative medicine sectors boosts opportunities.",
+      coreField: "Homeopathy",
+      careerProspects: "Homeopathic Practitioner, Teacher",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BUMS (Bachelor of Unani Medicine and Surgery)",
+      name: "BUMS",
       duration: "5.5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Unani Practitioner",
-        "Hospital-based Healer",
-        "Medical Officer",
-      ],
-      futureScope:
-        "Unani Medicine is gaining new momentum, creating jobs in wellness centers and hospitals.",
+      coreField: "Unani Medicine",
+      careerProspects: "Unani Doctor, Researcher",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BSMS (Bachelor of Siddha Medicine and Surgery)",
+      name: "BSMS",
       duration: "5.5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Siddha Medical Practitioner",
-        "Health and Wellness Consultant",
-        "Medical Researcher",
-      ],
-      futureScope:
-        "Growing acceptance of Siddha therapies, especially in South India, is boosting demand.",
+      coreField: "Siddha Medicine",
+      careerProspects: "Siddha Doctor, Wellness Expert",
+      eligibility: "NEET Qualified",
     },
     {
-      title: "BSc Nursing",
+      name: "BSc Nursing",
       duration: "4 years",
-      eligibility: "NEET UG qualified (in select institutes) + PCB in 12th",
-      careerPaths: [
-        "Registered Nurse",
-        "Critical Care Specialist",
-        "Nurse Educator",
-        "Hospital Administrator",
-      ],
-      futureScope:
-        "Massive global demand in hospitals, healthcare centers, and even immigration opportunities.",
+      coreField: "Nursing & Care",
+      careerProspects: "Nurse, Hospital Admin, Nurse Educator",
+      eligibility: "NEET (some institutes)",
     },
     {
-      title: "BVSc & AH (Bachelor of Veterinary Sciences and Animal Husbandry)",
+      name: "BVSc & AH",
       duration: "5.5 years",
-      eligibility: "Must qualify NEET UG",
-      careerPaths: [
-        "Veterinary Doctor",
-        "Animal Surgeon",
-        "Livestock Development Officer",
-      ],
-      futureScope:
-        "Booming opportunities in animal healthcare, government departments, and private clinics.",
+      coreField: "Veterinary Science",
+      careerProspects: "Veterinary Surgeon, Govt Jobs",
+      eligibility: "NEET Qualified",
     },
   ];
 
   return (
     <section className="bg-gray-50 py-12 px-4 md:px-8">
-      <div className="max-w-5xl mx-auto">
-        {/* Section Heading */}
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 leading-tight tracking-tight">
-          Top Career Paths After NEET UG 2025
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Table of Courses After NEET UG 2025
         </h2>
 
-        {/* List of Courses */}
-        <div className="space-y-10">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300 space-y-4"
-            >
-              <h3 className="text-2xl font-semibold text-indigo-700">
-                {course.title}
-              </h3>
-
-              <p className="text-gray-600">
-                <span className="font-semibold text-gray-800">Duration:</span>{" "}
-                {course.duration}
-              </p>
-
-              <p className="text-gray-600">
-                <span className="font-semibold text-gray-800">
-                  Eligibility:
-                </span>{" "}
-                {course.eligibility}
-              </p>
-
-              <div>
-                <p className="font-semibold text-gray-800 mb-1">
-                  Career Paths:
-                </p>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  {course.careerPaths.map((path, idx) => (
-                    <li key={idx}>{path}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-semibold text-gray-800 mb-1">
-                  Future Scope:
-                </p>
-                <p className="text-gray-600">{course.futureScope}</p>
-              </div>
-            </div>
-          ))}
+        {/* Table */}
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-200">
+            <thead>
+              <tr className="bg-gray-100 text-gray-700 text-left text-sm uppercase">
+                <th className="py-3 px-6 border-b">Course Name</th>
+                <th className="py-3 px-6 border-b">Duration</th>
+                <th className="py-3 px-6 border-b">Core Field</th>
+                <th className="py-3 px-6 border-b">Career Prospects</th>
+                <th className="py-3 px-6 border-b">Eligibility</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-600">
+              {courses.map((course, index) => (
+                <tr
+                  key={index}
+                  className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                >
+                  <td className="py-4 px-6 border-b">{course.name}</td>
+                  <td className="py-4 px-6 border-b">{course.duration}</td>
+                  <td className="py-4 px-6 border-b">{course.coreField}</td>
+                  <td className="py-4 px-6 border-b">
+                    {course.careerProspects}
+                  </td>
+                  <td className="py-4 px-6 border-b">{course.eligibility}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

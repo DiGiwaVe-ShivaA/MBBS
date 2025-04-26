@@ -10,38 +10,38 @@ import { HiOutlineDocumentText, HiCheckCircle } from "react-icons/hi";
 
 // Sample data for infographic
 
-const timelineSteps = [
-  {
-    title: "Register Online",
-    desc: "Fill out the NEET application form on neet.nta.nic.in",
-    icon: "📝",
-  },
-  {
-    title: "Admit Card",
-    desc: "Download the admit card when available",
-    icon: "🎫",
-  },
-  {
-    title: "Exam Day",
-    desc: "Appear for NEET at your assigned centre",
-    icon: "🧪",
-  },
-  {
-    title: "Result Announcement",
-    desc: "Check your results on the official portal",
-    icon: "📢",
-  },
-  {
-    title: "Counseling",
-    desc: "Register for counseling rounds",
-    icon: "📋",
-  },
-  {
-    title: "Seat Allotment",
-    desc: "Choose your college and confirm your seat",
-    icon: "🏫",
-  },
-];
+// const timelineSteps = [
+//   {
+//     title: "Register Online",
+//     desc: "Fill out the NEET application form on neet.nta.nic.in",
+//     icon: "📝",
+//   },
+//   {
+//     title: "Admit Card",
+//     desc: "Download the admit card when available",
+//     icon: "🎫",
+//   },
+//   {
+//     title: "Exam Day",
+//     desc: "Appear for NEET at your assigned centre",
+//     icon: "🧪",
+//   },
+//   {
+//     title: "Result Announcement",
+//     desc: "Check your results on the official portal",
+//     icon: "📢",
+//   },
+//   {
+//     title: "Counseling",
+//     desc: "Register for counseling rounds",
+//     icon: "📋",
+//   },
+//   {
+//     title: "Seat Allotment",
+//     desc: "Choose your college and confirm your seat",
+//     icon: "🏫",
+//   },
+// ];
 
 const testimonials = [
   {
@@ -607,14 +607,12 @@ export default function AboutNEETPage() {
       </div>
       {/* neet 4th ends */}
       {/* Interactive Timeline */}(
-      <section className="relative px-6 md:px-20 py-16 bg-gray-50 overflow-hidden">
-        <h2 className="text-3xl font-bold text-center mb-16">NEET Journey</h2>
-
-        <div className="relative max-w-4xl mx-auto">
-          {/* Vertical line in center */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 to-purple-500 z-0" />
-
-          <div className="flex flex-col gap-16 relative z-10">
+      {/* <section className="relative px-6 md:px-20 py-16 bg-gray-50 overflow-hidden">
+        <h2 className="text-3xl font-bold text-center mb-16">NEET Journey</h2> */}
+      {/* <div className="relative max-w-4xl mx-auto"> */}
+      {/* Vertical line in center */}
+      {/* <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 to-purple-500 z-0" /> */}
+      {/* <div className="flex flex-col gap-16 relative z-10">
             {timelineSteps.map((step, idx) => (
               <motion.div
                 key={idx}
@@ -625,24 +623,23 @@ export default function AboutNEETPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-              >
-                {/* Content Card */}
-                <div className="w-full md:w-5/12 bg-white border-t-4 border-blue-500 rounded-xl shadow-lg p-6">
+              > */}
+      {/* Content Card */}
+      {/* <div className="w-full md:w-5/12 bg-white border-t-4 border-blue-500 rounded-xl shadow-lg p-6">
                   <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                   <p className="text-gray-600">{step.desc}</p>
-                </div>
-
-                {/* Center Dot with Icon */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 -top-2 md:top-0 z-20">
+                </div> */}
+      {/* Center Dot with Icon */}
+      {/* <div className="absolute left-1/2 transform -translate-x-1/2 -top-2 md:top-0 z-20">
                   <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl shadow-xl border-4 border-white">
                     {step.icon}
                   </div>
-                </div>
-              </motion.div>
+                </div> */}
+      {/* </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div> */}
+      {/* </div> */}
+      {/* </section> */}
     </div>
   );
 }
