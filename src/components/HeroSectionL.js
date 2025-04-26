@@ -46,13 +46,16 @@ export default function ContactSection() {
       <div className="flex flex-col items-center gap-8 max-w-md w-full relative">
         {/* Franchise Card */}
         <div className="bg-white p-8 rounded-lg shadow-md border text-center w-full z-10">
-          <Store size={50} className="mx-auto text-pink-500 mb-4" />
-          <h2 className="text-xl font-semibold mb-2">Franchise</h2>
-          <p className="text-gray-600 mb-4">
+          <Store
+            size={50}
+            className="mx-auto text-pink-500 mb-4 will-change-transform"
+          />
+          <h2 className="text-xl font-semibold mb-2 antialiased">Franchise</h2>
+          <p className="text-gray-600 mb-4 antialiased">
             Start your own center in your city <br />
             Partner with us and grow together
           </p>
-          <button className="px-4 py-2 border rounded-md text-sm font-medium hover:bg-pink-50 transition">
+          <button className="px-4 py-2 min-w-[180px] border rounded-md text-sm font-medium hover:bg-pink-50 transition-all duration-150 ease-in-out">
             Apply for Franchise
           </button>
         </div>
@@ -62,13 +65,18 @@ export default function ContactSection() {
 
         {/* Partnership Card */}
         <div className="bg-white p-8 rounded-lg shadow-md border text-center w-full z-10">
-          <Globe size={50} className="mx-auto text-pink-500 mb-4" />
-          <h2 className="text-xl font-semibold mb-2">Partnership Request</h2>
-          <p className="text-gray-600 mb-4">
+          <Globe
+            size={50}
+            className="mx-auto text-pink-500 mb-4 will-change-transform"
+          />
+          <h2 className="text-xl font-semibold mb-2 antialiased">
+            Partnership Request
+          </h2>
+          <p className="text-gray-600 mb-4 antialiased">
             For partnership and business <br />
             development inquiries
           </p>
-          <button className="px-4 py-2 border rounded-md text-sm font-medium hover:bg-pink-50 transition">
+          <button className="px-4 py-2 min-w-[180px] border rounded-md text-sm font-medium hover:bg-pink-50 transition-all duration-150 ease-in-out">
             hello@yourdomain.com
           </button>
         </div>
