@@ -206,13 +206,13 @@ export default function NavBar() {
                     </button>
                     <div className="absolute left-full top-0 mt-0 hidden group-hover:block w-48 bg-white border rounded shadow-md">
                       <Link
-                        href="/courses/ug/mbbs"
+                        href="/courses/pg/mdms"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
                         MD/MS in INDIA
                       </Link>
                       <Link
-                        href="/courses/ug/bds"
+                        href="/courses/pg/mds"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
                         MDS in INDIA
@@ -252,7 +252,7 @@ export default function NavBar() {
 
           {/* <Link href="/neetpredicter">NEET Predictor</Link> */}
           <Link href="/NEET2025">NEET 2025</Link>
-          <Link href="/wecater">Services</Link>
+          <Link href="/services">Services</Link>
           <button
             className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold px-5 py-2 rounded-full shadow-md hover:opacity-90 transition-all duration-300 text-sm"
             onClick={() => setShowForm(true)}
@@ -427,14 +427,14 @@ export default function NavBar() {
                           }))
                         }
                       >
-                        <span>UG</span>
+                        <span>PG</span>
                         {mobileDropdown.ug ? <ChevronUp /> : <ChevronDown />}
                       </button>
 
                       <AnimatePresence>
                         {mobileDropdown.ug && (
                           <motion.ul
-                            key="ug-submenu"
+                            key="pg-submenu"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
@@ -442,12 +442,12 @@ export default function NavBar() {
                             className="pl-4 space-y-1"
                           >
                             <li>
-                              <Link href="/courses/ug/md" className="block">
+                              <Link href="/courses/pg/mdms" className="block">
                                 MD/MS in INDIA
                               </Link>
                             </li>
                             <li>
-                              <Link href="/courses/ug/mds" className="block">
+                              <Link href="/courses/pg/mds" className="block">
                                 MDS
                               </Link>
                             </li>
@@ -457,11 +457,11 @@ export default function NavBar() {
                     </li>
 
                     {/* Other main categories */}
-                    <li>
+                    {/* <li>
                       <Link href="/courses/pg" className="block">
                         PG
                       </Link>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <Link href="/courses/paramedical" className="block">
                         Paramedical
@@ -485,7 +485,7 @@ export default function NavBar() {
             <Link href="/NEET2025" className="block py-2 border-b">
               NEET 2025
             </Link>
-            <Link href="/wecater" className="block py-2 border-b">
+            <Link href="/services" className="block py-2 border-b">
               Service
             </Link>
             <button

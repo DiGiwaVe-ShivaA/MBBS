@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Heart, FileText, CalendarDays } from "lucide-react";
+import { GraduationCap, CalendarDays, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const DiplomaInMedicalLayout = () => {
+const MdsLayout = () => {
   return (
     <>
       {/* Main Intro Section */}
@@ -16,7 +16,7 @@ const DiplomaInMedicalLayout = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-center text-[#8A05FF] mb-6"
           >
-            Pursue a Diploma in Medical Fields in India
+            Study MDS in India
           </motion.h2>
 
           <motion.p
@@ -25,9 +25,10 @@ const DiplomaInMedicalLayout = () => {
             transition={{ delay: 0.3 }}
             className="text-gray-700 text-lg text-center mb-10"
           >
-            Medical diplomas in India offer specialized training in various
-            medical fields, giving you a path to start a successful career in
-            healthcare. Explore multiple options like DMLT, Nursing, and more.
+            MDS (Master of Dental Surgery) is a postgraduate degree for aspiring
+            dental professionals who want to specialize in various branches of
+            dentistry. Pursue an MDS in India for advanced training and
+            expertise in dentistry.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-6 text-gray-800">
@@ -38,14 +39,17 @@ const DiplomaInMedicalLayout = () => {
               className="bg-gray-100 p-6 rounded-2xl shadow-md"
             >
               <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <Heart className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Diploma Course Highlights
+                <GraduationCap className="w-6 h-6 mr-2 text-[#00E5FF]" />
+                MDS Course Highlights
               </h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>1-2 years duration</li>
-                <li>Specializations like DMLT, Nursing, Radiology, and more</li>
-                <li>Affordable and flexible learning options</li>
-                <li>Industry-relevant skills for immediate employment</li>
+                <li>3 years duration</li>
+                <li>
+                  Specializations in Orthodontics, Periodontics, Prosthodontics,
+                  etc.
+                </li>
+                <li>Recognized by DCI (Dental Council of India)</li>
+                <li>Global recognition and practice opportunities</li>
               </ul>
             </motion.div>
 
@@ -56,14 +60,14 @@ const DiplomaInMedicalLayout = () => {
               className="bg-gray-100 p-6 rounded-2xl shadow-md"
             >
               <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <FileText className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Admission Process
+                <CheckCircle className="w-6 h-6 mr-2 text-[#00E5FF]" />
+                Admission Criteria
               </h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Minimum 12th grade qualification (Science stream)</li>
-                <li>Application based on eligibility criteria</li>
-                <li>Entrance exams may be required for specific diplomas</li>
-                <li>Selection based on merit and availability of seats</li>
+                <li>Qualify NEET MDS exam</li>
+                <li>BDS degree from a recognized institution</li>
+                <li>Minimum 50% marks in BDS final exams</li>
+                <li>Fulfill category reservation norms if applicable</li>
               </ul>
             </motion.div>
           </div>
@@ -78,8 +82,8 @@ const DiplomaInMedicalLayout = () => {
               Important Timelines
             </h4>
             <p className="text-gray-700">
-              Applications open: <strong>June – July</strong> <br />
-              Classes commence: <strong>August – September</strong>
+              Applications open: <strong>January – February</strong> <br />
+              Classes commence: <strong>May – June</strong>
             </p>
           </motion.div>
         </div>
@@ -93,15 +97,14 @@ const DiplomaInMedicalLayout = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-[#8A05FF]">
-            Build Your Medical Career with Diplomas in India
+            Become a Dental Specialist with MDS in India
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-600">
-            Fast-track your career in the medical field by gaining expertise
-            through specialized diploma programs in nursing, radiology, lab
-            technology, and more.
+            Specialize in the field of your choice and gain advanced skills in
+            dental surgery with MDS in India.
           </p>
           <button className="bg-[#8A05FF] hover:bg-[#6601D5] text-white font-semibold px-6 py-3 rounded-full shadow-lg transition">
-            Explore Diploma Courses
+            Start Your MDS Journey
           </button>
         </motion.div>
       </section>
@@ -111,19 +114,19 @@ const DiplomaInMedicalLayout = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {[
             {
-              title: "Diverse Specializations",
-              desc: "Choose from various specializations such as DMLT, Radiology, Nursing, and more.",
-              icon: "🩺",
+              title: "Comprehensive Specializations",
+              desc: "Choose from a wide range of specialties such as Orthodontics, Periodontics, Prosthodontics, and more.",
+              icon: "🦷",
             },
             {
-              title: "Affordable Courses",
-              desc: "Diploma courses are budget-friendly and provide the same core knowledge as a degree program.",
-              icon: "💸",
+              title: "Top Dental Institutions",
+              desc: "Study at India’s best dental schools with state-of-the-art facilities and renowned faculty.",
+              icon: "🏫",
             },
             {
-              title: "Immediate Employment",
-              desc: "Get industry-ready skills and start your career as a healthcare professional with quick employment opportunities.",
-              icon: "👩‍⚕️",
+              title: "Worldwide Recognition",
+              desc: "Earn an MDS degree recognized globally, providing opportunities to practice worldwide.",
+              icon: "🌎",
             },
           ].map((item, idx) => (
             <motion.div
@@ -148,26 +151,26 @@ const DiplomaInMedicalLayout = () => {
             Admission Process
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Here’s how you can secure a spot in medical diploma programs in
-            India.
+            Follow these steps to apply and secure admission to top MDS programs
+            in India.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
             {
               step: "01",
-              title: "Choose Your Specialization",
-              desc: "Explore different medical diplomas and decide which one suits your interests and career goals.",
+              title: "Career Counseling",
+              desc: "Consult with experts to choose the right specialization and institution.",
             },
             {
               step: "02",
-              title: "Meet Eligibility Criteria",
-              desc: "Ensure you meet the educational and age requirements for your selected diploma program.",
+              title: "NEET MDS Exam",
+              desc: "Prepare and appear for the NEET MDS exam for postgraduate admissions.",
             },
             {
               step: "03",
-              title: "Submit Application",
-              desc: "Fill out the application form, provide documents, and appear for any required entrance exams.",
+              title: "College Allotment",
+              desc: "Get admitted to top dental colleges in India based on your rank and preferences.",
             },
           ].map((item, idx) => (
             <motion.div
@@ -192,34 +195,34 @@ const DiplomaInMedicalLayout = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Experienced Faculty",
-              desc: "Learn from industry experts and experienced professionals in the healthcare field.",
-              icon: "👩‍🏫",
+              title: "Advanced Clinical Training",
+              desc: "Learn through real-life clinical exposure in top dental hospitals.",
+              icon: "🦷",
             },
             {
-              title: "Practical Experience",
-              desc: "Gain hands-on experience through clinical training and internships in top medical institutions.",
-              icon: "🩺",
+              title: "Research Opportunities",
+              desc: "Get involved in cutting-edge dental research and innovations.",
+              icon: "🔬",
             },
             {
-              title: "Industry Connections",
-              desc: "Develop a network in the healthcare industry and improve your employment opportunities.",
-              icon: "🌐",
+              title: "Postgraduate Fellowships",
+              desc: "Further specialize through fellowships in specific areas of dentistry.",
+              icon: "🎓",
             },
             {
-              title: "High Employability",
-              desc: "Medical diploma holders are in high demand across various healthcare sectors.",
-              icon: "💼",
-            },
-            {
-              title: "Continuous Learning",
-              desc: "Stay updated with new medical advancements through regular workshops and training.",
-              icon: "📚",
-            },
-            {
-              title: "Global Recognition",
-              desc: "Diploma programs are recognized worldwide, offering you global career opportunities.",
+              title: "International Career Opportunities",
+              desc: "Practice as a dental surgeon in various countries.",
               icon: "🌍",
+            },
+            {
+              title: "Teaching Opportunities",
+              desc: "Teaching roles at top dental schools after your MDS degree.",
+              icon: "🧑‍🏫",
+            },
+            {
+              title: "Work in Top Hospitals",
+              desc: "Join leading dental hospitals and become an expert in your field.",
+              icon: "🏥",
             },
           ].map((item, idx) => (
             <motion.div
@@ -245,14 +248,14 @@ const DiplomaInMedicalLayout = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Ready to Start Your Medical Diploma Journey?
+            Ready to Start Your MDS Journey?
           </h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg">
-            Take the first step towards a fulfilling career in the medical
-            field. Enroll in a diploma program today!
+            Connect with experts and take the first step toward a successful
+            career in dentistry.
           </p>
           <button className="bg-white text-[#8A05FF] hover:bg-gray-100 font-semibold px-8 py-4 rounded-full transition">
-            Apply Now
+            Schedule a Free Consultation
           </button>
         </motion.div>
       </section>
@@ -260,4 +263,4 @@ const DiplomaInMedicalLayout = () => {
   );
 };
 
-export default DiplomaInMedicalLayout;
+export default MdsLayout;

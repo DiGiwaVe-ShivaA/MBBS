@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Heart, FileText, CalendarDays } from "lucide-react";
+import { GraduationCap, CalendarDays, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const DiplomaInMedicalLayout = () => {
+const MdMsLayout = () => {
   return (
     <>
       {/* Main Intro Section */}
@@ -16,7 +16,7 @@ const DiplomaInMedicalLayout = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-center text-[#8A05FF] mb-6"
           >
-            Pursue a Diploma in Medical Fields in India
+            Study MD/MS in India
           </motion.h2>
 
           <motion.p
@@ -25,9 +25,10 @@ const DiplomaInMedicalLayout = () => {
             transition={{ delay: 0.3 }}
             className="text-gray-700 text-lg text-center mb-10"
           >
-            Medical diplomas in India offer specialized training in various
-            medical fields, giving you a path to start a successful career in
-            healthcare. Explore multiple options like DMLT, Nursing, and more.
+            MD/MS (Doctor of Medicine/Master of Surgery) programs in India
+            provide an opportunity to specialize in various medical fields.
+            These postgraduate programs are designed to help you become an
+            expert in the medical industry.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-6 text-gray-800">
@@ -38,14 +39,14 @@ const DiplomaInMedicalLayout = () => {
               className="bg-gray-100 p-6 rounded-2xl shadow-md"
             >
               <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <Heart className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Diploma Course Highlights
+                <GraduationCap className="w-6 h-6 mr-2 text-[#00E5FF]" />
+                MD/MS Course Highlights
               </h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>1-2 years duration</li>
-                <li>Specializations like DMLT, Nursing, Radiology, and more</li>
-                <li>Affordable and flexible learning options</li>
-                <li>Industry-relevant skills for immediate employment</li>
+                <li>3 years duration (2 years for certain specialties)</li>
+                <li>Specializations available in various medical fields</li>
+                <li>Recognized by MCI and Indian universities</li>
+                <li>Global demand for MD/MS specialists</li>
               </ul>
             </motion.div>
 
@@ -56,14 +57,14 @@ const DiplomaInMedicalLayout = () => {
               className="bg-gray-100 p-6 rounded-2xl shadow-md"
             >
               <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <FileText className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Admission Process
+                <CheckCircle className="w-6 h-6 mr-2 text-[#00E5FF]" />
+                Admission Criteria
               </h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Minimum 12th grade qualification (Science stream)</li>
-                <li>Application based on eligibility criteria</li>
-                <li>Entrance exams may be required for specific diplomas</li>
-                <li>Selection based on merit and availability of seats</li>
+                <li>Qualify NEET PG exam</li>
+                <li>MBBS degree from a recognized institution</li>
+                <li>Minimum 50% marks in MBBS final exams</li>
+                <li>Fulfill category reservation norms if applicable</li>
               </ul>
             </motion.div>
           </div>
@@ -78,8 +79,8 @@ const DiplomaInMedicalLayout = () => {
               Important Timelines
             </h4>
             <p className="text-gray-700">
-              Applications open: <strong>June – July</strong> <br />
-              Classes commence: <strong>August – September</strong>
+              Applications open: <strong>March – April</strong> <br />
+              Classes commence: <strong>June – July</strong>
             </p>
           </motion.div>
         </div>
@@ -93,15 +94,14 @@ const DiplomaInMedicalLayout = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-[#8A05FF]">
-            Build Your Medical Career with Diplomas in India
+            Become a Medical Specialist with MD/MS in India
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-600">
-            Fast-track your career in the medical field by gaining expertise
-            through specialized diploma programs in nursing, radiology, lab
-            technology, and more.
+            Join India’s premier medical institutions and specialize in the
+            field of your choice with MD/MS.
           </p>
           <button className="bg-[#8A05FF] hover:bg-[#6601D5] text-white font-semibold px-6 py-3 rounded-full shadow-lg transition">
-            Explore Diploma Courses
+            Start Your MD/MS Journey
           </button>
         </motion.div>
       </section>
@@ -111,19 +111,19 @@ const DiplomaInMedicalLayout = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {[
             {
-              title: "Diverse Specializations",
-              desc: "Choose from various specializations such as DMLT, Radiology, Nursing, and more.",
-              icon: "🩺",
+              title: "World-Class Education",
+              desc: "Learn from top-notch faculty with hands-on clinical training.",
+              icon: "🎓",
             },
             {
-              title: "Affordable Courses",
-              desc: "Diploma courses are budget-friendly and provide the same core knowledge as a degree program.",
-              icon: "💸",
+              title: "Leading Medical Institutions",
+              desc: "Study at India’s most reputed universities and hospitals.",
+              icon: "🏥",
             },
             {
-              title: "Immediate Employment",
-              desc: "Get industry-ready skills and start your career as a healthcare professional with quick employment opportunities.",
-              icon: "👩‍⚕️",
+              title: "Versatile Career Paths",
+              desc: "Opportunities to practice, teach, or enter research.",
+              icon: "🌍",
             },
           ].map((item, idx) => (
             <motion.div
@@ -148,26 +148,26 @@ const DiplomaInMedicalLayout = () => {
             Admission Process
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Here’s how you can secure a spot in medical diploma programs in
-            India.
+            Follow these steps to apply and secure admission to top MD/MS
+            programs.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
             {
               step: "01",
-              title: "Choose Your Specialization",
-              desc: "Explore different medical diplomas and decide which one suits your interests and career goals.",
+              title: "Career Counseling",
+              desc: "Consult experts to select the right specialization and institution.",
             },
             {
               step: "02",
-              title: "Meet Eligibility Criteria",
-              desc: "Ensure you meet the educational and age requirements for your selected diploma program.",
+              title: "NEET PG Exam",
+              desc: "Prepare and appear for the NEET PG exam for postgraduate admissions.",
             },
             {
               step: "03",
-              title: "Submit Application",
-              desc: "Fill out the application form, provide documents, and appear for any required entrance exams.",
+              title: "College Allotment",
+              desc: "Get admission to a prestigious medical college in India.",
             },
           ].map((item, idx) => (
             <motion.div
@@ -192,34 +192,34 @@ const DiplomaInMedicalLayout = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Experienced Faculty",
-              desc: "Learn from industry experts and experienced professionals in the healthcare field.",
-              icon: "👩‍🏫",
-            },
-            {
-              title: "Practical Experience",
-              desc: "Gain hands-on experience through clinical training and internships in top medical institutions.",
+              title: "Clinical Training",
+              desc: "Gain practical experience in renowned hospitals.",
               icon: "🩺",
             },
             {
-              title: "Industry Connections",
-              desc: "Develop a network in the healthcare industry and improve your employment opportunities.",
-              icon: "🌐",
-            },
-            {
-              title: "High Employability",
-              desc: "Medical diploma holders are in high demand across various healthcare sectors.",
-              icon: "💼",
-            },
-            {
-              title: "Continuous Learning",
-              desc: "Stay updated with new medical advancements through regular workshops and training.",
-              icon: "📚",
+              title: "Research Opportunities",
+              desc: "Participate in cutting-edge research in the medical field.",
+              icon: "🔬",
             },
             {
               title: "Global Recognition",
-              desc: "Diploma programs are recognized worldwide, offering you global career opportunities.",
-              icon: "🌍",
+              desc: "Earn a degree recognized worldwide.",
+              icon: "🌎",
+            },
+            {
+              title: "Postgraduate Fellowships",
+              desc: "Further specialization through fellowship programs.",
+              icon: "🎓",
+            },
+            {
+              title: "Teaching Opportunities",
+              desc: "Teaching opportunities at medical institutions worldwide.",
+              icon: "🧑‍🏫",
+            },
+            {
+              title: "Practice in Top Hospitals",
+              desc: "Work in leading hospitals as a specialist.",
+              icon: "🏥",
             },
           ].map((item, idx) => (
             <motion.div
@@ -245,14 +245,14 @@ const DiplomaInMedicalLayout = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Ready to Start Your Medical Diploma Journey?
+            Ready to Begin Your MD/MS Journey?
           </h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg">
-            Take the first step towards a fulfilling career in the medical
-            field. Enroll in a diploma program today!
+            Connect with counselors and take the first step toward becoming a
+            specialist in your field.
           </p>
           <button className="bg-white text-[#8A05FF] hover:bg-gray-100 font-semibold px-8 py-4 rounded-full transition">
-            Apply Now
+            Schedule a Free Consultation
           </button>
         </motion.div>
       </section>
@@ -260,4 +260,4 @@ const DiplomaInMedicalLayout = () => {
   );
 };
 
-export default DiplomaInMedicalLayout;
+export default MdMsLayout;

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import TopBar from "../../components/TopBar";
 import Navbar from "../../components/Navbar";
-import HeroSectionC from "../../components/HeroSectionC";
-import HeroSectionCB from "../../components/HeroSectionCB";
+import HeroSectionServices from "../../components/HeroSectionServices";
+// import HeroSectionCB from "../../components/HeroSectionCB";
 // import HeroSectionCC from "../../components/HeroSectionCC";
 
 import Footer from "../../components/Footer";
@@ -13,8 +13,8 @@ export default function Home() {
       <TopBar />
       <Navbar />
       <main>
-        <HeroSectionC />
-        <HeroSectionCB />
+        <HeroSectionServices />
+        {/* <HeroSectionCB /> */}
         {/* <HeroSectionCC /> */}
       </main>
       <Footer />
