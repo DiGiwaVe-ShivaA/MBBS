@@ -315,13 +315,10 @@ export default function AboutNEETPage() {
                 <thead className="bg-indigo-100">
                   <tr>
                     <th className="border border-gray-300 p-4 text-left text-indigo-800 font-semibold">
-                      Subject
-                    </th>
-                    <th className="border border-gray-300 p-4 text-left text-indigo-800 font-semibold">
                       Section
                     </th>
                     <th className="border border-gray-300 p-4 text-left text-indigo-800 font-semibold">
-                      Questions
+                      Number of Questions
                     </th>
                     <th className="border border-gray-300 p-4 text-left text-indigo-800 font-semibold">
                       Marks
@@ -331,39 +328,32 @@ export default function AboutNEETPage() {
                 <tbody>
                   <tr>
                     <td className="border border-gray-300 p-4">Physics</td>
-                    <td className="border border-gray-300 p-4">A + B</td>
-                    <td className="border border-gray-300 p-4">35 + 15 = 50</td>
+                    <td className="border border-gray-300 p-4">45</td>
                     <td className="border border-gray-300 p-4">180</td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="border border-gray-300 p-4">Chemistry</td>
-                    <td className="border border-gray-300 p-4">A + B</td>
-                    <td className="border border-gray-300 p-4">35 + 15 = 50</td>
+                    <td className="border border-gray-300 p-4">45</td>
                     <td className="border border-gray-300 p-4">180</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-4">Botany</td>
-                    <td className="border border-gray-300 p-4">A + B</td>
-                    <td className="border border-gray-300 p-4">35 + 15 = 50</td>
-                    <td className="border border-gray-300 p-4">180</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-4">Zoology</td>
-                    <td className="border border-gray-300 p-4">A + B</td>
-                    <td className="border border-gray-300 p-4">35 + 15 = 50</td>
-                    <td className="border border-gray-300 p-4">180</td>
+                    <td className="border border-gray-300 p-4">
+                      Biology <br />
+                      <span className="text-sm text-gray-500">
+                        (Botany + Zoology)
+                      </span>
+                    </td>
+                    <td className="border border-gray-300 p-4">90</td>
+                    <td className="border border-gray-300 p-4">360</td>
                   </tr>
                 </tbody>
                 <tfoot className="bg-indigo-50">
                   <tr>
-                    <td
-                      className="border border-gray-300 p-4 font-bold"
-                      colSpan="2"
-                    >
+                    <td className="border border-gray-300 p-4 font-bold">
                       Total
                     </td>
                     <td className="border border-gray-300 p-4 font-bold">
-                      200 (Attempt 180)
+                      180
                     </td>
                     <td className="border border-gray-300 p-4 font-bold">
                       720
