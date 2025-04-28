@@ -128,7 +128,7 @@ export default function AboutNEETPage() {
             🧭 NEET 2025 Counselling Process
           </h2>
 
-          <div className="flex flex-col space-y-8 relative max-w-4xl mx-auto">
+          <div className="flex flex-col space-y-8 relative max-w-6xl mx-auto">
             {/* Vertical line in center */}
             <div className="absolute left-5 top-0 bottom-0 w-1 bg-indigo-200"></div>
 
