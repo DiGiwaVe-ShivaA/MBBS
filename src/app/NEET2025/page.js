@@ -1,9 +1,9 @@
 import Image from "next/image";
 import TopBar from "../../components/TopBar";
 import Navbar from "../../components/Navbar";
-// import HeroSectionNeetAA from "../../components/HeroSectionNeetAA";
+import HeroSectionNeetAA from "../../components/HeroSectionNeetAA";
 import HeroSectionNeetA from "../../components/HeroSectionNeetA";
-import HeroSectionNeetE from "../../components/HeroSectionNeetE";
+// import HeroSectionNeetE from "../../components/HeroSectionNeetE";
 import HeroSectionNeetF from "../../components/HeroSectionNeetF";
 // import HeroSectionNeetG from "../../components/HeroSectionNeetG";
 import HeroSectionNeetB from "../../components/HeroSectionNeetB";
@@ -23,13 +23,13 @@ export default function Home() {
       <main>
         {/* <HeroSectionC /> */}
         {/* <HeroSectionCB /> */}
-        {/* <HeroSectionNeetAA /> */}
         <HeroSectionNeetA />
+        <HeroSectionNeetAA />
         {/* <HeroSectionNeetB /> */}
         <HeroSectionNeetC />
         <HeroSectionNeetD />
         {/* <HeroSectionI /> */}
-        <HeroSectionNeetE />
+        {/* <HeroSectionNeetE /> */}
         <HeroSectionNeetF />
         {/* <HeroSectionNeetG /> */}
       </main>
