@@ -12,16 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata = {
-//   title: "MbbsCollage",
-//   description:
-//     "Stay updated with NEET (UG) 2025 announcements, guides, and more.",
-// };
-
 export const metadata = {
   title: "MBBS Collage | Trusted Info for NEET Aspirants",
   description:
     "Get accurate, up-to-date NEET UG 2025 updates, admit card info, and college guidance.",
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
   openGraph: {
     title: "MBBS Collage | Trusted Info for NEET Aspirants",
     description:
@@ -30,7 +27,7 @@ export const metadata = {
     siteName: "MBBS Collage",
     images: [
       {
-        url: "/og-image.png", // Replace with your actual image in public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "MBBS Collage",
