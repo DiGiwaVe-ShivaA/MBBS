@@ -6,7 +6,7 @@ import {
   FaMapMarkerAlt,
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 
@@ -40,14 +40,17 @@ export default function Footer() {
             </h3>
             <div className="grid grid-cols-2 text-left gap-x-6 gap-y-3">
               {[
-                { name: "Home", link: "/about" },
-                { name: "Login", link: "/services" },
-                { name: "Testimonial", link: "/testimonial" },
-                { name: "FAQs", link: "/faqs" },
-                { name: "Career", link: "/career" },
-                { name: "Blogs", link: "/blogs" },
-                { name: "State", link: "/state" },
-                { name: "Counseling", link: "/counseling" },
+                { name: "Home", link: "/" },
+                { name: "About", link: "/about" },
+                { name: "Explore Colleges in INDIA", link: "/colleges/india" },
+                {
+                  name: "Explore Colleges in Abroad",
+                  link: "/colleges/abroad",
+                },
+                // { name: "Career", link: "/career" },
+                // { name: "Blogs", link: "/blogs" },
+                { name: "NEET 2025", link: "/NEET2025" },
+                { name: "Services", link: "/services" },
               ].map(({ name, link }, index) => (
                 <Link
                   key={index}
@@ -85,17 +88,17 @@ export default function Footer() {
             {[
               {
                 icon: FaFacebookF,
-                link: "#",
+                link: "https://www.facebook.com/share/1ZAU1GRZKr/",
                 bg: "bg-[#1877F2]", // Facebook Blue
               },
               {
                 icon: FaInstagram,
-                link: "#",
+                link: "https://www.instagram.com/nset.pvt.ltd?igsh=YXRvdWF0c2VkOGx4",
                 bg: "bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600", // Instagram gradient
               },
               {
-                icon: FaLinkedinIn,
-                link: "#",
+                icon: FaYoutube,
+                link: "https://youtube.com/@nset-b6f?si=FA34n5xgpGXEFa8K",
                 bg: "bg-[#0A66C2]", // LinkedIn Blue
               },
             ].map(({ icon: Icon, link, bg }, index) => (
