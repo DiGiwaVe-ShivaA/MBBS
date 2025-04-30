@@ -27,16 +27,18 @@ export default function FlagCarouselSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Video Section (Left Side) */}
         <div className="w-full h-64 md:h-full relative overflow-hidden rounded-xl shadow-lg">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          >
-            <source src="/images/flags.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <Link href="/colleges/abroad">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+              <source src="/images/flags.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Link>
         </div>
 
         {/* Text Section (Right Side) */}

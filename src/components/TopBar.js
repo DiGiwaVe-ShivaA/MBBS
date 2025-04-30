@@ -142,10 +142,11 @@ Coaching Attended: ${formData.coaching}
           <div className="flex items-center gap-4">
             {[
               {
-                icon: <FaInstagram className="text-xl text-[#E4405F]" />,
-                link: "https://www.instagram.com/nset.pvt.ltd?igsh=YXRvdWF0c2VkOGx4",
-                label: "Instagram",
+                icon: <FaWhatsapp className="text-xl text-[#25D366]" />,
+                link: "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
+                label: "WhatsApp",
               },
+
               {
                 icon: <FaFacebookF className="text-xl text-[#1877F2]" />,
                 link: "https://www.facebook.com/share/1ZAU1GRZKr/",
@@ -162,9 +163,9 @@ Coaching Attended: ${formData.coaching}
                 label: "YouTube",
               },
               {
-                icon: <FaWhatsapp className="text-xl text-[#25D366]" />,
-                link: "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
-                label: "WhatsApp",
+                icon: <FaInstagram className="text-xl text-[#E4405F]" />,
+                link: "https://www.instagram.com/nset.pvt.ltd?igsh=YXRvdWF0c2VkOGx4",
+                label: "Instagram",
               },
             ].map((item, index) => (
               <a
