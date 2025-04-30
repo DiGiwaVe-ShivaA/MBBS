@@ -5,7 +5,7 @@ import HeroSectionNeetAA from "../../components/HeroSectionNeetAA";
 import HeroSectionNeetA from "../../components/HeroSectionNeetA";
 // import HeroSectionNeetE from "../../components/HeroSectionNeetE";
 import HeroSectionNeetF from "../../components/HeroSectionNeetF";
-// import HeroSectionNeetG from "../../components/HeroSectionNeetG";
+import HeroSectionNeetG from "../../components/HeroSectionNeetG";
 import HeroSectionNeetB from "../../components/HeroSectionNeetB";
 import HeroSectionNeetC from "../../components/HeroSectionNeetC";
 import HeroSectionNeetD from "../../components/HeroSectionNeetD";
@@ -31,7 +31,7 @@ export default function Home() {
         {/* <HeroSectionI /> */}
         {/* <HeroSectionNeetE /> */}
         <HeroSectionNeetF />
-        {/* <HeroSectionNeetG /> */}
+        <HeroSectionNeetG />
       </main>
       <Footer />
     </div>
