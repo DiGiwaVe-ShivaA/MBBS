@@ -6,9 +6,10 @@ import {
   FaFacebookF,
   FaXTwitter,
   FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa6";
 import { FaHeadset } from "react-icons/fa"; // this exists ✅
-import { FaCalendarCheck, FaUserHeadset } from "react-icons/fa6";
+import { FaCalendarCheck } from "react-icons/fa6";
 import ApplicationFormModal from "./ApplicationFormModal";
 
 const initialFormState = {
@@ -114,6 +115,27 @@ Coaching Attended: ${formData.coaching}
               >
                 <FaHeadset className="text-white" /> Live Counseling
               </button>
+              {/* <button
+                className="flex items-end gap-2 px-4 py-4 text-white font-semibold rounded-full shadow-md bg-green-500 hover:bg-green-600 transition-all duration-300"
+                onClick={() =>
+                  window.open(
+                    "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
+                    "_blank"
+                  )
+                }
+              >
+                <FaWhatsapp />
+              </button> */}
+              {/* <a
+                href="https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-end gap-2 px-4 py-4 text-white font-semibold rounded-full shadow-md bg-green-500 hover:bg-green-600 transition-all duration-300"
+                title="Join WhatsApp Channel"
+                aria-label="WhatsApp Channel"
+              >
+                <FaWhatsapp />
+              </a> */}
             </div>
           </div>
 
@@ -138,6 +160,11 @@ Coaching Attended: ${formData.coaching}
                 icon: <FaYoutube className="text-xl text-[#FF0000]" />,
                 link: "https://youtube.com/@nset-b6f?si=FA34n5xgpGXEFa8K",
                 label: "YouTube",
+              },
+              {
+                icon: <FaWhatsapp className="text-xl text-[#25D366]" />,
+                link: "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
+                label: "WhatsApp",
               },
             ].map((item, index) => (
               <a

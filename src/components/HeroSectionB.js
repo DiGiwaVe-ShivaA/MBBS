@@ -2,13 +2,17 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 const imageData = [
-  { src: "/images/med1.jpg", text: "Explore NEET Tips" },
-  { src: "/images/med2.jpg", text: "Get Counselling Guide" },
-  { src: "/images/med3.jpg", text: "Learn Top Strategies" },
-  { src: "/images/med4.jpg", text: "Success Stories Here" },
-  { src: "/images/med5.webp", text: "Check Eligibility Now" },
+  { src: "/images/med1.jpg", text: "BPT" },
+  { src: "/images/med2.jpg", text: "BDS" },
+  {
+    src: "/images/med3.jpg",
+    text: "BMLT",
+  },
+  { src: "/images/med4.jpg", text: "BAMS" },
+  { src: "/images/med5.webp", text: "BVSc" },
 ];
 
 const containerVariants = {
@@ -77,9 +81,11 @@ export default function HeroSectionA() {
               <span className="text-white text-lg font-semibold">
                 {item.text}
               </span>
-              <button className="bg-white text-black text-sm font-medium px-4 py-1.5 rounded-full shadow hover:bg-gray-200 transition duration-300">
-                Click to Know More
-              </button>
+              <Link href="/colleges/india">
+                <button className="bg-white text-black text-sm font-medium px-4 py-1.5 rounded-full shadow hover:bg-gray-200 transition duration-300">
+                  Click to Know More
+                </button>
+              </Link>
             </div>
           </motion.div>
         ))}
