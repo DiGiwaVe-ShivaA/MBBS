@@ -409,7 +409,11 @@ export default function AboutNEETPage() {
 
       {/* neet course ends */}
 
+      {/* important section */}
+
       {/* neet 4th ends */}
     </div>
+
+    // important section
   );
 }

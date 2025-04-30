@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function NeetDifficultySection() {
   const [iframeLoaded, setIframeLoaded] = useState(false);
@@ -35,10 +36,11 @@ export default function NeetDifficultySection() {
               Regular mock test practice is essential for accuracy and speed.
             </li>
           </ol>
-
-          <button className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400">
-            Read More <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
+          <Link href="/NEET2025">
+            <button className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400">
+              Read More <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+          </Link>
         </div>
 
         {/* Right: Video Section */}

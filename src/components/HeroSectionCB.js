@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from "next/image";
+import Link from "next/link";
 
 // Flag data (not used in this specific section but kept for possible future use)
 const flags = [
@@ -63,9 +64,11 @@ export default function FlagCarouselSection() {
             are recognized worldwide, and more affordable tuition fees—making it
             an attractive option for future doctors.
           </p>
-          <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
-            Read More
-          </button>
+          <Link href="/colleges/abroad">
+            <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </section>
