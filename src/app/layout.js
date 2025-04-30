@@ -12,10 +12,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata = {
+//   title: "MbbsCollage",
+//   description:
+//     "Stay updated with NEET (UG) 2025 announcements, guides, and more.",
+// };
+
 export const metadata = {
-  title: "MbbsCollage",
+  title: "MBBS Collage | Trusted Info for NEET Aspirants",
   description:
-    "Stay updated with NEET (UG) 2025 announcements, guides, and more.",
+    "Get accurate, up-to-date NEET UG 2025 updates, admit card info, and college guidance.",
+  openGraph: {
+    title: "MBBS Collage | Trusted Info for NEET Aspirants",
+    description:
+      "Stay ahead with NEET UG 2025 notifications, admit cards, and guidance.",
+    url: "https://www.mbbscollage.com",
+    siteName: "MBBS Collage",
+    images: [
+      {
+        url: "/og-image.png", // Replace with your actual image in public folder
+        width: 1200,
+        height: 630,
+        alt: "MBBS Collage",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBBS Collage | Trusted Info for NEET Aspirants",
+    description: "Get updates, admit card info, and guidance for NEET UG 2025.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
