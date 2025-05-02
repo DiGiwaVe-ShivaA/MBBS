@@ -8,82 +8,6 @@ const DiplomaInMedicalLayout = () => {
   return (
     <>
       {/* Main Intro Section */}
-      <section className="bg-white py-12 px-4 lg:px-20">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center text-[#8A05FF] mb-6"
-          >
-            Pursue a Diploma in Medical Fields in India
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-700 text-lg text-center mb-10"
-          >
-            Medical diplomas in India offer specialized training in various
-            medical fields, giving you a path to start a successful career in
-            healthcare. Explore multiple options like DMLT, Nursing, and more.
-          </motion.p>
-
-          <div className="grid md:grid-cols-2 gap-6 text-gray-800">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 p-6 rounded-2xl shadow-md"
-            >
-              <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <Heart className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Diploma Course Highlights
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>1-2 years duration</li>
-                <li>Specializations like DMLT, Nursing, Radiology, and more</li>
-                <li>Affordable and flexible learning options</li>
-                <li>Industry-relevant skills for immediate employment</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 p-6 rounded-2xl shadow-md"
-            >
-              <h3 className="flex items-center text-xl font-semibold mb-2 text-[#8A05FF]">
-                <FileText className="w-6 h-6 mr-2 text-[#00E5FF]" />
-                Admission Process
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Minimum 12th grade qualification (Science stream)</li>
-                <li>Application based on eligibility criteria</li>
-                <li>Entrance exams may be required for specific diplomas</li>
-                <li>Selection based on merit and availability of seats</li>
-              </ul>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-10 text-center bg-[#00E5FF] p-6 rounded-xl shadow"
-          >
-            <h4 className="text-xl font-semibold text-[#8A05FF] mb-2">
-              Important Timelines
-            </h4>
-            <p className="text-gray-700">
-              Applications open: <strong>June – July</strong> <br />
-              Classes commence: <strong>August – September</strong>
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#00E5FF] to-white py-20 px-6 text-center">
@@ -100,44 +24,209 @@ const DiplomaInMedicalLayout = () => {
             through specialized diploma programs in nursing, radiology, lab
             technology, and more.
           </p>
-          <button className="bg-[#8A05FF] hover:bg-[#6601D5] text-white font-semibold px-6 py-3 rounded-full shadow-lg transition">
-            Explore Diploma Courses
-          </button>
         </motion.div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-          {[
-            {
-              title: "Diverse Specializations",
-              desc: "Choose from various specializations such as DMLT, Radiology, Nursing, and more.",
-              icon: "🩺",
-            },
-            {
-              title: "Affordable Courses",
-              desc: "Diploma courses are budget-friendly and provide the same core knowledge as a degree program.",
-              icon: "💸",
-            },
-            {
-              title: "Immediate Employment",
-              desc: "Get industry-ready skills and start your career as a healthcare professional with quick employment opportunities.",
-              icon: "👩‍⚕️",
-            },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              className="p-6 rounded-2xl shadow-md hover:shadow-xl transition border"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
-            </motion.div>
-          ))}
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto md:flex md:items-stretch gap-10">
+          {/* Left Side: Text Content (narrower) */}
+          <div className="md:w-5/12">
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-6">
+              Study{" "}
+              <span className="text-black font-extrabold">
+                Medical Diplomas in India
+              </span>
+            </h2>
+            <p className="text-lg mb-4">
+              Diploma courses in the medical field in India are an excellent
+              option for students who wish to begin their careers in healthcare
+              in a shorter time frame. These programs are designed to equip
+              students with hands-on clinical skills and theoretical knowledge
+              in specific medical domains.
+            </p>
+            <p className="text-lg mb-4">
+              Popular diploma programs include Diploma in Medical Laboratory
+              Technology (DMLT), Radiology, Nursing, Ophthalmic Technology, and
+              Physiotherapy. Course durations typically range from 1 to 2 years,
+              depending on the specialization and institution.
+            </p>
+            <p className="text-lg mb-4">
+              Eligibility for most diploma courses requires passing 10+2 with
+              science subjects, particularly Biology, Physics, and Chemistry.
+              Some programs may also require a minimum percentage and entrance
+              test performance.
+            </p>
+            <p className="text-lg mb-4">
+              Approved by state medical faculties, paramedical boards, or
+              respective health councils, these diplomas offer direct entry into
+              the healthcare workforce. Graduates can work in hospitals,
+              diagnostic labs, clinics, and even pursue higher studies later.
+            </p>
+          </div>
+
+          {/* Right Side: Image (wider) */}
+          <div className="md:w-7/12 flex">
+            <img
+              src="/images/diploma.webp" // You can replace this with a relevant image like /images/medical-diploma.png
+              alt="Top Medical Colleges"
+              className="rounded-lg shadow-xl w-full object-cover h-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto space-y-12">
+          {/* Advantages Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Advantages of Pursuing Diplomas in India
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                India is home to some of the most prestigious and globally
+                recognized medical universities.
+              </li>
+              <li>
+                With over 300 medical institutions across the country, including
+                around 180 private colleges, students have diverse choices.
+              </li>
+              <li>
+                India offers approximately 72,000 Diplomas seats annually,
+                ensuring ample opportunities for aspiring doctors.
+              </li>
+              <li>
+                Indian medical education is renowned for its strong emphasis on
+                research, innovation, and academic excellence.
+              </li>
+              <li>
+                Clinical training in India provides hands-on experience and
+                real-time patient interaction, building practical skills.
+              </li>
+              <li>
+                Students participate in international medical conferences,
+                workshops, and academic exchange programs.
+              </li>
+              <li>
+                The curriculum aligns with global medical standards, making
+                Indian graduates competitive worldwide.
+              </li>
+              <li>
+                Indian Diplomas graduates are eligible to appear for global
+                licensing exams and practice medicine internationally.
+              </li>
+              <li>
+                Students gain practical experience by working with real human
+                cadavers during their training.
+              </li>
+            </ul>
+          </div>
+
+          {/* Eligibility Criteria Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Eligibility Criteria for{" "}
+              <span className="text-black font-extrabold">
+                Diplomas Admission
+              </span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Applicants must qualify for NEET, AIIMS, or JIPMER entrance
+                exams with competitive scores due to high demand.
+              </li>
+              <li>
+                General category candidates must secure at least 60% in 12th
+                grade, while SC/ST students require a minimum of 40%.
+              </li>
+              <li>
+                Mandatory subjects include Physics, Chemistry, and Biology in
+                10+2 or equivalent examinations.
+              </li>
+              <li>
+                Unreserved candidates require a minimum of 50% marks; reserved
+                category candidates need at least 45% in PCB subjects.
+              </li>
+              <li>
+                For AIIMS admission, a minimum of 60% marks in 10+2 is
+                essential.
+              </li>
+              <li>
+                Proficiency in English is compulsory, as it is the medium of
+                instruction in top medical colleges.
+              </li>
+              <li>
+                Applicants must be between 17 and 25 years of age at the time of
+                admission.
+              </li>
+              <li>
+                Clearing NEET is mandatory for participation in centralized
+                counselling for admission to medical colleges.
+              </li>
+            </ul>
+          </div>
+
+          {/* Documents Required Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Documents Required for{" "}
+              <span className="text-black font-extrabold">
+                Diplomas Admission
+              </span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-lg">
+              <ul className="space-y-2">
+                <li>
+                  10th and 12th-grade mark sheets and passing certificates
+                </li>
+                <li>NEET scorecard and admit card</li>
+                <li>Birth certificate</li>
+                <li>Caste certificate (if applicable)</li>
+                <li>Recent passport-size photographs</li>
+                <li>Medical Council of India (MCI) approval (if required)</li>
+                <li>Provisional allotment letter</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>Domicile certificate (if applicable)</li>
+                <li>Transfer certificate from last attended institution</li>
+                <li>Income certificate (for scholarships/reservations)</li>
+                <li>Migration certificate (for students from other boards)</li>
+                <li>Disability certificate (if applicable)</li>
+                <li>Freedom fighter certificate (if applicable)</li>
+                <li>Proof of application fee payment</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Teaching Methodology Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Teaching Methodology in{" "}
+              <span className="text-black font-extrabold">Diplomas India</span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Most Indian medical colleges commence their academic session in
+                September.
+              </li>
+              <li>
+                While regional languages are spoken on campuses, the medium of
+                instruction is primarily English.
+              </li>
+              <li>
+                Students are comfortable with both English and Hindi, which
+                enhances learning and communication.
+              </li>
+              <li>
+                The National Medical Commission (NMC) publishes a list of
+                English-medium Diplomas colleges annually.
+              </li>
+              <li>
+                Modern teaching methods include clinical rotations, simulation
+                labs, group discussions, and case-based learning.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

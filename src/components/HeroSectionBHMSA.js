@@ -8,95 +8,6 @@ const BhmsLayout = () => {
   return (
     <>
       {/* Main Intro Section */}
-      <section className="bg-white py-12 px-4 lg:px-20">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-6"
-            style={{ color: "#8A05FF" }}
-          >
-            Study BHMS in India
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-700 text-lg text-center mb-10"
-          >
-            BHMS (Bachelor of Homeopathic Medicine and Surgery) offers a unique
-            approach to healthcare, emphasizing holistic treatment and natural
-            remedies. India has some of the best institutions to launch your
-            career in homeopathy.
-          </motion.p>
-
-          <div className="grid md:grid-cols-2 gap-6 text-gray-800">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 p-6 rounded-2xl shadow-md"
-            >
-              <h3
-                className="flex items-center text-xl font-semibold mb-2"
-                style={{ color: "#00E5FF" }}
-              >
-                <GraduationCap className="w-6 h-6 mr-2" color="#00E5FF" />
-                BHMS Course Highlights
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>5.5 years duration (including internship)</li>
-                <li>Focus on natural healing and homeopathic principles</li>
-                <li>Recognized by NCH and WHO</li>
-                <li>Global demand for homeopathic practitioners</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 p-6 rounded-2xl shadow-md"
-            >
-              <h3
-                className="flex items-center text-xl font-semibold mb-2"
-                style={{ color: "#00E5FF" }}
-              >
-                <CheckCircle className="w-6 h-6 mr-2" color="#00E5FF" />
-                Admission Criteria
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Qualify NEET exam</li>
-                <li>Minimum 50% marks in 10+2 (PCB)</li>
-                <li>Apply through AYUSH counseling</li>
-                <li>Fulfill category reservation norms if applicable</li>
-              </ul>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-10 text-center p-6 rounded-xl shadow"
-            style={{ backgroundColor: "#00E5FF20" }}
-          >
-            <h4
-              className="text-xl font-semibold mb-2"
-              style={{ color: "#8A05FF" }}
-            >
-              Important Timelines
-            </h4>
-            <p className="text-gray-700">
-              Applications open: <strong>July – August</strong> <br />
-              Classes commence: <strong>October – November</strong>
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section
         className="py-20 px-6 text-center"
@@ -117,17 +28,208 @@ const BhmsLayout = () => {
             Join the world of holistic healing through BHMS and make a
             difference globally.
           </p>
-          <button
-            className="font-semibold px-6 py-3 rounded-full shadow-lg transition"
-            style={{ backgroundColor: "#8A05FF", color: "#fff" }}
-          >
-            Start Your BHMS Journey
-          </button>
         </motion.div>
       </section>
 
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto md:flex md:items-stretch gap-10">
+          {/* Left Side: Text Content (narrower) */}
+          <div className="md:w-5/12">
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-6">
+              Study{" "}
+              <span className="text-black font-extrabold">BHMS in India</span>
+            </h2>
+            <p className="text-lg mb-4">
+              BHMS (Bachelor of Homeopathic Medicine and Surgery) in India is a
+              highly preferred postgraduate program among dental aspirants
+              worldwide. With world-class institutions, experienced faculty, and
+              international recognition, India provides an ideal environment for
+              dental specialization.
+            </p>
+            <p className="text-lg mb-4">
+              To pursue BHMS, candidates must hold a BDS degree and qualify NEET
+              BHMS. The course duration is 3 years, offering in-depth clinical
+              and theoretical expertise across multiple dental fields.
+              Applications typically begin early in the year, with academic
+              sessions starting by mid-year.
+            </p>
+            <p className="text-lg mb-4">
+              Eligibility includes scoring at least 50% in 10+2 with science
+              subjects. The MBBS course spans 5.5 years — including 4.5 years of
+              academic training and 1 year of mandatory internship.
+            </p>
+            <p className="text-lg mb-4">
+              Institutions offering BHMS in India are approved by the Dental
+              Council of India (DCI), and many are recognized by international
+              bodies such as WHO. Students gain access to a wide range of
+              patient cases, advanced labs, and research opportunities.
+            </p>
+          </div>
+
+          {/* Right Side: Image (wider) */}
+          <div className="md:w-7/12 flex">
+            <img
+              src="/images/homeo.jpeg"
+              alt="Top Medical Colleges"
+              className="rounded-lg shadow-xl w-full object-cover h-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto space-y-12">
+          {/* Advantages Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Advantages of Pursuing BHMS in India
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                India is home to some of the most prestigious and globally
+                recognized medical universities.
+              </li>
+              <li>
+                With over 300 medical institutions across the country, including
+                around 180 private colleges, students have diverse choices.
+              </li>
+              <li>
+                India offers approximately 72,000 BHMS seats annually, ensuring
+                ample opportunities for aspiring doctors.
+              </li>
+              <li>
+                Indian medical education is renowned for its strong emphasis on
+                research, innovation, and academic excellence.
+              </li>
+              <li>
+                Clinical training in India provides hands-on experience and
+                real-time patient interaction, building practical skills.
+              </li>
+              <li>
+                Students participate in international medical conferences,
+                workshops, and academic exchange programs.
+              </li>
+              <li>
+                The curriculum aligns with global medical standards, making
+                Indian graduates competitive worldwide.
+              </li>
+              <li>
+                Indian BHMS graduates are eligible to appear for global
+                licensing exams and practice medicine internationally.
+              </li>
+              <li>
+                Students gain practical experience by working with real human
+                cadavers during their training.
+              </li>
+            </ul>
+          </div>
+
+          {/* Eligibility Criteria Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Eligibility Criteria for{" "}
+              <span className="text-black font-extrabold">BHMS Admission</span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Applicants must qualify for NEET, AIIMS, or JIPMER entrance
+                exams with competitive scores due to high demand.
+              </li>
+              <li>
+                General category candidates must secure at least 60% in 12th
+                grade, while SC/ST students require a minimum of 40%.
+              </li>
+              <li>
+                Mandatory subjects include Physics, Chemistry, and Biology in
+                10+2 or equivalent examinations.
+              </li>
+              <li>
+                Unreserved candidates require a minimum of 50% marks; reserved
+                category candidates need at least 45% in PCB subjects.
+              </li>
+              <li>
+                For AIIMS admission, a minimum of 60% marks in 10+2 is
+                essential.
+              </li>
+              <li>
+                Proficiency in English is compulsory, as it is the medium of
+                instruction in top medical colleges.
+              </li>
+              <li>
+                Applicants must be between 17 and 25 years of age at the time of
+                admission.
+              </li>
+              <li>
+                Clearing NEET is mandatory for participation in centralized
+                counselling for admission to medical colleges.
+              </li>
+            </ul>
+          </div>
+
+          {/* Documents Required Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Documents Required for{" "}
+              <span className="text-black font-extrabold">BHMS Admission</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-lg">
+              <ul className="space-y-2">
+                <li>
+                  10th and 12th-grade mark sheets and passing certificates
+                </li>
+                <li>NEET scorecard and admit card</li>
+                <li>Birth certificate</li>
+                <li>Caste certificate (if applicable)</li>
+                <li>Recent passport-size photographs</li>
+                <li>Medical Council of India (MCI) approval (if required)</li>
+                <li>Provisional allotment letter</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>Domicile certificate (if applicable)</li>
+                <li>Transfer certificate from last attended institution</li>
+                <li>Income certificate (for scholarships/reservations)</li>
+                <li>Migration certificate (for students from other boards)</li>
+                <li>Disability certificate (if applicable)</li>
+                <li>Freedom fighter certificate (if applicable)</li>
+                <li>Proof of application fee payment</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Teaching Methodology Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Teaching Methodology in{" "}
+              <span className="text-black font-extrabold">BHMS India</span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Most Indian medical colleges commence their academic session in
+                September.
+              </li>
+              <li>
+                While regional languages are spoken on campuses, the medium of
+                instruction is primarily English.
+              </li>
+              <li>
+                Students are comfortable with both English and Hindi, which
+                enhances learning and communication.
+              </li>
+              <li>
+                The National Medical Commission (NMC) publishes a list of
+                English-medium BHMS colleges annually.
+              </li>
+              <li>
+                Modern teaching methods include clinical rotations, simulation
+                labs, group discussions, and case-based learning.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-16 px-6 bg-white">
+      {/* <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {[
             {
@@ -164,7 +266,7 @@ const BhmsLayout = () => {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works Section */}
       <section className="py-16 px-6" style={{ backgroundColor: "#00E5FF20" }}>

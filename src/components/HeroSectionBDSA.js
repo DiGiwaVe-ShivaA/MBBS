@@ -8,7 +8,7 @@ const BdsLayout = () => {
   return (
     <>
       {/* Main Intro Section */}
-      <section className="bg-white py-12 px-4 lg:px-20">
+      {/* <section className="bg-white py-12 px-4 lg:px-20">
         <div className="max-w-5xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const BdsLayout = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Hero Section */}
       <section
@@ -123,13 +123,208 @@ const BdsLayout = () => {
             Explore endless opportunities in dentistry with the right guidance
             and academic excellence.
           </p>
-          <button
+          {/* <button
             className="font-semibold px-6 py-3 rounded-full shadow-lg transition"
             style={{ backgroundColor: "#00E5FF", color: "white" }}
           >
             Start Your Journey
-          </button>
+          </button> */}
         </motion.div>
+      </section>
+
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto md:flex md:items-stretch gap-10">
+          {/* Left Side: Text Content (narrower) */}
+          <div className="md:w-5/12">
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-6">
+              Study{" "}
+              <span className="text-black font-extrabold">BDS in India</span>
+            </h2>
+            <p className="text-lg mb-4">
+              BDS (Bachelor of Dental Surgery) in India is a highly preferred
+              course for aspiring dental professionals. With excellent
+              infrastructure, expert faculty, and a robust academic structure,
+              India offers global-standard dental education.
+            </p>
+            <p className="text-lg mb-4">
+              Admission is based on the NEET entrance exam. Applicants must
+              score at least 50% in 10+2 with science subjects. The BDS program
+              is 5 years long—4 years of academic learning followed by a 1-year
+              internship.
+            </p>
+            <p className="text-lg mb-4">
+              Indian dental colleges offer early clinical exposure and extensive
+              hands-on practice. Top institutions are approved by the Dental
+              Council of India (DCI), WHO, and NMC.
+            </p>
+            <p className="text-lg mb-4">
+              The application process typically begins in June/July, and the
+              academic session starts by August/September. For students seeking
+              quality education at affordable costs, India is a great
+              destination for BDS.
+            </p>
+          </div>
+
+          {/* Right Side: Image (wider) */}
+          <div className="md:w-7/12 flex">
+            <img
+              src="/images/bdsneet.jpg"
+              alt="Top Medical Colleges"
+              className="rounded-lg shadow-xl w-full object-cover h-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto space-y-12">
+          {/* Advantages Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Advantages of Pursuing BDS in India
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                India is home to some of the most prestigious and globally
+                recognized medical universities.
+              </li>
+              <li>
+                With over 300 medical institutions across the country, including
+                around 180 private colleges, students have diverse choices.
+              </li>
+              <li>
+                India offers approximately 72,000 BDS seats annually, ensuring
+                ample opportunities for aspiring doctors.
+              </li>
+              <li>
+                Indian medical education is renowned for its strong emphasis on
+                research, innovation, and academic excellence.
+              </li>
+              <li>
+                Clinical training in India provides hands-on experience and
+                real-time patient interaction, building practical skills.
+              </li>
+              <li>
+                Students participate in international medical conferences,
+                workshops, and academic exchange programs.
+              </li>
+              <li>
+                The curriculum aligns with global medical standards, making
+                Indian graduates competitive worldwide.
+              </li>
+              <li>
+                Indian BDS graduates are eligible to appear for global licensing
+                exams and practice medicine internationally.
+              </li>
+              <li>
+                Students gain practical experience by working with real human
+                cadavers during their training.
+              </li>
+            </ul>
+          </div>
+
+          {/* Eligibility Criteria Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Eligibility Criteria for{" "}
+              <span className="text-black font-extrabold">BDS Admission</span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Applicants must qualify for NEET, AIIMS, or JIPMER entrance
+                exams with competitive scores due to high demand.
+              </li>
+              <li>
+                General category candidates must secure at least 60% in 12th
+                grade, while SC/ST students require a minimum of 40%.
+              </li>
+              <li>
+                Mandatory subjects include Physics, Chemistry, and Biology in
+                10+2 or equivalent examinations.
+              </li>
+              <li>
+                Unreserved candidates require a minimum of 50% marks; reserved
+                category candidates need at least 45% in PCB subjects.
+              </li>
+              <li>
+                For AIIMS admission, a minimum of 60% marks in 10+2 is
+                essential.
+              </li>
+              <li>
+                Proficiency in English is compulsory, as it is the medium of
+                instruction in top medical colleges.
+              </li>
+              <li>
+                Applicants must be between 17 and 25 years of age at the time of
+                admission.
+              </li>
+              <li>
+                Clearing NEET is mandatory for participation in centralized
+                counselling for admission to medical colleges.
+              </li>
+            </ul>
+          </div>
+
+          {/* Documents Required Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Documents Required for{" "}
+              <span className="text-black font-extrabold">BDS Admission</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-lg">
+              <ul className="space-y-2">
+                <li>
+                  10th and 12th-grade mark sheets and passing certificates
+                </li>
+                <li>NEET scorecard and admit card</li>
+                <li>Birth certificate</li>
+                <li>Caste certificate (if applicable)</li>
+                <li>Recent passport-size photographs</li>
+                <li>Medical Council of India (MCI) approval (if required)</li>
+                <li>Provisional allotment letter</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>Domicile certificate (if applicable)</li>
+                <li>Transfer certificate from last attended institution</li>
+                <li>Income certificate (for scholarships/reservations)</li>
+                <li>Migration certificate (for students from other boards)</li>
+                <li>Disability certificate (if applicable)</li>
+                <li>Freedom fighter certificate (if applicable)</li>
+                <li>Proof of application fee payment</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Teaching Methodology Section */}
+          <div>
+            <h2 className="text-3xl font-bold border-b-4 border-red-500 inline-block mb-4">
+              Teaching Methodology in{" "}
+              <span className="text-black font-extrabold">BDS India</span>
+            </h2>
+            <ul className="space-y-2 text-lg">
+              <li>
+                Most Indian medical colleges commence their academic session in
+                September.
+              </li>
+              <li>
+                While regional languages are spoken on campuses, the medium of
+                instruction is primarily English.
+              </li>
+              <li>
+                Students are comfortable with both English and Hindi, which
+                enhances learning and communication.
+              </li>
+              <li>
+                The National Medical Commission (NMC) publishes a list of
+                English-medium BDS colleges annually.
+              </li>
+              <li>
+                Modern teaching methods include clinical rotations, simulation
+                labs, group discussions, and case-based learning.
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* Features Section */}
