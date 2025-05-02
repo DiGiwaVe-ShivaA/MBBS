@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useCallback } from "react";
 import {
   FaInstagram,
@@ -8,9 +7,9 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { FaHeadset } from "react-icons/fa"; // this exists ✅
+import { FaHeadset } from "react-icons/fa";
 import { FaCalendarCheck } from "react-icons/fa6";
-import ApplicationFormModal from "./ApplicationFormModal";
+import ApplicationFormModal from "./ApplicationFormModal"; // Make sure this path is correct
 
 const initialFormState = {
   name: "",
@@ -46,6 +45,7 @@ const TopBar = () => {
         setError("Please enter a valid 10-digit mobile number");
         return;
       }
+
       if (
         !formData.name ||
         !formData.city ||
@@ -68,7 +68,7 @@ Dropper: ${formData.dropper}
 Coaching Attended: ${formData.coaching}
       `;
 
-      const url = `https://wa.me/9557911144?text=${encodeURIComponent(
+      const url = `https://wa.me/8109380429?text=${encodeURIComponent(
         message
       )}`;
       window.open(url, "_blank");
@@ -81,64 +81,30 @@ Coaching Attended: ${formData.coaching}
 
   return (
     <>
-      <style jsx global>{`
-        @keyframes movingGradient {
-          0% {
-            background-position: 0% 0%;
-          }
-          100% {
-            background-position: 200% 0%;
-          }
-        }
-
-        .animate-moving-gradient {
-          animation: movingGradient 4s linear infinite;
-          background-size: 50% 10%;
-        }
-      `}</style>
-
       <div className="text-sm shadow-md border-b-1 border-transparent relative">
-        <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-[#00E5FF] via-[#4b028b] to-[#00E5FF] bg-[length:200%_100%] animate-moving-gradient"></div>
+        <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-[#00E5FF] via-[#4b028b] to-[#00E5FF] bg-[length:200%_100%]"></div>
 
         <div className="w-full px-4 md:px-8 py-2 flex flex-col md:flex-row justify-end items-end gap-4">
           <div className="w-full flex justify-end">
             <div className="flex gap-4">
+              {/* ✅ Trigger modal */}
               <button
                 className="flex items-end gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
-                onClick={() => alert("Book Appointment clicked")}
+                onClick={() => setShowForm(true)}
               >
                 <FaCalendarCheck className="text-white" /> Book Appointment
               </button>
+
               <button
                 className="flex items-end gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
                 onClick={() => alert("Live Counseling clicked")}
               >
                 <FaHeadset className="text-white" /> Live Counseling
               </button>
-              {/* <button
-                className="flex items-end gap-2 px-4 py-4 text-white font-semibold rounded-full shadow-md bg-green-500 hover:bg-green-600 transition-all duration-300"
-                onClick={() =>
-                  window.open(
-                    "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
-                    "_blank"
-                  )
-                }
-              >
-                <FaWhatsapp />
-              </button> */}
-              {/* <a
-                href="https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-end gap-2 px-4 py-4 text-white font-semibold rounded-full shadow-md bg-green-500 hover:bg-green-600 transition-all duration-300"
-                title="Join WhatsApp Channel"
-                aria-label="WhatsApp Channel"
-              >
-                <FaWhatsapp />
-              </a> */}
             </div>
           </div>
 
+          {/* Social Icons */}
           <div className="flex items-center gap-4">
             {[
               {
@@ -146,7 +112,6 @@ Coaching Attended: ${formData.coaching}
                 link: "https://whatsapp.com/channel/0029VamSJ0dJuyAKnrn49B2i",
                 label: "WhatsApp",
               },
-
               {
                 icon: <FaFacebookF className="text-xl text-[#1877F2]" />,
                 link: "https://www.facebook.com/share/1ZAU1GRZKr/",
@@ -184,6 +149,7 @@ Coaching Attended: ${formData.coaching}
         </div>
       </div>
 
+      {/* ✅ Popup Modal */}
       {showForm && (
         <ApplicationFormModal
           formData={formData}

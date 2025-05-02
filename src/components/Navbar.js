@@ -61,7 +61,7 @@ export default function NavBar() {
       }
 
       const message = `*New Application Form:*\nName: ${formData.name}\nMobile: ${formData.mobile}\nCity: ${formData.city}\nState: ${formData.state}\nCourse: ${formData.course}\nNEET Attempt: ${formData.neetAttempt}\nDropper: ${formData.dropper}\nCoaching Attended: ${formData.coaching}`;
-      const url = `https://wa.me/9557911144?text=${encodeURIComponent(
+      const url = `https://wa.me/8109380429?text=${encodeURIComponent(
         message
       )}`;
 
@@ -172,6 +172,7 @@ export default function NavBar() {
                       >
                         MBBS
                       </Link>
+
                       <Link
                         href="/courses/ug/bds"
                         className="block px-4 py-2 hover:bg-gray-100"
@@ -219,32 +220,12 @@ export default function NavBar() {
                       </Link>
                     </div>
                   </div>
-
-                  {/* Other main categories */}
-                  {/* <Link
-                    href="/courses/pg"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    PG
-                  </Link> */}
-                  {/* <Link
-                    href="/courses/paramedical"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Paramedical
-                  </Link> */}
                   <Link
                     href="/courses/diploma"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Diploma
                   </Link>
-                  {/* <Link
-                    href="/courses/others"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Others
-                  </Link> */}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -455,28 +436,11 @@ export default function NavBar() {
                         )}
                       </AnimatePresence>
                     </li>
-
-                    {/* Other main categories */}
-                    {/* <li>
-                      <Link href="/courses/pg" className="block">
-                        PG
-                      </Link>
-                    </li> */}
-                    {/* <li>
-                      <Link href="/courses/paramedical" className="block">
-                        Paramedical
-                      </Link>
-                    </li> */}
                     <li>
                       <Link href="/courses/diploma" className="block">
                         Diploma
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link href="/courses/others" className="block">
-                        Others
-                      </Link>
-                    </li> */}
                   </motion.ul>
                 )}
               </AnimatePresence>

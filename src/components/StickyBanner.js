@@ -11,14 +11,14 @@ export default function StickyBanner() {
   return (
     <div className="fixed top-56 right-6 z-[100] w-64 h-64 bg-[#00E5FF] text-black p-4 rounded-2xl shadow-2xl flex flex-col justify-between border-2 border-[#8A05FF]">
       <div>
-        <h3 className="text-lg font-bold text-[#8A05FF] mb-2">
-          🌟 NEET 2025 Alert!
+        <h3 className="text-lg font-bold text-[#8A05FF] text-center mb-2">
+          NEET 2025 Alert!
         </h3>
         <p className="text-sm leading-relaxed">
           Admit cards are now available.{" "}
           <Link
             href="/announcements"
-            className="underline font-semibold text-white hover:text-[#8A05FF]"
+            className="underline font-semibold text-white text-center hover:text-[#8A05FF]"
           >
             View details
           </Link>

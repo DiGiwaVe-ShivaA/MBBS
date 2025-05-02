@@ -42,10 +42,10 @@ export default function Footer() {
               {[
                 { name: "Home", link: "/" },
                 { name: "About", link: "/about" },
-                { name: "Explore Colleges in INDIA", link: "/colleges/india" },
+                { name: "Explore Colleges", link: "/colleges/india" },
                 {
-                  name: "Explore Colleges in Abroad",
-                  link: "/colleges/abroad",
+                  name: "Courses",
+                  link: "/courses/ug/mbbs",
                 },
                 // { name: "Career", link: "/career" },
                 // { name: "Blogs", link: "/blogs" },
@@ -68,15 +68,18 @@ export default function Footer() {
             <h3 className="text-white text-xl font-semibold mb-4">
               Contact Details
             </h3>
-            <p className="flex text-white items-center">
-              <FaPhoneAlt className="text-green-300 mr-2" /> +91 1234 656 789
-            </p>
+            <a
+              href="tel:+918109380429"
+              className="flex text-white items-center"
+            >
+              <FaPhoneAlt className="text-green-300 mr-2" /> +91 8109380429
+            </a>
             <p className="flex text-white items-center mt-2">
               <FaEnvelope className="text-yellow-300 mr-2" /> info@BADOC.com
             </p>
             <p className="flex text-white items-start mt-2">
               <FaMapMarkerAlt className="text-red-300 mr-2 mt-1" />
-              01/A Best Place, Bhagwanpur, Dehradun
+              SHRAWANKANTA STATE, NARELA SHANKARI, MADHYA PRADESH
             </p>
           </div>
         </div>
