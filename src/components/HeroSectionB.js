@@ -5,13 +5,14 @@ import { Sparkles } from "lucide-react";
 import Link from "next/link";
 
 const imageData = [
-  { src: "/images/med1.jpg", text: "BPT" },
-  { src: "/images/med2.jpg", text: "BDS" },
   {
-    src: "/images/med3.jpg",
-    text: "BMLT",
+    src: "/images/mbbs.JPG",
+    text: "MBBS",
   },
+  { src: "/images/med2.jpg", text: "BDS" },
   { src: "/images/med4.jpg", text: "BAMS" },
+  { src: "/images/homeo.jpg", text: "BHMS" },
+
   { src: "/images/med5.webp", text: "BVSc" },
 ];
 
