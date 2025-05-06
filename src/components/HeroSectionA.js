@@ -53,7 +53,7 @@ export default function HeroSection() {
             Services
           </h1>
           <button className="bg-white text-black text-sm sm:text-base font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/40">
-            Get Started
+            Get Call
           </button>
         </div>
       </div>

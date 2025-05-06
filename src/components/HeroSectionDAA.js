@@ -79,7 +79,7 @@ const companyTabs = [
 Our work goes beyond consulting; we are dedicated mentors who walk with our students at every step of their academic journey. At NSET, we believe that every student has the potential to shine—and it is our responsibility and honor to help transform their dreams into reality.
 `,
     content3: `Together, let’s build a future where borders don’t limit ambition and where every aspiring doctor finds the path to success.`,
-    image: "/images/med1.jpg",
+    image: "/images/logo.png",
     imageClass: "w-[320px] h-[240px]",
   },
   {
@@ -88,7 +88,7 @@ Our work goes beyond consulting; we are dedicated mentors who walk with our stud
     title: "Our Mission",
     content: `To empower aspiring medical students by providing expert guidance, transparent admission support, and personalized career counseling—helping them secure seats in top medical institutions across India and abroad. We are committed to making quality medical education accessible to every deserving student, regardless of geographical or financial barriers.
 `,
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[250px] h-[200px]",
   },
   {
@@ -97,7 +97,7 @@ Our work goes beyond consulting; we are dedicated mentors who walk with our stud
     title: "Our Vision",
     content: `To be the most trusted and comprehensive education consultancy for medical admissions, shaping the future of healthcare by nurturing the next generation of doctors through ethical, informed, and student-first practices.
 `,
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[300px] h-[220px]",
   },
   {
@@ -117,7 +117,7 @@ From the very beginning, we recognized the confusion and hurdles that students a
 `,
     content6: `2023: We forged strong partnerships with esteemed medical colleges and universities around the world, enhancing access to top-notch medical education.
 `,
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[200px] h-[180px]",
   },
   {
@@ -125,7 +125,7 @@ From the very beginning, we recognized the confusion and hurdles that students a
     icon: FaChartLine,
     title: "Company Growth",
     content: `Our success is reflected in the growing number of students placed in top medical institutions in India and abroad.`,
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[280px] h-[210px]",
   },
   {
@@ -133,7 +133,7 @@ From the very beginning, we recognized the confusion and hurdles that students a
     icon: FaUsers,
     title: "Meet Our Team",
     content: `Our team consists of professionals who are passionate about helping students and have vast experience in academic counseling.`,
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[270px] h-[200px]",
   },
   {
@@ -141,7 +141,7 @@ From the very beginning, we recognized the confusion and hurdles that students a
     icon: FaQuestionCircle,
     title: "Frequently Asked Questions",
     content: "",
-    image: "/images/med1.jpg",
+    // image: "/images/logo.png",
     imageClass: "w-[260px] h-[200px]",
   },
 ];

@@ -65,7 +65,6 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
         onChange={handleChange}
         placeholder={placeholder}
         className="w-full pl-10 border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none p-2 rounded-lg"
-        required={name === "course"}
       />
     </div>
   );
@@ -89,7 +88,6 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
           🎓 Application Form
         </h2>
 
-        {/* Progress Bar */}
         <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
           <div
             className={`h-full rounded-full transition-all duration-500 ${
@@ -133,7 +131,7 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
                   Courses Interested In:
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {["NEET", "PG", "UG", "JEE"].map((course) => (
+                  {["NEET-UG", "NEET-PG", "Diploma", "JEE"].map((course) => (
                     <label
                       key={course}
                       className="flex items-center gap-2 text-gray-600"
@@ -159,7 +157,6 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
                     Other
                   </label>
                 </div>
-
                 {formData.courses?.includes("Other") && (
                   <input
                     type="text"
@@ -173,7 +170,7 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["course", "neetAttempt", "dropper", "coaching"].map((f) => (
+                {["course", "neetAttempt"].map((f) => (
                   <div key={f}>
                     {renderInput({
                       name: f,
@@ -183,6 +180,93 @@ const ApplicationFormModal = React.memo(function ApplicationFormModal({
                     })}
                   </div>
                 ))}
+
+                {/* Dropper Yes/No */}
+                <div className="flex flex-col gap-2">
+                  <label className="font-semibold text-gray-700">
+                    Are you a Dropper?
+                  </label>
+                  <div className="flex items-center gap-4">
+                    <label className="flex items-center gap-1">
+                      <input
+                        type="checkbox"
+                        name="dropper"
+                        checked={formData.dropper === "Yes"}
+                        onChange={(e) =>
+                          handleChange({
+                            target: {
+                              name: "dropper",
+                              value: e.target.checked ? "Yes" : "No",
+                            },
+                          })
+                        }
+                        className="accent-green-600"
+                      />
+                      Yes
+                    </label>
+                  </div>
+                </div>
+
+                {/* Coaching Yes/No + name if yes */}
+                <div className="flex flex-col gap-2">
+                  <label className="font-semibold text-gray-700">
+                    Have you taken Coaching?
+                  </label>
+                  <div className="flex items-center gap-4">
+                    <label className="flex items-center gap-1">
+                      <input
+                        type="checkbox"
+                        name="coaching"
+                        checked={formData.coaching === "Yes"}
+                        onChange={(e) =>
+                          handleChange({
+                            target: {
+                              name: "coaching",
+                              value: e.target.checked ? "Yes" : "No",
+                            },
+                          })
+                        }
+                        className="accent-green-600"
+                      />
+                      Yes
+                    </label>
+                  </div>
+                  {formData.coaching === "Yes" && (
+                    <input
+                      type="text"
+                      name="coachingName"
+                      value={formData.coachingName || ""}
+                      onChange={handleChange}
+                      placeholder="Enter Coaching Name"
+                      className="w-full border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none p-2 rounded-lg"
+                    />
+                  )}
+                </div>
+              </div>
+
+              {/* Study Mode */}
+              <div>
+                <label className="font-semibold text-gray-700 mb-2 block">
+                  Study Mode:
+                </label>
+                <div className="flex gap-6">
+                  {["Self Study", "Online Studies"].map((mode) => (
+                    <label
+                      key={mode}
+                      className="flex items-center gap-2 text-gray-700"
+                    >
+                      <input
+                        type="radio"
+                        name="studyMode"
+                        value={mode}
+                        checked={formData.studyMode === mode}
+                        onChange={handleChange}
+                        className="accent-green-600"
+                      />
+                      {mode}
+                    </label>
+                  ))}
+                </div>
               </div>
 
               <div className="flex justify-between gap-3">
