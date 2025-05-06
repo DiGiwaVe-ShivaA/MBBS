@@ -5,11 +5,11 @@ import { Sparkles } from "lucide-react";
 import Link from "next/link";
 
 const imageData = [
-  { src: "/images/mbbs.JPG", text: "MBBS", link: "/colleges/mbbs" },
-  { src: "/images/med2.jpg", text: "BDS", link: "/colleges/bds" },
-  { src: "/images/med4.jpg", text: "BAMS", link: "/colleges/bams" },
-  { src: "/images/homeo.jpg", text: "BHMS", link: "/colleges/bhms" },
-  { src: "/images/med5.webp", text: "BVSc", link: "/colleges/bvsc" },
+  { src: "/images/mbbs.JPG", text: "MBBS-NEET PG", link: "/courses/pg/mdms" },
+  { src: "/images/med2.jpg", text: "BDS", link: "/courses/ug/bds" },
+  { src: "/images/med4.jpg", text: "BAMS", link: "/courses/ug/bams" },
+  { src: "/images/homeo.jpg", text: "BHMS", link: "/courses/ug/bhms" },
+  { src: "/images/med5.webp", text: "BVSc", link: "/courses/ug/bvsc" },
 ];
 
 const containerVariants = {
