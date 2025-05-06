@@ -12,7 +12,7 @@ const initialFormState = {
   city: "",
   state: "",
   course: "",
-  neetAttempt: false, // changed to boolean
+  neetAttempt: "",
   dropper: "",
   coaching: "",
 };
@@ -33,12 +33,7 @@ export default function NavBar() {
   const [formData, setFormData] = useState(initialFormState);
 
   const handleChange = useCallback((e) => {
-    const { name, type, value, checked } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }, []);
 
   const resetForm = useCallback(() => {
@@ -65,14 +60,8 @@ export default function NavBar() {
         return;
       }
 
-      const message = `*New Application Form:*\nName: ${
-        formData.name
-      }\nMobile: ${formData.mobile}\nCity: ${formData.city}\nState: ${
-        formData.state
-      }\nCourse: ${formData.course}\nNEET Attempt: ${
-        formData.neetAttempt ? "Yes" : "No"
-      }\nDropper: ${formData.dropper}\nCoaching Attended: ${formData.coaching}`;
-      const url = `https://wa.me/918109380429?text=${encodeURIComponent(
+      const message = `*New Application Form:*\nName: ${formData.name}\nMobile: ${formData.mobile}\nCity: ${formData.city}\nState: ${formData.state}\nCourse: ${formData.course}\nNEET Attempt: ${formData.neetAttempt}\nDropper: ${formData.dropper}\nCoaching Attended: ${formData.coaching}`;
+      const url = `https://wa.me/8109380429?text=${encodeURIComponent(
         message
       )}`;
 
@@ -155,6 +144,7 @@ export default function NavBar() {
               )}
             </AnimatePresence>
           </div>
+
           {/* Courses Dropdown */}
           <div
             className="relative"
@@ -262,6 +252,7 @@ export default function NavBar() {
       </div>
 
       {/* Mobile Dropdown */}
+
       <AnimatePresence initial={false} mode="wait">
         {mobileMenuOpen && (
           <motion.div
@@ -285,6 +276,7 @@ export default function NavBar() {
             <Link href="/about" className="block py-2 border-b">
               About us
             </Link>
+
             {/* Explore Colleges */}
             <div className="border-b overflow-hidden">
               <button
@@ -324,6 +316,7 @@ export default function NavBar() {
                 )}
               </AnimatePresence>
             </div>
+
             {/* Courses Dropdown */}
             <div className="border-b overflow-hidden">
               <button
@@ -452,6 +445,7 @@ export default function NavBar() {
                 )}
               </AnimatePresence>
             </div>
+
             <Link href="/NEET2025" className="block py-2 border-b">
               NEET 2025
             </Link>

@@ -10,8 +10,8 @@ export default function StickyBanner() {
 
   return (
     <div className="fixed top-56 right-6 z-[100] w-72 h-44 bg-[#00E5FF] text-black p-4 rounded-2xl shadow-2xl flex flex-col justify-between border-2 border-[#8A05FF]">
-      <div className="relative overflow-hidden h-28">
-        <div className="animate-vertical-marquee hover:[animation-play-state:paused] space-y-4">
+      <div className="relative overflow-hidden h-28 group">
+        <div className="vertical-marquee group-hover:paused space-y-4">
           <div className="text-sm leading-relaxed text-center">
             <h3 className="text-lg font-bold text-[#8A05FF] mb-1">
               🚨 Update NEET Counseling 2025! (UG and PG)
@@ -37,6 +37,7 @@ export default function StickyBanner() {
           </div>
         </div>
       </div>
+
       <button
         onClick={() => setShow(false)}
         className="text-black self-end text-xl font-bold hover:text-[#8A05FF] mt-2"
@@ -45,7 +46,6 @@ export default function StickyBanner() {
         ✕
       </button>
 
-      {/* Custom styles for vertical marquee animation */}
       <style jsx>{`
         @keyframes vertical-marquee {
           0% {
@@ -56,10 +56,15 @@ export default function StickyBanner() {
           }
         }
 
-        .animate-vertical-marquee {
+        .vertical-marquee {
           display: flex;
           flex-direction: column;
           animation: vertical-marquee 8s linear infinite;
+          animation-play-state: running;
+        }
+
+        .group:hover .vertical-marquee {
+          animation-play-state: paused;
         }
       `}</style>
     </div>

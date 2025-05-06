@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const imageData = [
   { src: "/images/mbbs.JPG", text: "MBBS-NEET PG", link: "/courses/pg/mdms" },
+  { src: "/images/mbbsaa.JPG", text: "MBBS", link: "/courses/ug/mbbs" },
   { src: "/images/med2.jpg", text: "BDS", link: "/courses/ug/bds" },
   { src: "/images/med4.jpg", text: "BAMS", link: "/courses/ug/bams" },
   { src: "/images/homeo.jpg", text: "BHMS", link: "/courses/ug/bhms" },
@@ -16,7 +17,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.4,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -49,39 +50,39 @@ export default function HeroSectionA() {
         </motion.div>
       </div>
 
-      {/* Image Grid Section */}
+      {/* Card Section */}
       <motion.div
-        className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 px-3 md:px-6 pb-10"
+        className="w-full overflow-x-auto px-4 pb-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {imageData.map((item, index) => (
-          <motion.div
-            key={index}
-            variants={itemVariants}
-            className="relative w-full h-[260px] sm:h-[300px] md:h-[340px] lg:h-[360px] group cursor-pointer overflow-hidden rounded-xl shadow-md"
-          >
-            <Link href={item.link}>
-              <Image
-                src={item.src}
-                alt={item.text}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-
-              {/* Hover Overlay with Text + Button */}
-              <div className="absolute inset-0 bg-black/50 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col items-center justify-center text-center space-y-3 px-3">
-                <span className="text-white text-lg font-semibold">
-                  {item.text}
-                </span>
-                <button className="bg-white text-black text-sm font-medium px-4 py-1.5 rounded-full shadow hover:bg-gray-200 transition duration-300">
-                  Click to Know More
-                </button>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-2 w-full sm:w-max">
+          {imageData.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="w-full sm:w-[200px] md:w-[240px] h-[260px] sm:h-[280px] md:h-[300px] group cursor-pointer overflow-hidden rounded-xl shadow-md relative flex-shrink-0"
+            >
+              <Link href={item.link}>
+                <Image
+                  src={item.src}
+                  alt={item.text}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/50 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col items-center justify-center text-center space-y-3 px-3">
+                  <span className="text-white text-lg font-semibold">
+                    {item.text}
+                  </span>
+                  <button className="bg-white text-black text-sm font-medium px-4 py-1.5 rounded-full shadow hover:bg-gray-200 transition duration-300">
+                    Click to Know More
+                  </button>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );

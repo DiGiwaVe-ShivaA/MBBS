@@ -42,45 +42,45 @@ import { Store, Globe } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <div className="flex flex-col items-center gap-8 max-w-md w-full relative">
+    <section className="bg-gray-50 py-10 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Franchise Card */}
-        <div className="bg-white p-8 rounded-lg shadow-md border text-center w-full z-10">
-          <Store
-            size={50}
-            className="mx-auto text-pink-500 mb-4 will-change-transform"
-          />
-          <h2 className="text-xl font-semibold mb-2 antialiased">Franchise</h2>
-          <p className="text-gray-600 mb-4 antialiased">
-            Start your own center in your city <br />
-            Partner with us and grow together
-          </p>
-          <button className="px-4 py-2 min-w-[180px] border rounded-md text-sm font-medium hover:bg-pink-50 transition-all duration-150 ease-in-out">
-            Apply for Franchise
-          </button>
+        <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+          <div className="flex flex-col items-center text-center">
+            <Store size={40} className="text-rose-500 mb-3" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-1">
+              Franchise Opportunity
+            </h3>
+            <p className="text-gray-600 text-sm mb-4">
+              Start your own center in your city.
+              <br />
+              Partner with us and grow together.
+            </p>
+            <button className="px-4 py-1.5 bg-rose-500 text-white text-sm rounded-full hover:bg-rose-600 transition">
+              Apply for Franchise
+            </button>
+          </div>
         </div>
-
-        {/* Arrow/Connector */}
-        <div className="w-1 h-10 bg-gray-300 rounded"></div>
 
         {/* Partnership Card */}
-        <div className="bg-white p-8 rounded-lg shadow-md border text-center w-full z-10">
-          <Globe
-            size={50}
-            className="mx-auto text-pink-500 mb-4 will-change-transform"
-          />
-          <h2 className="text-xl font-semibold mb-2 antialiased">
-            Partnership Request
-          </h2>
-          <p className="text-gray-600 mb-4 antialiased">
-            For partnership and business <br />
-            development inquiries
-          </p>
-          <button className="px-4 py-2 min-w-[180px] border rounded-md text-sm font-medium hover:bg-pink-50 transition-all duration-150 ease-in-out">
-            hello@yourdomain.com
-          </button>
+        <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+          <div className="flex flex-col items-center text-center">
+            <Globe size={40} className="text-sky-500 mb-3" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-1">
+              Partnership Request
+            </h3>
+            <p className="text-gray-600 text-sm mb-4">
+              For partnership and business development inquiries.
+            </p>
+            <a
+              href="mailto:hello@yourdomain.com"
+              className="px-4 py-1.5 bg-sky-500 text-white text-sm rounded-full hover:bg-sky-600 transition"
+            >
+              hello@yourdomain.com
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
