@@ -76,7 +76,7 @@ export default function ContactSection() {
               href="mailto:hello@yourdomain.com"
               className="px-4 py-1.5 bg-sky-500 text-white text-sm rounded-full hover:bg-sky-600 transition"
             >
-              hello@yourdomain.com
+              nsetpvtltd@gmail.com
             </a>
           </div>
         </div>

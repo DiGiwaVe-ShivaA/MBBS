@@ -1,17 +1,23 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function NeetDifficultySection() {
-  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [embedLoaded, setEmbedLoaded] = useState(false);
+  const embedRef = useRef(null);
+
+  useEffect(() => {
+    if (embedLoaded && window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }, [embedLoaded]);
 
   return (
     <section className="bg-white py-12 px-4 md:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch w-full max-w-7xl mx-auto min-h-[560px]">
         {/* Left: Text Content */}
-        <div className="space-y-6 px-4 sm:px-8 md:px-16">
+        <div className="space-y-6 px-4 sm:px-8 md:px-16 flex flex-col justify-center">
           <h2 className="inline-flex items-center px-6 py-3 rounded-3xl bg-gradient-to-r from-cyan-400 to-violet-600 text-white font-semibold text-base md:text-3xl shadow-lg">
             NEET 2025–26 Difficulty Level
           </h2>
@@ -36,6 +42,7 @@ export default function NeetDifficultySection() {
               Regular mock test practice is essential for accuracy and speed.
             </li>
           </ol>
+
           <Link href="/NEET2025">
             <button className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400">
               Read More <ArrowRight className="ml-2 w-5 h-5" />
@@ -43,26 +50,34 @@ export default function NeetDifficultySection() {
           </Link>
         </div>
 
-        {/* Right: Video Section */}
-        <div className="flex justify-center px-4 sm:px-8 md:px-4">
-          <div className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden shadow-lg bg-black">
-            {/* Lazy load iframe only when user scrolls */}
-            {iframeLoaded ? (
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/I0S1Vv2DrjE"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            ) : (
+        {/* Right: Instagram Reel Embed */}
+        <div className="flex justify-center items-center px-4 sm:px-8 md:px-4 min-h-[560px]">
+          <div className="relative w-full max-w-xl h-full min-h-[560px] rounded-xl overflow-hidden shadow-lg bg-white">
+            {!embedLoaded ? (
               <button
-                className="w-full h-full flex items-center justify-center text-white font-bold"
-                onClick={() => setIframeLoaded(true)}
+                onClick={() => {
+                  setEmbedLoaded(true);
+                  const script = document.createElement("script");
+                  script.src = "https://www.instagram.com/embed.js";
+                  script.async = true;
+                  document.body.appendChild(script);
+                }}
+                className="w-full h-full flex items-center justify-center bg-black text-white font-bold"
               >
-                ▶️ Play Video
+                ▶️ Load Instagram Video
               </button>
+            ) : (
+              <blockquote
+                ref={embedRef}
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/C9MnwPXpUC1/"
+                data-instgrm-version="14"
+                style={{
+                  width: "100%",
+                  minHeight: "560px",
+                  margin: "auto",
+                }}
+              ></blockquote>
             )}
           </div>
         </div>

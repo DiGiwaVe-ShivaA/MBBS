@@ -1,7 +1,7 @@
 /* File: app/about/page.jsx */
 
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -60,9 +60,11 @@ export default function AboutContact() {
           medical field.{" "}
           {/* <span className="font-bold text-blue-600">Learn More</span> */}
         </p>
-        <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
-          Read More
-        </button>
+        <Link href="/NEET2025">
+          <button className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full transition-colors duration-300">
+            Read More
+          </button>
+        </Link>
       </div>
 
       {/* Contact Form */}
