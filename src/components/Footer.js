@@ -75,7 +75,8 @@ export default function Footer() {
               <FaPhoneAlt className="text-green-300 mr-2" /> +91 8109380429
             </a>
             <p className="flex text-white items-center mt-2">
-              <FaEnvelope className="text-yellow-300 mr-2" /> info@BADOC.com
+              <FaEnvelope className="text-yellow-300 mr-2" />{" "}
+              nsetpvtltd@gmail.com
             </p>
             <p className="flex text-white items-start mt-2">
               <FaMapMarkerAlt className="text-red-300 mr-2 mt-1" />
