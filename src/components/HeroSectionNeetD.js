@@ -11,7 +11,7 @@ import {
 
 export default function HowToRegisterNeet() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12">
+    <main className="max-w-5xl mx-auto px-2 py-4">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

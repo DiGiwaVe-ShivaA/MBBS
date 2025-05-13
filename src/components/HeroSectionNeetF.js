@@ -61,7 +61,7 @@ export default function CoursesTableAfterNeetUg() {
   ];
 
   return (
-    <section className="bg-gray-50 py-12 px-4 md:px-8">
+    <section className="bg-gray-50 py-4 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">

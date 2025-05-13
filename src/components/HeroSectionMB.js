@@ -1652,8 +1652,8 @@ const CollegeTable = () => {
             <tr>
               <th className="py-3 px-4 font-semibold">College</th>
               <th className="py-3 px-4 font-semibold">Location</th>
-              <th className="py-3 px-4 font-semibold">Ranking</th>
-              {/* <th className="py-3 px-4 font-semibold">Cutoff</th> */}
+              {/* <th className="py-3 px-4 font-semibold">Ranking</th> */}
+              <th className="py-3 px-4 font-semibold">Cutoff</th>
               <th className="py-3 px-4 font-semibold">Application Deadline</th>
             </tr>
           </thead>
@@ -1680,8 +1680,8 @@ const CollegeTable = () => {
                   </div>
                 </td>
                 <td className="py-4 px-4">{college.location}</td>
-                <td className="py-4 px-4">{college.ranking}</td>
-                {/* <td className="py-4 px-4">{college.cutoff}</td> */}
+                {/* <td className="py-4 px-4">{college.ranking}</td> */}
+                <td className="py-4 px-4">{college.cutoff}</td>
                 <td className="py-4 px-4">{college.deadline}</td>
               </tr>
             ))}

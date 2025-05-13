@@ -40,7 +40,7 @@ export default function AboutNEETPage() {
         />
       </div>
       {/* Iconic Breakdown */}
-      <div className="min-h-screen bg-gradient-to-br from-[#f0f4ff] to-[#e8fcff] py-14 px-6">
+      <div className="min-h-screen bg-gradient-to-br from-[#f0f4ff] to-[#e8fcff] py-4 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -40 }}
@@ -236,7 +236,7 @@ export default function AboutNEETPage() {
         </div>
       </div>
       {/* neets course 2 starts */}
-      <div className="min-h-screen bg-gradient-to-br from-[#f7faff] to-[#ebf4ff] py-12 px-6">
+      <div className="min-h-screen bg-gradient-to-br from-[#f7faff] to-[#ebf4ff]  px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Title */}
           <motion.div
