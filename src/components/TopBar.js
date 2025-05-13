@@ -95,12 +95,12 @@ Coaching Attended: ${formData.coaching}
                 <FaCalendarCheck className="text-white" /> Book Appointment
               </button>
 
-              <button
+              {/* <button
                 className="flex items-end gap-2 px-4 py-2 text-white font-semibold rounded-full shadow-md bg-gradient-to-r from-[#00E5FF] to-[#8A05FF] hover:opacity-90 transition-all duration-300"
                 onClick={() => alert("Live Counseling clicked")}
               >
                 <FaHeadset className="text-white" /> Live Counseling
-              </button>
+              </button> */}
             </div>
           </div>
 
