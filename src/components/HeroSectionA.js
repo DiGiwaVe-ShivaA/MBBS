@@ -131,7 +131,7 @@ export default function HeroSection() {
             onClick={() => setShowForm(true)}
             aria-label="Open Application Form"
           >
-            Call Now
+            Get Call
           </button>
         </div>
         {showForm && (

@@ -80,7 +80,7 @@ export default function Footer() {
             </p>
             <p className="flex text-white items-start mt-2">
               <FaMapMarkerAlt className="text-red-300 mr-2 mt-1" />
-              SHRAWANKANTA STATE, NARELA SHANKARI, MADHYA PRADESH
+              APURVA ENCLAVE, NARELA SHANKARI, MADHYA PRADESH
             </p>
           </div>
         </div>

@@ -352,8 +352,8 @@ export default function CompanyTabs() {
             <Image
               src={activeData.image}
               alt={activeData.label}
-              width={500}
-              height={400}
+              width={250}
+              height={200}
               priority={activeTab === "Director"}
               className={`${activeData.imageClass} rounded-xl shadow-md object-cover`}
             />
