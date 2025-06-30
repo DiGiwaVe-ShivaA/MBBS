@@ -102,9 +102,10 @@ export default function NavBar() {
     <header className="bg-white shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
-        <Link href="/" className="hidden lg:block ml-2">
-          <Image src="/images/logoo.png" alt="Logo" width={80} height={80} />
-        </Link>
+        <Link href="/" className="hidden lg:block ml-2  ">
+  <Image src="/images/mbbslogo.png" alt="Logo" width={140} height={50} className="object-fill" />
+</Link>
+
 
         {/* Mobile Header */}
         <div className="flex w-full justify-between items-center lg:hidden flex-row-reverse">

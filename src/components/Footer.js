@@ -18,16 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 border-b border-gray-300 gap-8 md:grid-cols-3 pb-8">
           {/* Logo Section */}
           <div className="flex flex-col text-center items-center md:items-center">
-            <Image
-              src="/lago.png"
-              alt="Company Logo"
-              width={100}
-              height={100}
-              priority
-              decoding="async"
-              fetchPriority="high"
-              className="h-16 rounded-full w-16 hover:scale-105 lg:h-24 lg:w-24 mt-3 mx-auto object-cover transition-transform"
-            />
+             <Image src="/images/mbbslogo.png" alt="Logo" width={140} height={50} className="object-fill" />
             <p className="text-center text-gray-200 text-sm md:text-left mt-3">
               Your trusted guide to a career in medicine.
             </p>
