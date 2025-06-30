@@ -1,6 +1,17 @@
 "use client";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import uzb from "../../public/images/uzb.png";
+import amc from "../../public/images/amc.png";
+import nepall from "../../public/images/nepall.png";
+import geo from "../../public/images/geo.png";
+import bangladesh from "../../public/images/bangladesh.png";
+import philip from "../../public/images/philip.png";
+import kaza from "../../public/images/kaza.png";
+import russia from "../../public/images/russia.png";
+import kyr from "../../public/images/kyr.png";
+import italy from "../../public/images/italy.png";
+import { useRouter } from "next/navigation"; // ✅ Correct for App Rou
 
 const countries = [
   {
@@ -57,6 +68,12 @@ const countries = [
 ];
 
 export default function StudyAbroad() {
+  const router = useRouter();
+
+  const handleCardClick = (country) => {
+    router.push(`/countries/${country}`);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50 py-12 px-4">
       <div className="max-w-7xl mx-auto text-center">
@@ -98,6 +115,114 @@ export default function StudyAbroad() {
           </div>
         </div>
 
+        {/*Study Abroad Support */}
+        <section className="lg:px-20 my-16 p-6 bg-white rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-indigo-700 text-center mb-8">
+            🌍 Study Abroad Support – Top Countries
+          </h2>
+
+          <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-col-5 gap-6">
+            <div
+              onClick={() => handleCardClick("america")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={amc} alt="America" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">AMERICA</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Top universities, STEM focus, global career opportunities.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("nepal")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={nepall} alt="Nepal" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">NEPAL</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Student-friendly immigration, PR pathway, quality education.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("bangladesh")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={bangladesh} alt="Bangladesh" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">BANGLADESH</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                No tuition fees in public universities, innovation & research.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("russia")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={russia} alt="Russia" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">RUSSIA</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Affordable tuition, medical universities, globally recognized degrees.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("kazakhstan")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={kaza} alt="Kazakhstan" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">KAZAKHSTAN</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Emerging education hub, cost-effective, English-medium medical courses.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("kyrgyzstan")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={kyr} alt="Kyrgyzstan" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">KYRGYZSTAN</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Low tuition fees, WHO-recognized medical degrees, Indian student-friendly.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("uzbekistan")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={uzb} alt="Uzbekistan" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">UZBEKISTAN</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Modern curriculum, English-taught MBBS, growing international reputation.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("georgia")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={geo} alt="Georgia" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">GEORGIA</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                European education system, English-medium programs, clinical exposure.
+              </p>
+            </div>
+
+            <div
+              onClick={() => handleCardClick("philippines")}
+              className="border border-gray-300 rounded-xl p-4 text-center shadow hover:shadow-md transition"
+            >
+              <Image src={philip} alt="Philippines" width={48} height={32} className="mx-auto mb-3" />
+              <h3 className="font-bold text-blue-700">PHILIPPINES</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                US-based curriculum, English-speaking country, good FMGE passing rate.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="mt-12">
           <h3 className="text-3xl font-bold text-indigo-700 mb-6">
             🌎 Top Countries to Study MBBS Abroad
@@ -127,9 +252,7 @@ export default function StudyAbroad() {
                   </div>
                 </div>
                 <div className="mt-4 flex justify-end">
-                  <span className="text-xs text-gray-500 italic">
-                    #FutureDoctors
-                  </span>
+                  <span className="text-xs text-gray-500 italic">#FutureDoctors</span>
                 </div>
               </div>
             ))}

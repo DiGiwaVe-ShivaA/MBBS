@@ -168,4 +168,14 @@
 
 /* why choose us flip  */
 
+/* 
+@keyframes moveDot {
+  0% { left: 0%; opacity: 1; }
+  100% { left: 100%; opacity: 0.3; }
+}
 
+.dot {
+  @apply absolute top-1/2 w-4 h-4 bg-red-500 rounded-full shadow-xl;
+  animation: moveDot 4s linear infinite;
+  transform: translateY(-50%);
+} */

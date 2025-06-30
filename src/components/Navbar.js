@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ApplicationFormModal2 from "./ApplicationFormModal2";
-
+// import logoo from "../../public/images/logoo.png"
 const initialFormState = {
   name: "",
   mobile: "",
@@ -102,8 +102,8 @@ export default function NavBar() {
     <header className="bg-white shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between">
         {/* Desktop Logo */}
-        <Link href="/" className="hidden lg:block">
-          <Image src="/lago.png" alt="Logo" width={120} height={120} />
+        <Link href="/" className="hidden lg:block ml-2">
+          <Image src="/images/logoo.png" alt="Logo" width={80} height={80} />
         </Link>
 
         {/* Mobile Header */}
@@ -115,7 +115,7 @@ export default function NavBar() {
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
           <Link href="/">
-            <Image src="/lago.png" alt="Logo" width={50} height={50} />
+            <Image src="/logoo.png" alt="Logo" width={50} height={50} />
           </Link>
         </div>
 

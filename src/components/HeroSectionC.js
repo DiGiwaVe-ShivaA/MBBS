@@ -70,7 +70,7 @@ export default function NeetDifficultySection() {
               <blockquote
                 ref={embedRef}
                 className="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/reel/C9MnwPXpUC1/"
+                data-instgrm-permalink="https://www.instagram.com/reel/DKBgZVax7h-/?igsh=MWU3NDFpY3FubzA5NA=="
                 data-instgrm-version="14"
                 style={{
                   width: "100%",

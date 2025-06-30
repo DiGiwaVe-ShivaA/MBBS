@@ -24,15 +24,19 @@ export default function Home() {
       <main>
         {/* <HeroSectionC /> */}
         {/* <HeroSectionCB /> */}
-        <HeroSectionNeetA />
-        <HeroSectionNeetAA />
+        
         {/* <HeroSectionNeetB /> */}
-        <HeroSectionNeetC />
-        <HeroSectionNeetD />
+        
         {/* <HeroSectionI /> */}
         {/* <HeroSectionNeetE /> */}
-        <HeroSectionNeetF />
-        <HeroSectionNeetG />
+       
+        {/**Working */}
+      <HeroSectionNeetA />
+        <HeroSectionNeetAA />
+        <HeroSectionNeetC />
+        {/* <HeroSectionNeetD /> */}
+         {/* <HeroSectionNeetF /> */}
+        {/* <HeroSectionNeetG /> */}
       </main>
       <Footer />
     </div>
